@@ -28,36 +28,92 @@
     {% endif %}
 
     {% if post.collection == 'publications' %}
-      <div style="border: 2px solid #ddd; padding: 20px; margin-bottom: 20px; border-radius: 10px; background-color: #f9f9f9;">
-        <table style="width: 100%; border-spacing: 0px; border-collapse: collapse; margin-right: auto;">
-          <tbody>
-            <tr>
-              <!-- Image Cell -->
-              <td style="padding: 15px; width: 40%; text-align: center;">
-                <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; display: block; margin: auto; border-radius: 10px;" />
-              </td>
-              
-              <!-- Text Cell -->
-              <td style="padding: 15px; width: 60%; vertical-align: top;">
-                <p style="font-size: 20px; font-weight: bold; color: black; margin-bottom: 10px;">
-                  <a href="{{ post.link }}" style="color: black; text-decoration: none;">{{ post.title }}</a>
-                </p>
-                <p style="font-size: 16px; color: black; margin-bottom: 10px;">
-                  <span style="font-weight: bold;">Authors:</span> {{ post.authors }}
-                </p>
-                <p style="font-size: 16px; color: black;">
-                  <span style="font-weight: bold;">Publication:</span> <i>{{ post.publication }}</i>, {{ post.year }}
-                </p>
-                {% if post.github %}
-                  <a href="{{ post.github }}" style="margin-top: 10px; display: inline-block; color: black;">
-                    <i class="fab fa-github"></i> View on GitHub
-                  </a>
-                {% endif %}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table style="width:100%; border:5px; border-spacing:0px; border-collapse:collapse; margin-right:auto; color: black;">
+        <tbody>
+          <tr>
+            <td style="padding:15px; width:30%; text-align:center;">
+                <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; height:auto; display: block; margin: auto;" />
+            </td>
+            <td style="padding:5px; width:70%; color: black;">
+              <p><a class="pub1" href="{{ post.link }}" style="color: black;">{{ post.title }}</a></p>
+              <p><a class="pub2" style="color: black;"> {{ post.authors }}, <i>{{ post.publication }}</i>, {{ post.year }}. </a>
+              {% if post.github %}
+                <a href="{{ post.github }}" style="color: black;"> <i class="fab fa-fw fa-github" aria-hidden="true"></i></a>
+              {% endif %}
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    {% elsif post.collection == 'portfolio' %}
+      <table style="width:100%; border:0px; border-spacing:0px; border-collapse:collapse; margin-right:auto; color: black;">
+        <tbody>
+          <tr>
+            <td style="padding:10px; width:25%; vertical-align:middle; text-align:center;">
+              <p>
+                <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; display: block; margin: auto;" />
+              </p>
+            </td>
+            <td style="padding:10px; width:75%; color: black;">
+              <b><a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: black;">{{ title }}</a></b>
+              <br>
+              <p style="color: black;">{{ post.excerpt }}</p>
+              {% if post.github != 'None' %}
+                <button class="btn btn-round btn-sm btn-ghost-blue" onclick="location.href='{{ post.github }}'" style="color: black;">github</button>
+              {% endif %}
+              {% if post.docs != 'None' %}
+                <button class="btn btn-round btn-sm btn-ghost-blue" onclick="location.href='{{ post.docs }}'" style="color: black;">docs</button>
+              {% endif %}
+              {% if post.pdf != 'None' %}
+                <button class="btn btn-round btn-sm btn-ghost-blue" onclick="location.href='{{ post.pdf }}'" style="color: black;">pdf</button>
+              {% endif %}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    {% elsif post.collection == 'teaching' %}
+      <table style="width:100%; border:0px; border-spacing:0px; border-collapse:collapse; margin-right:auto; color: black;">
+        <tbody>
+          <tr>
+            <td style="padding:5px; width:20%; text-align:center;">
+              <p>
+                <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; display: block; margin: auto;" />
+              </p>
+            </td>
+            <td style="padding:5px; width:80%; color: black;">
+              {% if post.link %}
+                <b><a class="pub1" href="{{ post.link }}" style="color: black;">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a></b>
+              {% else %}
+                <b><a class="pub1" href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: black;">{{ title }}</a></b>
+              {% endif %}
+              <br>
+              <p><a class="pub2" style="color: black;"> <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} 
+              <br> {{ post.subject }}</a></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    {% elsif post.collection == 'research' %}
+    <table style="width:100%; border:0px; border-spacing:0px; border-collapse:collapse; margin-right:auto; color: black;">
+        <tbody>
+          <tr>
+            <td style="padding:5px; width:20%; text-align:center;">
+              <p>
+                <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; display: block; margin: auto;" />
+              </p>
+            </td>
+            <td style="padding:5px; width:80%; color: black;">
+              {% if post.link %}
+                <b><a class="pub1" href="{{ post.link }}" style="color: black;">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a></b>
+              {% else %}
+                <b><a class="pub1" href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: black;">{{ title }}</a></b>
+              {% endif %}
+              <br>
+              <p><a class="pub2" style="color: black;"><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</a></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     {% else %}
       <h2 class="archive__item-title" itemprop="headline" style="color: black;">
         {% if post.link %}
