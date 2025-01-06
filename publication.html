@@ -1,152 +1,231 @@
 ---
-layout: default
-title: "Publications"
-permalink: /publications/
+layout: null
 ---
+<!DOCTYPE html>
+<html lang="en">
 
-{% include base_path %}
+<head>
+    <title>Publications</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-For the up-to-date publication list, please visit the <a href="https://scholar.google.com/citations?hl=en&user=TF2LRvMAAAAJ">Google Scholar</a>  page.
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-<p> Filter by type:
-  <select class="pubtype-select" data-filter-group="pubtype" id="pub_type" onchange="select_func.call(this)">    
-    <option value=".pubtype-0">All</option>
-    <option value=".pubtype-1">Conference paper</option>
-    <option value=".pubtype-2">Journal paper</option>
-    <option value=".pubtype-3">Book chapter</option>
-    <option value=".pubtype-4">Preprint</option>
-    <option value=".pubtype-5">Under Review</option>
-  </select>
-</p>
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-<div id="all">
-  <h2>2024</h2>
-  {% for post in site.publications reversed %}
-    {% if post.year == '2024' %}
-      {% include archive-single.html %}
-    {% endif %}
-  {% endfor %}
-  <h2>2023</h2>
-  {% for post in site.publications reversed %}
-    {% if post.year == '2023' %}
-      {% include archive-single.html %}
-    {% endif %}
-  {% endfor %}
-  <h2>2022</h2>
-  {% for post in site.publications reversed %}
-    {% if post.year == '2022' %}
-      {% include archive-single.html %}
-    {% endif %}
-  {% endfor %}
-  <h2>2021</h2>
-  {% for post in site.publications reversed %}
-    {% if post.year == '2021' %}
-      {% include archive-single.html %}
-    {% endif %}
-  {% endfor %}
-  <h2>2020</h2>
-  {% for post in site.publications reversed %}
-    {% if post.year == '2020' %}
-      {% include archive-single.html %}
-    {% endif %}
-  {% endfor %}
-</div>
-<div id="conference">
-  {% for post in site.publications reversed %}
-    {% if post.type == 'conference paper' %}
-      {% include archive-single.html %}
-    {% endif %}
-  {% endfor %}
-</div>
-<div id="journal">
-  {% for post in site.publications reversed %}
-    {% if post.type == 'journal paper' %}
-      {% include archive-single.html %}
-    {% endif %}
-  {% endfor %}
-</div>
-<div id="book chapter">
-  {% for post in site.publications reversed %}
-    {% if post.type == 'book chapter' %}
-      {% include archive-single.html %}
-    {% endif %}
-  {% endfor %}
-</div>
-<div id="preprint">
-  {% for post in site.publications reversed %}
-    {% if post.type == 'preprint' %}
-      {% include archive-single.html %}
-    {% endif %}
-  {% endfor %}
-</div>
-<div id="under review">
-  {% for post in site.publications reversed %}
-    {% if post.type == 'under review' %}
-      {% include archive-single.html %}
-    {% endif %}
-  {% endfor %}
-</div>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-<script>
-function init(){
-  document.getElementById("all").style.display = "block";
-  document.getElementById("conference").style.display = "none";
-  document.getElementById("journal").style.display = "none";
-  document.getElementById("book chapter").style.display = "none";
-  document.getElementById("preprint").style.display = "none";
-  document.getElementById("under review").style.display = "none";
-}
-window.onload = init;
-  
-function select_func() {
-  var x = document.getElementById("pub_type").value;
-  if(x == ".pubtype-0"){
-    document.getElementById("all").style.display = "block";
-    document.getElementById("conference").style.display = "none";
-    document.getElementById("journal").style.display = "none";
-    document.getElementById("book chapter").style.display = "none";
-    document.getElementById("preprint").style.display = "none";
-    document.getElementById("under review").style.display = "none";
-  }
-  if(x == ".pubtype-1"){
-    document.getElementById("all").style.display = "none";
-    document.getElementById("conference").style.display = "block";
-    document.getElementById("journal").style.display = "none";
-    document.getElementById("book chapter").style.display = "none";
-    document.getElementById("preprint").style.display = "none";
-    document.getElementById("under review").style.display = "none";
-  }
-  if(x == ".pubtype-2"){
-    document.getElementById("all").style.display = "none";
-    document.getElementById("conference").style.display = "none";
-    document.getElementById("journal").style.display = "block";
-    document.getElementById("book chapter").style.display = "none";
-    document.getElementById("preprint").style.display = "none";
-    document.getElementById("under review").style.display = "none";
-  }
-  if(x == ".pubtype-3"){
-    document.getElementById("all").style.display = "none";
-    document.getElementById("conference").style.display = "none";
-    document.getElementById("journal").style.display = "none";
-    document.getElementById("book chapter").style.display = "block";
-    document.getElementById("preprint").style.display = "none";
-    document.getElementById("under review").style.display = "none";
-  }
-  if(x == ".pubtype-4"){
-    document.getElementById("all").style.display = "none";
-    document.getElementById("conference").style.display = "none";
-    document.getElementById("journal").style.display = "none";
-    document.getElementById("book chapter").style.display = "none";
-    document.getElementById("preprint").style.display = "block";
-    document.getElementById("under review").style.display = "none";
-  }
-  if(x == ".pubtype-5"){
-    document.getElementById("all").style.display = "none";
-    document.getElementById("conference").style.display = "none";
-    document.getElementById("journal").style.display = "none";
-    document.getElementById("book chapter").style.display = "none";
-    document.getElementById("preprint").style.display = "none";
-    document.getElementById("under review").style.display = "block";
-  }
-}
-</script>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Huy Le</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><span>About</span></a></li>
+                    <li class="nav-item"><a href="publication.html" class="nav-link"><span>Publications</span></a></li>
+                    <li class="nav-item"><a href="#experience-section" class="nav-link"><span>Experience</span></a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link"><span>Misc</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="ftco-section ftco-no-pb goto-here">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="heading">Publications</h2>
+                    <p>For the up-to-date publication list, please visit the <a href="https://scholar.google.com/citations?hl=en&user=TF2LRvMAAAAJ">Google Scholar</a> page.</p>
+                    <p>Filter by type:
+                        <select class="pubtype-select" id="pub_type" onchange="select_func.call(this)">
+                            <option value=".pubtype-0">All</option>
+                            <option value=".pubtype-1">Conference paper</option>
+                            <option value=".pubtype-2">Journal paper</option>
+                            <option value=".pubtype-3">Book chapter</option>
+                            <option value=".pubtype-4">Preprint</option>
+                            <option value=".pubtype-5">Under Review</option>
+                        </select>
+                    </p>
+                    <h2>Debug: Publications</h2>
+                    <pre>{{ site.publications | jsonify }}</pre>
+                    <!-- Filtered Sections -->
+                    <div id="all">
+                        <h3>2024</h3>
+                        {% for post in site.publications reversed %}
+                        {% if post.year == '2024' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                        <h3>2023</h3>
+                        {% for post in site.publications reversed %}
+                        {% if post.year == '2023' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <div id="conference" style="display: none;">
+                        {% for post in site.publications reversed %}
+                        {% if post.type == 'conference paper' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <div id="journal" style="display: none;">
+                        {% for post in site.publications reversed %}
+                        {% if post.type == 'journal paper' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <div id="book chapter" style="display: none;">
+                        {% for post in site.publications reversed %}
+                        {% if post.type == 'book chapter' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <div id="preprint" style="display: none;">
+                        {% for post in site.publications reversed %}
+                        {% if post.type == 'preprint' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <div id="under review" style="display: none;">
+                        {% for post in site.publications reversed %}
+                        {% if post.type == 'under review' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> Huy Le. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        function init() {
+            document.getElementById("all").style.display = "block";
+            document.getElementById("conference").style.display = "none";
+            document.getElementById("journal").style.display = "none";
+            document.getElementById("book chapter").style.display = "none";
+            document.getElementById("preprint").style.display = "none";
+            document.getElementById("under review").style.display = "none";
+        }
+        window.onload = init;
+
+        function select_func() {
+            const sections = {
+                ".pubtype-0": "all",
+                ".pubtype-1": "conference",
+                ".pubtype-2": "journal",
+                ".pubtype-3": "book chapter",
+                ".pubtype-4": "preprint",
+                ".pubtype-5": "under review"
+            };
+            const selected = this.value;
+            for (const [key, value] of Object.entries(sections)) {
+                document.getElementById(value).style.display = key === selected ? "block" : "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
