@@ -5,7 +5,7 @@ link: https://openaccess.thecvf.com/content/CVPR2022W/AICity/html/Chung_Multi-Ca
 authors: "Nhat Chung, <b>Huy Le</b>, Vuong Nguyen, Quang Nguyen, Thong Nguyen, Tin Thai, Synh Ha"
 collection: publications
 permalink: /publication/aictrack1_2022
-type: "conference paper"
+type: "workshop paper"
 publication: "IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b> Workshop"
 year: "2022"
 date: 2022-12-04

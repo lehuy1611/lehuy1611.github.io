@@ -6,7 +6,7 @@ github: https://github.com/nguyenquivinhquang/Multi-camera-People-Tracking-With-
 authors: "Quang Nguyen, <b>Huy Le</b>, Truc Chau, Duc Luu, Nhat Chung, Synh Ha"
 collection: publications
 permalink: /publication/aictrack1_2023
-type: "conference paper"
+type: "workshop paper"
 publication: "IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b> Workshop"
 year: "2023"
 date: 2023-12-03
