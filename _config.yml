@@ -1,4 +1,58 @@
+# Site Information
+title: "Huy Le's Website"
+description: "Personal website for showcasing publications, projects, and more."
+baseurl: "" # Leave empty unless the site is hosted in a subdirectory
+url: "" # Add your website URL (e.g., https://yourdomain.com)
+
+# Author Information
+author:
+  name: "Huy Le"
+  email: "your-email@example.com"
+
+# Plugins
+plugins:
+  - jekyll-feed # Enables RSS feed generation
+  - jekyll-paginate # Enables pagination (optional, remove if not needed)
+
+# Collections
 collections:
   publications:
     output: true
     permalink: /publications/:title/
+
+# Permalinks
+permalink: pretty
+
+# Pagination Settings (Optional)
+paginate: 5
+paginate_path: "/page:num/"
+
+# Markdown Processing
+markdown: kramdown
+kramdown:
+  input: GFM # Enables GitHub-Flavored Markdown (GFM) for better compatibility
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"
+
+# Exclude Files and Folders
+exclude:
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# Include Additional Files
+include:
+  - _pages
+  - _layouts
+  - _includes
+
+# Theme Settings (Optional)
+theme: minima # Replace with your chosen theme, or remove if using a custom theme
