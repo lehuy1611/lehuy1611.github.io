@@ -18,21 +18,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Phuc Nguyen Duc Anh
-name: Phuc, Nguyen Duc Anh
+title: Huy Le
+name: Huy Le
 position: AI Research Resident 
-email: phucnda@gmail.com
+email: lehuy2316@gmail.com
 description: >-
-  I was an AI Research Resident at [VinAI Research, Vietnam](https://www.vinai.io/), where I worked with 3D scene understanding and multimodal Large Language Models under the supervision of [Dr. Anh Tran](https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en) and [Prof. Cuong Pham](https://sites.google.com/view/cuongpham/home). 
-  <br>
-  Previously, I recieved my Bachelor of Computer Science at the [University of Information Technology - VNUHCM](https://en.uit.edu.vn/).
+  I was an AI Research Resident at [FPT Software, AI Center, Vietnam](https://www.fptsoftware.com/), where I worked with video understanding and multimodal Large Language Models.
+  Previously, I recieved my Bachelor of Computer Science at the [International University - VNUHCM](https://hcmiu.edu.vn/).
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://phucnda.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: PhucNDA
-google_scholar: 9tHv7IQAAAAJ&hl
-# twitter_username: phucnda
-# google_analytics: G-MFWSBLRKG0
+url: "http://lehuy1611.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: zef1611
+google_scholar: nsoYvw8AAAAJ&hl
+# twitter_username: lehuy1611
 
 # Build settings
 theme: minima
