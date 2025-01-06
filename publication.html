@@ -46,60 +46,119 @@
                     <h2 class="heading">Publications</h2>
                     <p>For the up-to-date publication list, please visit the <a href="https://scholar.google.com/citations?hl=en&user=TF2LRvMAAAAJ">Google Scholar</a> page.</p>
                     <p>Filter by type:
-                        <select class="pubtype-select" id="pub_type" onchange="filterPublications()">
-                            <option value="all">All</option>
-                            <option value="conference">Conference paper</option>
-                            <option value="journal">Journal paper</option>
-                            <option value="book-chapter">Book chapter</option>
-                            <option value="preprint">Preprint</option>
-                            <option value="under-review">Under Review</option>
+                        <select class="pubtype-select" id="pub_type" onchange="select_func.call(this)">
+                            <option value=".pubtype-0">All</option>
+                            <option value=".pubtype-1">Conference paper</option>
+                            <option value=".pubtype-2">Journal paper</option>
+                            <option value=".pubtype-3">Book chapter</option>
+                            <option value=".pubtype-4">Preprint</option>
+                            <option value=".pubtype-5">Under Review</option>
                         </select>
                     </p>
 
-                    <!-- Publication sections -->
+                    <!-- Filtered Sections -->
                     <div id="all">
                         <h3>2024</h3>
+                        {% for post in site.publications reversed %}
+                        {% if post.year == '2024' %}
                         <div class="resume-wrap d-flex ftco-animate">
                             <div class="icon d-flex align-items-center justify-content-center">
                                 <span class="flaticon-ideas"></span>
                             </div>
                             <div class="text pl-3">
-                                <span class="position">Conference Paper</span>
-                                <p><strong>Title:</strong> Example Paper Title 2024<br><strong>Authors:</strong> Author A, Author B<br><strong>Conference:</strong> Example Conference 2024</p>
+                                {% include archive-single.html %}
                             </div>
                         </div>
+                        {% endif %}
+                        {% endfor %}
+                        <h3>2023</h3>
+                        {% for post in site.publications reversed %}
+                        {% if post.year == '2023' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
 
                     <div id="conference" style="display: none;">
-                        <h3>Conference Papers</h3>
+                        {% for post in site.publications reversed %}
+                        {% if post.type == 'conference paper' %}
                         <div class="resume-wrap d-flex ftco-animate">
                             <div class="icon d-flex align-items-center justify-content-center">
                                 <span class="flaticon-ideas"></span>
                             </div>
                             <div class="text pl-3">
-                                <p><strong>Title:</strong> Example Conference Paper<br><strong>Authors:</strong> Author A, Author B<br><strong>Conference:</strong> Example Conference 2023</p>
+                                {% include archive-single.html %}
                             </div>
                         </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
 
                     <div id="journal" style="display: none;">
-                        <h3>Journal Papers</h3>
-                        <p>No journal papers available yet.</p>
+                        {% for post in site.publications reversed %}
+                        {% if post.type == 'journal paper' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
 
-                    <div id="book-chapter" style="display: none;">
-                        <h3>Book Chapters</h3>
-                        <p>No book chapters available yet.</p>
+                    <div id="book chapter" style="display: none;">
+                        {% for post in site.publications reversed %}
+                        {% if post.type == 'book chapter' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
 
                     <div id="preprint" style="display: none;">
-                        <h3>Preprints</h3>
-                        <p>No preprints available yet.</p>
+                        {% for post in site.publications reversed %}
+                        {% if post.type == 'preprint' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
 
-                    <div id="under-review" style="display: none;">
-                        <h3>Under Review</h3>
-                        <p>No papers under review yet.</p>
+                    <div id="under review" style="display: none;">
+                        {% for post in site.publications reversed %}
+                        {% if post.type == 'under review' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -116,7 +175,7 @@
         </div>
     </footer>
 
-    <!-- loader -->
+    <!-- Loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
             <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
@@ -138,18 +197,30 @@
     <script src="js/main.js"></script>
 
     <script>
-        function filterPublications() {
-            const sections = ["all", "conference", "journal", "book-chapter", "preprint", "under-review"];
-            const selected = document.getElementById("pub_type").value;
-
-            sections.forEach(section => {
-                document.getElementById(section).style.display = section === selected || selected === "all" ? "block" : "none";
-            });
+        function init() {
+            document.getElementById("all").style.display = "block";
+            document.getElementById("conference").style.display = "none";
+            document.getElementById("journal").style.display = "none";
+            document.getElementById("book chapter").style.display = "none";
+            document.getElementById("preprint").style.display = "none";
+            document.getElementById("under review").style.display = "none";
         }
+        window.onload = init;
 
-        document.addEventListener("DOMContentLoaded", () => {
-            filterPublications(); // Ensure "all" is visible on load
-        });
+        function select_func() {
+            const sections = {
+                ".pubtype-0": "all",
+                ".pubtype-1": "conference",
+                ".pubtype-2": "journal",
+                ".pubtype-3": "book chapter",
+                ".pubtype-4": "preprint",
+                ".pubtype-5": "under review"
+            };
+            const selected = this.value;
+            for (const [key, value] of Object.entries(sections)) {
+                document.getElementById(value).style.display = key === selected ? "block" : "none";
+            }
+        }
     </script>
 </body>
 
