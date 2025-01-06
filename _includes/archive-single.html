@@ -23,15 +23,16 @@
             "{{ teaser | prepend: "/images/" | prepend: base_path }}"
           {% endif %}
           alt=""
-          style="width: 150px; height: 150px; object-fit: cover; border-radius: 8px;">
+          style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
       </div>
     {% endif %}
 
     {% if post.collection == 'publications' %}
       <table style="width:100%; border:5px; border-spacing:0px; border-collapse:collapse; margin-right:auto;">
-        <tbody><tr>
+        <tbody>
+          <tr>
             <td style="padding:15px; width:30%; text-align:center;">
-                <img src="{{ post.image }}" alt="{{ post.title }}" style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px; margin: auto;" />
+                <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; height:auto; display: block; margin: auto;" />
             </td>
             <td style="padding:5px; width:70%;">
               <p><a class="pub1" href="{{ post.link }}">{{ post.title }}</a></p>
@@ -41,20 +42,22 @@
               {% endif %}
               </p>
             </td>
-        </tr></tbody>
+          </tr>
+        </tbody>
       </table>
     {% elsif post.collection == 'portfolio' %}
       <table style="width:100%; border:0px; border-spacing:0px; border-collapse:collapse; margin-right:auto;">
-        <tbody><tr>
+        <tbody>
+          <tr>
             <td style="padding:10px; width:25%; vertical-align:middle; text-align:center;">
               <p>
-                <img src="{{ post.image }}" width="150" height="150" style="object-fit: cover; border-radius: 8px;" />
+                <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; display: block; margin: auto;" />
               </p>
             </td>
             <td style="padding:10px; width:75%;">
               <b><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a></b>
               <br>
-              <p> {{ post.excerpt }} </p>
+              <p>{{ post.excerpt }}</p>
               {% if post.github != 'None' %}
                 <button class="btn btn-round btn-sm btn-ghost-blue" onclick="location.href='{{ post.github }}'">github</button>
               {% endif %}
@@ -65,14 +68,16 @@
                 <button class="btn btn-round btn-sm btn-ghost-blue" onclick="location.href='{{ post.pdf }}'">pdf</button>
               {% endif %}
             </td>
-        </tr></tbody>
+          </tr>
+        </tbody>
       </table>
     {% elsif post.collection == 'teaching' %}
       <table style="width:100%; border:0px; border-spacing:0px; border-collapse:collapse; margin-right:auto;">
-        <tbody><tr>
+        <tbody>
+          <tr>
             <td style="padding:5px; width:20%; text-align:center;">
               <p>
-                <img src="{{ post.image }}" width="100" height="100" style="object-fit: cover; border-radius: 8px;" />
+                <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; display: block; margin: auto;" />
               </p>
             </td>
             <td style="padding:5px; width:80%;">
@@ -81,17 +86,20 @@
               {% else %}
                 <b><a class="pub1" href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a></b>
               {% endif %}
-              <br><p><a class="pub2"> <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} 
-              <br> {{ post.subject }} </a></p>
+              <br>
+              <p><a class="pub2"> <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} 
+              <br> {{ post.subject }}</a></p>
             </td>
-        </tr></tbody>
+          </tr>
+        </tbody>
       </table>
     {% elsif post.collection == 'research' %}
     <table style="width:100%; border:0px; border-spacing:0px; border-collapse:collapse; margin-right:auto;">
-        <tbody><tr>
+        <tbody>
+          <tr>
             <td style="padding:5px; width:20%; text-align:center;">
               <p>
-                <img src="{{ post.image }}" width="100" height="100" style="object-fit: cover; border-radius: 8px;" />
+                <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; display: block; margin: auto;" />
               </p>
             </td>
             <td style="padding:5px; width:80%;">
@@ -100,9 +108,11 @@
               {% else %}
                 <b><a class="pub1" href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a></b>
               {% endif %}
-              <br><p> <a class="pub2"><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </a></p>
+              <br>
+              <p><a class="pub2"><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</a></p>
             </td>
-        </tr></tbody>
+          </tr>
+        </tbody>
       </table>
     {% else %}
       <h2 class="archive__item-title" itemprop="headline">
