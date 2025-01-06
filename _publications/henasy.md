@@ -8,8 +8,8 @@ collection: publications
 permalink: /publication/a_multi_task_contextual_atrous_residual_networkfor_brain_tumor_detection_and_segmentation
 type: "conference paper"
 publication: "International Conference on Pattern Recognition (ICPR)"
-year: "2020"
-date: 2020-12-03
+year: "2024"
+date: 2024-12-03
 ---
 <button class="btn btn-round btn-sm btn-ghost-blue" onclick="location.href='https://arxiv.org/abs/2012.02073'">arXiv</button>
 
