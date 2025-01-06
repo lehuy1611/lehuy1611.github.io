@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Huy Le</title>
+    <title>Publications</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -10,11 +10,9 @@
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/ionicons.min.css">
     <link rel="stylesheet" href="css/flaticon.css">
@@ -48,20 +46,19 @@
                     <h2 class="heading">Publications</h2>
                     <p>For the up-to-date publication list, please visit the <a href="https://scholar.google.com/citations?hl=en&user=TF2LRvMAAAAJ">Google Scholar</a> page.</p>
                     <p>Filter by type:
-                        <select class="pubtype-select" data-filter-group="pubtype" id="pub_type" onchange="select_func.call(this)">
-                            <option value=".pubtype-0">All</option>
-                            <option value=".pubtype-1">Conference paper</option>
-                            <option value=".pubtype-2">Journal paper</option>
-                            <option value=".pubtype-3">Book chapter</option>
-                            <option value=".pubtype-4">Preprint</option>
-                            <option value=".pubtype-5">Under Review</option>
+                        <select class="pubtype-select" id="pub_type" onchange="filterPublications()">
+                            <option value="all">All</option>
+                            <option value="conference">Conference paper</option>
+                            <option value="journal">Journal paper</option>
+                            <option value="book-chapter">Book chapter</option>
+                            <option value="preprint">Preprint</option>
+                            <option value="under-review">Under Review</option>
                         </select>
                     </p>
 
+                    <!-- Publication sections -->
                     <div id="all">
                         <h3>2024</h3>
-                        <!-- Publications for 2024 -->
-                        <!-- Example entry -->
                         <div class="resume-wrap d-flex ftco-animate">
                             <div class="icon d-flex align-items-center justify-content-center">
                                 <span class="flaticon-ideas"></span>
@@ -71,24 +68,38 @@
                                 <p><strong>Title:</strong> Example Paper Title 2024<br><strong>Authors:</strong> Author A, Author B<br><strong>Conference:</strong> Example Conference 2024</p>
                             </div>
                         </div>
-                        <!-- Add more publications dynamically -->
                     </div>
 
-                    <!-- Additional sections for filtering -->
                     <div id="conference" style="display: none;">
-                        <!-- Conference papers go here -->
+                        <h3>Conference Papers</h3>
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-ideas"></span>
+                            </div>
+                            <div class="text pl-3">
+                                <p><strong>Title:</strong> Example Conference Paper<br><strong>Authors:</strong> Author A, Author B<br><strong>Conference:</strong> Example Conference 2023</p>
+                            </div>
+                        </div>
                     </div>
+
                     <div id="journal" style="display: none;">
-                        <!-- Journal papers go here -->
+                        <h3>Journal Papers</h3>
+                        <p>No journal papers available yet.</p>
                     </div>
-                    <div id="book chapter" style="display: none;">
-                        <!-- Book chapters go here -->
+
+                    <div id="book-chapter" style="display: none;">
+                        <h3>Book Chapters</h3>
+                        <p>No book chapters available yet.</p>
                     </div>
+
                     <div id="preprint" style="display: none;">
-                        <!-- Preprints go here -->
+                        <h3>Preprints</h3>
+                        <p>No preprints available yet.</p>
                     </div>
-                    <div id="under review" style="display: none;">
-                        <!-- Papers under review go here -->
+
+                    <div id="under-review" style="display: none;">
+                        <h3>Under Review</h3>
+                        <p>No papers under review yet.</p>
                     </div>
                 </div>
             </div>
@@ -124,24 +135,21 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
-    <script>
-        function init() {
-            document.getElementById("all").style.display = "block";
-            document.getElementById("conference").style.display = "none";
-            document.getElementById("journal").style.display = "none";
-            document.getElementById("book chapter").style.display = "none";
-            document.getElementById("preprint").style.display = "none";
-            document.getElementById("under review").style.display = "none";
-        }
-        window.onload = init;
+    <script src="js/main.js"></script>
 
-        function select_func() {
-            var x = document.getElementById("pub_type").value;
-            var sections = ["all", "conference", "journal", "book chapter", "preprint", "under review"];
-            sections.forEach(function(section) {
-                document.getElementById(section).style.display = (".pubtype-" + sections.indexOf(section) == x) ? "block" : "none";
+    <script>
+        function filterPublications() {
+            const sections = ["all", "conference", "journal", "book-chapter", "preprint", "under-review"];
+            const selected = document.getElementById("pub_type").value;
+
+            sections.forEach(section => {
+                document.getElementById(section).style.display = section === selected || selected === "all" ? "block" : "none";
             });
         }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            filterPublications(); // Ensure "all" is visible on load
+        });
     </script>
 </body>
 
