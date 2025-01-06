@@ -37,8 +37,11 @@
             <td style="padding:5px; width:70%; color: black;">
               <p><a class="pub1" href="{{ post.link }}" style="color: black;"><b>{{ post.title }}</b><br>{{ post.authors }}<br><i>{{ post.publication }}</i>, {{ post.year }}<br></a></p>
               {% if post.github %}
-                <a href="{{ post.github }}" style="color: black;"> <i class="fab fa-fw fa-github" aria-hidden="true"></i></a>
-              {% endif %}
+                <a class="external-link button is-small is-ghost" href="{{ post.github }}" style="color: black;">
+                  <span style="color: black; class="icon"><i class="fab fa-github"></i></span>
+                  <span>github</span>
+                </a>
+                {% endif %}
               {% if post.arxiv %}
               <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ post.arxiv }}" style="color: black;">
                 <span style="color: black; class="icon"><i class="ai ai-arxiv"></i></span>
