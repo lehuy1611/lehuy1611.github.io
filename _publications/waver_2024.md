@@ -7,7 +7,7 @@ authors: "<b>Huy Le</b>, Tung Kieu, Anh Nguyen, Ngan Le"
 collection: publications
 permalink: /publication/waver
 type: "conference paper"
-publication: "International Conference on Acoustics, Speech, and Signal Processing <b>(ICASSP)</b> 2024"
+publication: "International Conference on Acoustics, Speech, and Signal Processing <b>(ICASSP)</b>"
 year: "2024"
 date: 2024-12-04
 ---
