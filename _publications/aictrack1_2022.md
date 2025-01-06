@@ -1,16 +1,14 @@
 ---
-title: "WAVER: Writing-style Agnostic Text-Video Retrieval via Distilling Vision-Language Models through Open-Vocabulary Knowledge"
-image: "/images/publications/waver_2024.jpg"
-link: https://ieeexplore.ieee.org/document/10446193
-arxiv: 2312.09507
-github: https://github.com/Fsoft-AIC/WAVER
-authors: "<b>Huy Le</b>, Tung Kieu, Anh Nguyen, Ngan Le"
+title: "Multi-Camera Multi-Vehicle Tracking with Domain Generalization and Contextual Constraints"
+image: "/images/publications/aictrack1_2022.png"
+link: https://openaccess.thecvf.com/content/CVPR2022W/AICity/html/Chung_Multi-Camera_Multi-Vehicle_Tracking_With_Domain_Generalization_and_Contextual_Constraints_CVPRW_2022_paper.html
+authors: "Nhat Chung, <b>Huy Le</b>, Vuong Nguyen, Quang Nguyen, Thong Nguyen, Tin Thai, Synh Ha"
 collection: publications
-permalink: /publication/waver
+permalink: /publication/aictrack1_2022
 type: "conference paper"
-publication: "International Conference on Acoustics, Speech, and Signal Processing <b>(ICASSP)</b>"
-year: "2024"
-date: 2024-12-04
+publication: "IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b> Workshop"
+year: "2022"
+date: 2022-12-04
 ---
 
 ## Abstract

@@ -1,15 +1,15 @@
 ---
-title: "Tracked-Vehicle Retrieval by Natural Language Descriptions With Multi-Contextual Adaptive Knowledge"
-image: "/images/publications/aictrack2_2023.png"
-arxiv: 
-github: https://github.com/zef1611/AIC23_NLRetrieval_HCMIU_CVIP
-authors: "<b>Huy Le</b>, Quang Nguyen, Duc Luu, Truc Chau, Nhat Chung, Synh Ha"
+title: "Multi-camera People Tracking With Mixture of Realistic and Synthetic Knowledge"
+image: "/images/publications/aictrack1_2023.png"
+link: https://openaccess.thecvf.com/content/CVPR2023W/AICity/html/Nguyen_Multi-Camera_People_Tracking_With_Mixture_of_Realistic_and_Synthetic_Knowledge_CVPRW_2023_paper.html
+github: https://github.com/nguyenquivinhquang/Multi-camera-People-Tracking-With-Mixture-of-Realistic-and-Synthetic-Knowledge
+authors: "Quang Nguyen, <b>Huy Le</b>, Truc Chau, Duc Luu, Nhat Chung, Synh Ha"
 collection: publications
-permalink: /publication/aictrack2_2023
+permalink: /publication/aictrack1_2023
 type: "conference paper"
 publication: "IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b> Workshop"
 year: "2023"
-date: 2023-12-04
+date: 2023-12-03
 ---
 
 ## Abstract
