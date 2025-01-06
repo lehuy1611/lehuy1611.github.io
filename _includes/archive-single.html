@@ -35,9 +35,10 @@
                 <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; height:auto; display: block; margin: auto;" />
             </td>
             <td style="padding:5px; width:70%; color: black;">
-              <p><a class="pub1" href="{{ post.link }}" style="color: black;">{{ post.title }}</a></p>
-              <p><a class="pub2" style="color: black;"> {{ post.authors }}, <i>{{ post.publication }}</i>, {{ post.year }}. </a>
-              {% if post.github %}
+              <p><a class="pub1" href="{{ post.link }}" style="color: black;"><b>{{ post.title }}</b></a></p>
+              <p><a class="pub2" style="color: black;"> {{ post.authors }} </a>
+              <p><a class="pub3" style="color: black;"> <i>{{ post.publication }}</i>, {{ post.year }} </a>
+                {% if post.github %}
                 <a href="{{ post.github }}" style="color: black;"> <i class="fab fa-fw fa-github" aria-hidden="true"></i></a>
               {% endif %}
               </p>
