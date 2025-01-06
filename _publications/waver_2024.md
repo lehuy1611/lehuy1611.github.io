@@ -1,7 +1,7 @@
 ---
 title: "WAVER: Writing-style Agnostic Text-Video Retrieval via Distilling Vision-Language Models through Open-Vocabulary Knowledge"
 image: "/images/publications/waver_2024.jpg"
-link: https://arxiv.org/abs/2312.09507
+arxiv: https://arxiv.org/abs/2312.09507
 github: https://github.com/Fsoft-AIC/WAVER
 authors: "<b>Huy Le</b>, Tung Kieu, Anh Nguyen, Ngan Le"
 collection: publications
