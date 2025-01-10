@@ -1,7 +1,10 @@
 @import 'bootstrap/bootstrap';
 @import 'bootstrap/variables';
 
-$font-primary: 'Poppins',Arial, sans-serif;
+// $font-primary: 'Poppins',Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
+$font-primary: 'Google Sans', Arial, sans-serif;
 
 $white: #fff;
 $black: #000000;
