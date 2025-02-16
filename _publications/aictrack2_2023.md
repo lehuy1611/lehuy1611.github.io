@@ -7,7 +7,7 @@ authors: "<b>Huy Le</b>, Quang Nguyen, Duc Luu, Truc Chau, Nhat Chung, Synh Ha"
 collection: publications
 permalink: /publication/aictrack2_2023
 type: "workshop paper"
-publication: "<b>CVPR</b> Workshop"
+publication: "CVPR Workshop"
 year: "2023"
 date: 2023-12-04
 ---

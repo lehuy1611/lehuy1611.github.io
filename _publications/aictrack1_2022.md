@@ -6,7 +6,7 @@ authors: "Nhat Chung, <b>Huy Le</b>, Vuong Nguyen, Quang Nguyen, Thong Nguyen, T
 collection: publications
 permalink: /publication/aictrack1_2022
 type: "workshop paper"
-publication: "<b>CVPR</b> Workshop"
+publication: "CVPR Workshop"
 year: "2022"
 date: 2022-12-04
 ---
