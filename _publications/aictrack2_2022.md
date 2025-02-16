@@ -1,16 +1,15 @@
 ---
-title: "Multi-camera People Tracking With Mixture of Realistic and Synthetic Knowledge"
-image: "/images/publications/aictrack1_2023.png"
-link: https://openaccess.thecvf.com/content/CVPR2023W/AICity/html/Nguyen_Multi-Camera_People_Tracking_With_Mixture_of_Realistic_and_Synthetic_Knowledge_CVPRW_2023_paper.html
-github: https://github.com/nguyenquivinhquang/Multi-camera-People-Tracking-With-Mixture-of-Realistic-and-Synthetic-Knowledge
-authors: "Quang Nguyen, <b>Huy Le</b>, Truc Chau, Duc Luu, Nhat Chung, Synh Ha"
+title: "Tracked-vehicle retrieval by natural language descriptions with domain adaptive knowledge"
+image: "/images/publications/aictrack2_2022.png"
+link: https://openaccess.thecvf.com/content/CVPR2022W/AICity/html/Le_Tracked-Vehicle_Retrieval_by_Natural_Language_Descriptions_With_Domain_Adaptive_Knowledge_CVPRW_2022_paper.html
+authors: "<b>Huy Le</b>*, Quang Nguyen*, Vuong Nguyen, Thong Nguyen, Nhat Chung, Tin Thai, Synh Ha"
 collection: publications
-permalink: /publication/aictrack1_2023
+permalink: /publication/aictrack2_2022
 type: "workshop paper"
 publication: "CVPR Workshop"
-workshop: "Track 1 - Runner-up Award🥈, NVIDIA AI City Challenge Workshop"
-year: "2023"
-date: 2023-12-03
+workshop: "Track 2 - 2nd Place, NVIDIA AI City Challenge Workshop"
+year: "2022"
+date: 2022-12-04
 ---
 
 ## Abstract
