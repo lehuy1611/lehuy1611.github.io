@@ -33,7 +33,7 @@ layout: null
             <a id="navbar-brand" class="navbar-brand" href="#">
                 <span class="txt-rotate" data-period="2000" data-rotate='["Huy Le", "Le Huy"]'></span>
             </a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
@@ -41,7 +41,6 @@ layout: null
                     <li class="nav-item"><a href="index.html" class="nav-link"><span>About</span></a></li>
                     <li class="nav-item"><a href="#publication-section" class="nav-link"><span>Publications</span></a></li>
                     <li class="nav-item"><a href="experience.html" class="nav-link"><span>Experience</span></a></li>
-                    <!-- <li class="nav-item"><a href="achievement.html" class="nav-link"><span>Others</span></a></li> -->
                     <li class="nav-item"><a href="gallery.html" class="nav-link"><span>Misc</span></a></li>
                 </ul>
             </div>
@@ -54,110 +53,6 @@ layout: null
                 <div class="col-md-12">
                     <h2 class="heading"><b>Publications</b></h2>
                     <p>For the up-to-date publication list, please visit the <a href="https://scholar.google.com/citations?hl=en&user=nsoYvw8AAAAJ">Google Scholar</a> page.</p>
-                    <p>Filter by type:
-                        <select class="pubtype-select" id="pub_type" onchange="select_func.call(this)">
-                            <option value=".pubtype-0">All</option>
-                            <option value=".pubtype-1">Conference paper</option>
-                            <option value=".pubtype-2">Journal paper</option>
-                            <option value=".pubtype-3">Workshop paper</option>
-                            <option value=".pubtype-4">Preprint</option>
-                            <option value=".pubtype-5">Under Review</option>
-                        </select>
-                    </p>
-                    <!-- Filtered Sections -->
-                    <div id="all">
-                        <h3>2024</h3>
-                        {% for post in site.publications reversed %}
-                        {% if post.year == '2024' %}
-                        <div class="resume-wrap d-flex ftco-animate">
-                            <div class="text pl-3">
-                                {% include archive-single.html %}
-                            </div>
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-                        <h3>2023</h3>
-                        {% for post in site.publications reversed %}
-                        {% if post.year == '2023' %}
-                        <div class="resume-wrap d-flex ftco-animate">
-                            <div class="text pl-3">
-                                {% include archive-single.html %}
-                            </div>
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-                        <h3>2022</h3>
-                        {% for post in site.publications reversed %}
-                        {% if post.year == '2022' %}
-                        <div class="resume-wrap d-flex ftco-animate">
-                            <div class="text pl-3">
-                                {% include archive-single.html %}
-                            </div>
-                        </div>
-                        {% endif %}
-                        {% endfor %}                    
-                    </div>
-
-                    <div id="conference" style="display: none;">
-                        {% for post in site.publications reversed %}
-                        {% if post.type == 'conference paper' %}
-                        <div class="resume-wrap d-flex ftco-animate">
-                            <div class="text pl-3">
-                                {% include archive-single.html %}
-                            </div>
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-                    </div>
-
-                    <div id="journal" style="display: none;">
-                        {% for post in site.publications reversed %}
-                        {% if post.type == 'journal paper' %}
-                        <div class="resume-wrap d-flex ftco-animate">
-                            <div class="text pl-3">
-                                {% include archive-single.html %}
-                            </div>
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-                    </div>
-
-                    <div id="workshop paper" style="display: none;">
-                        {% for post in site.publications reversed %}
-                        {% if post.type == 'workshop paper' %}
-                        <div class="resume-wrap d-flex ftco-animate">
-                            <div class="text pl-3">
-                                {% include archive-single.html %}
-                            </div>
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-                    </div>
-
-                    <div id="preprint" style="display: none;">
-                        {% for post in site.publications reversed %}
-                        {% if post.type == 'preprint' %}
-                        <div class="resume-wrap d-flex ftco-animate">
-                            <div class="text pl-3">
-                                {% include archive-single.html %}
-                            </div>
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-                    </div>
-
-                    <div id="under review" style="display: none;">
-                        {% for post in site.publications reversed %}
-                        {% if post.type == 'under review' %}
-                        <div class="resume-wrap d-flex ftco-animate">
-
-                            <div class="text pl-3">
-                                {% include archive-single.html %}
-                            </div>
-                        </div>
-                        {% endif %}
-                        {% endfor %}
-                    </div>
                 </div>
             </div>
         </div>
@@ -194,32 +89,58 @@ layout: null
     <script src="js/scrollax.min.js"></script>
     <script src="js/main.js"></script>
 
+    <!-- Txt-Rotate Script -->
     <script>
-        function init() {
-            document.getElementById("all").style.display = "block";
-            document.getElementById("conference").style.display = "none";
-            document.getElementById("journal").style.display = "none";
-            document.getElementById("workshop paper").style.display = "none";
-            document.getElementById("preprint").style.display = "none";
-            document.getElementById("under review").style.display = "none";
-        }
-        window.onload = init;
+        class TxtRotate {
+            constructor(el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = '';
+                this.isDeleting = false;
+                this.tick();
+            }
 
-        function select_func() {
-            const sections = {
-                ".pubtype-0": "all",
-                ".pubtype-1": "conference",
-                ".pubtype-2": "journal",
-                ".pubtype-3": "workshop paper",
-                ".pubtype-4": "preprint",
-                ".pubtype-5": "under review"
-            };
-            const selected = this.value;
-            for (const [key, value] of Object.entries(sections)) {
-                document.getElementById(value).style.display = key === selected ? "block" : "none";
+            tick() {
+                let i = this.loopNum % this.toRotate.length;
+                let fullTxt = this.toRotate[i];
+
+                this.txt = this.isDeleting 
+                    ? fullTxt.substring(0, this.txt.length - 1) 
+                    : fullTxt.substring(0, this.txt.length + 1);
+
+                this.el.innerHTML = `<span class="wrap">${this.txt}</span>`;
+
+                let that = this;
+                let delta = 300 - Math.random() * 100;
+
+                if (this.isDeleting) delta /= 2;
+
+                if (!this.isDeleting && this.txt === fullTxt) {
+                    delta = this.period;
+                    this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                    this.isDeleting = false;
+                    this.loopNum++;
+                    delta = 500;
+                }
+
+                setTimeout(() => that.tick(), delta);
             }
         }
-    </script>
-</body>
 
+        document.addEventListener("DOMContentLoaded", function () {
+            let elements = document.getElementsByClassName('txt-rotate');
+            for (let i = 0; i < elements.length; i++) {
+                let toRotate = elements[i].getAttribute('data-rotate');
+                let period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+        });
+    </script>
+
+</body>
 </html>
