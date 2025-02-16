@@ -7,7 +7,8 @@ authors: "Quang Nguyen, <b>Huy Le</b>, Truc Chau, Duc Luu, Nhat Chung, Synh Ha"
 collection: publications
 permalink: /publication/aictrack1_2023
 type: "workshop paper"
-publication: "CVPR Workshop (Track 1 Challenge Runner-up Award 🥈)"
+publication: "CVPR Workshop"
+workshop: "NVIDIA AI City Challenge (Track 1 Challenge Runner-up Award🥈)"
 year: "2023"
 date: 2023-12-03
 ---
