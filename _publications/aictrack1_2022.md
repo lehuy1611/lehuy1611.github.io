@@ -7,7 +7,7 @@ collection: publications
 permalink: /publication/aictrack1_2022
 type: "workshop paper"
 publication: "CVPR Workshop"
-workshop: "Track 1 - 6th Place, NVIDIA AI City Challenge Workshop"
+workshop: "<b>Track 1 - 6th Place</b>, NVIDIA AI City Challenge Workshop"
 year: "2022"
 date: 2022-12-04
 ---

@@ -9,7 +9,7 @@ collection: publications
 permalink: /publication/waver
 type: "conference paper"
 publication: "ICASSP"
-workshop: "Oral Presentation"
+additional: "Oral Presentation"
 year: "2024"
 date: 2024-12-04
 ---
