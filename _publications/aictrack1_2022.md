@@ -7,6 +7,7 @@ collection: publications
 permalink: /publication/aictrack1_2022
 type: "workshop paper"
 publication: "CVPR Workshop"
+workshop: "NVIDIA AI City Challenge Workshop"
 year: "2022"
 date: 2022-12-04
 ---
