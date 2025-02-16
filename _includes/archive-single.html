@@ -35,7 +35,7 @@
                 <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; height:auto; display: block; margin: auto;" />
             </td>
             <td style="padding:5px; width:70%; color: black;">
-              <p><a class="pub1" href="{{ post.link }}" style="color: rgb(39, 174, 21);"><b>{{ post.title }}</b></a><br>{{ post.authors }}<br><i>{{ post.publication }}</i>, {{ post.year }}<br>
+              <p><a class="pub1" href="{{ post.link }}" style="color: black;"><b>{{ post.title }}</b></a><br>{{ post.authors }}<br><i>{{ post.publication }}</i>, {{ post.year }}<br>
               {% if post.workshop %}
               {{ post.workshop }}
               {% endif %}
