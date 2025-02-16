@@ -8,7 +8,7 @@ collection: publications
 permalink: /publication/aictrack2_2023
 type: "workshop paper"
 publication: "CVPR Workshop"
-workshop: "NVIDIA AI City Challenge (Track 2 Challenge Winner Award 🏆)"
+workshop: "NVIDIA AI City Challenge (Track 2 Winner Award 🏆)"
 year: "2023"
 date: 2023-12-04
 ---
