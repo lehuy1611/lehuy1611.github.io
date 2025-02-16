@@ -8,7 +8,7 @@ authors: "<b>Huy Le</b>, Tung Kieu, Anh Nguyen, Ngan Le"
 collection: publications
 permalink: /publication/waver
 type: "conference paper"
-publication: "ICASSP (Oral)"
+publication: "ICASSP (<h1 style="background-color:red">Oral</h1>)"
 year: "2024"
 date: 2024-12-04
 ---
