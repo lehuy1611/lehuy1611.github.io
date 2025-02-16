@@ -38,6 +38,7 @@
               <p><a class="pub1" href="{{ post.link }}" style="color: black;"><b>{{ post.title }}</b><br>{{ post.authors }}<br><i>{{ post.publication }}</i>, {{ post.year }}<br>
               {% if post.workshop %}
               {{ post.workshop }}
+              {% endif %}
               </a></p>
               {% if post.github %}
                 <a class="external-link button is-small is-ghost" href="{{ post.github }}" style="color: black;">
