@@ -193,6 +193,33 @@ layout: null
     <script src="js/scrollax.min.js"></script>
     <script src="js/main.js"></script>
 
+
+    <script>
+        function init() {
+            document.getElementById("all").style.display = "block";
+            document.getElementById("conference").style.display = "none";
+            document.getElementById("journal").style.display = "none";
+            document.getElementById("workshop paper").style.display = "none";
+            document.getElementById("preprint").style.display = "none";
+            document.getElementById("under review").style.display = "none";
+        }
+        window.onload = init;
+
+        function select_func() {
+            const sections = {
+                ".pubtype-0": "all",
+                ".pubtype-1": "conference",
+                ".pubtype-2": "journal",
+                ".pubtype-3": "workshop paper",
+                ".pubtype-4": "preprint",
+                ".pubtype-5": "under review"
+            };
+            const selected = this.value;
+            for (const [key, value] of Object.entries(sections)) {
+                document.getElementById(value).style.display = key === selected ? "block" : "none";
+            }
+        }
+    </script>
     <!-- Txt-Rotate Script -->
     <script>
         class TxtRotate {
