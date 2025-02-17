@@ -47,15 +47,15 @@
               <a class="pub1" href="{{ post.workshop_link }}" style="color: black;"><u>{{ post.workshop }}</u></a>
               {% endif %}              
             </p>
-              {% if post.github %}
-                <a class="external-link button is-small is-ghost" href="{{ post.github }}" style="color: black;">
-                  <span style="color: rgb(42, 152, 249); class="icon"><i class="fab fa-github"></i> code</span>
-                </a>
-                {% endif %}
-              
               {% if post.arxiv %}
               <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ post.arxiv }}" style="color: black;">
                 <span style="color: rgb(42, 152, 249); class="icon"><i class="ai ai-arxiv"></i> arXiv</span>
+              </a>
+              {% endif %}
+
+              {% if post.github %}
+              <a class="external-link button is-small is-ghost" href="{{ post.github }}" style="color: black;">
+                <span style="color: rgb(42, 152, 249); class="icon"><i class="fab fa-github"></i> Code</span>
               </a>
               {% endif %}
               
