@@ -37,10 +37,10 @@
             <td style="padding:5px; width:70%; color: black;">
               <p><a class="pub1" href="{{ post.link }}" style="color: rgb(2, 108, 201);"><b>{{ post.title }}</b></a><br>{{ post.authors }}<br><i>{{ post.publication }}</i>, {{ post.year }}<br>
                 {% if post.additional %}
-                <span style="color: red;"><b>{{ post.additional }}</b></span>
+                <span style="color: red;"><b>{{ post.additional }}</b> </span>
                 {% endif %}
                 {% if post.workshop %}
-              <a class="pub1" href="{{ post.workshop_link }}" style="color: black;">, <u>{{ post.workshop }}</u></a>
+              <a class="pub1" href="{{ post.workshop_link }}" style="color: black;"><u>{{ post.workshop }}</u></a>
               {% endif %}              
             </p>
               {% if post.github %}
