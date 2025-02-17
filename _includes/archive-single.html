@@ -37,10 +37,11 @@
             <td style="padding:5px; width:70%; color: black;">
               <p><a class="pub1" href="{{ post.link }}" style="color: rgb(2, 108, 201);"><b>{{ post.title }}</b></a><br>{{ post.authors }}<br><i>{{ post.publication }}</i>, {{ post.year }}<br>
                 {% if post.additional %}
-                <span style="color: red;"><b>{{ post.additional }}</b></span>
+                <span style="color: red;"><b>{{ post.additional }}</b>
                   {% if post.workshop %}
                   <span style="color: black;">, </span>
                   {% endif %}
+                </span>
                 {% endif %}
                 {% if post.workshop %}
               <a class="pub1" href="{{ post.workshop_link }}" style="color: black;"><u>{{ post.workshop }}</u></a>
@@ -53,7 +54,7 @@
                 </a>
                 {% endif %}
               {% if post.arxiv %}
-              <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ post.arxiv }}" style="color: black;">
+              <!-- <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ post.arxiv }}" style="color: black;"> -->
                 <span style="color: black; class="icon"><i class="ai ai-arxiv"></i></span>
                 <span>ArXiv</span>
               </a>
