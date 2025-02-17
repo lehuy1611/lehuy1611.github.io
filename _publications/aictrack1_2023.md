@@ -8,8 +8,9 @@ collection: publications
 permalink: /publication/aictrack1_2023
 type: "workshop paper"
 publication: "CVPR Workshop"
-workshop: "<b>Track 1 - Runner-up Award🥈</b>, <u>The 7th AI City Challenge Workshop</u>"
+workshop: "The 7th AI City Challenge Workshop"
 workshop_link: https://www.aicitychallenge.org/2023-challenge-winners/
+additional: "Track 1 - Runner-up Award🥈"
 year: "2023"
 date: 2023-12-03
 ---
