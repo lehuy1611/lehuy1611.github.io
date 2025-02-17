@@ -49,18 +49,22 @@
             </p>
               {% if post.github %}
                 <a class="external-link button is-small is-ghost" href="{{ post.github }}" style="color: black;">
-                  <span style="color: rgb(10, 173, 222); class="icon"><i class="fab fa-github"></i> code</span>
+                  <span style="color: rgb(42, 152, 249); class="icon"><i class="fab fa-github"></i> code</span>
                 </a>
                 {% endif %}
+              
               {% if post.arxiv %}
               <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ post.arxiv }}" style="color: black;">
-                <span style="color: rgb(10, 173, 222); class="icon"><i class="ai ai-arxiv"></i> arXiv</span>
+                <span style="color: rgb(42, 152, 249); class="icon"><i class="ai ai-arxiv"></i> arXiv</span>
               </a>
               {% endif %}
+              
               {% if post.page %}
-              <a href="{{ post.page }}" style="color: black;"> <i class="fab fa-fw fa-github" aria-hidden="true"></i></a>
-              {% endif %}
-              </p>
+              <a class="external-link button is-small is-ghost" href="{{ post.page }}" style="color: black;">
+                <span style="color: rgb(42, 152, 249); class="icon"><i class="fab fa-github"></i> project page</span>
+              </a>
+              {% endif %}  
+            </p>
             </td>
           </tr>
         </tbody>
