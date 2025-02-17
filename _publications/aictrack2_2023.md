@@ -10,7 +10,7 @@ type: "workshop paper"
 publication: "CVPR Workshop"
 workshop: "The 7th AI City Challenge Workshop"
 workshop_link: https://www.aicitychallenge.org/2023-challenge-winners/
-additional: "Track 2 - Winner Award 🏆"
+additional: "Track 2 - Winner Award🏆"
 year: "2023"
 date: 2023-12-04
 ---
