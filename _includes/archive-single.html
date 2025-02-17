@@ -48,21 +48,19 @@
               {% endif %}              
             </p>
               {% if post.arxiv %}
-              <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ post.arxiv }}" style="color: black;">
-                <span style="color: rgb(42, 152, 249); class="icon"><i class="ai ai-arxiv"></i> arXiv</span>
-              </a>
+                <a class="external-link button is-small is-ghost padding-right: 80px;" href="https://arxiv.org/abs/{{ post.arxiv }}" style="color: black;">
+                  <span style="color: rgb(42, 152, 249); class="icon"><i class="ai ai-arxiv"></i> arXiv</span>
+                </a>
               {% endif %}
-
               {% if post.github %}
-              <a class="external-link button is-small is-ghost" href="{{ post.github }}" style="color: black;">
-                <span style="color: rgb(42, 152, 249); class="icon"><i class="fab fa-github"></i> Code</span>
-              </a>
+                <a class="external-link button is-small is-ghost" href="{{ post.github }}" style="color: black;">
+                  <span style="color: rgb(42, 152, 249); class="icon"><i class="fab fa-github"></i> Code</span>
+                </a>
               {% endif %}
-              
               {% if post.page %}
-              <a class="external-link button is-small is-ghost" href="{{ post.page }}" style="color: black;">
-                <span style="color: rgb(42, 152, 249); class="icon"><i class="fab fa-github"></i> project page</span>
-              </a>
+                <a class="external-link button is-small is-ghost" href="{{ post.page }}" style="color: black;">
+                  <span style="color: rgb(42, 152, 249); class="icon"><i class="fab fa-github"></i> project page</span>
+                </a>
               {% endif %}  
             </p>
             </td>
