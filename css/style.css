@@ -8166,7 +8166,8 @@ h1, h2, h3, h4, h5,
   color: var(--themecolor) !important; }
 
 .ftco-navbar-light {
-  background: transparent !important;
+  background-color: white !important; /* Ensure navbar is white */
+  background: white !important;
   position: absolute;
   top: 0;
   left: 0;
