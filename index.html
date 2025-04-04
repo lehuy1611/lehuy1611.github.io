@@ -27,6 +27,13 @@
     <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
     <link href="{{ '/css/academicons.min.css' | relative_url }}" rel="stylesheet">
 
+    <style>
+        /* Centering the Research Interests section */
+        .research-interests {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -44,7 +51,6 @@
                     <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
                     <li class="nav-item"><a href="publication.html" class="nav-link"><span>Publications</span></a></li>
                     <li class="nav-item"><a href="gallery.html" class="nav-link"><span>Gallery</span></a></li>
-                    <!-- <li class="nav-item"><a href="misc.html" class="nav-link"><span>Misc</span></a></li> -->
                 </ul>
             </div>
         </div>
@@ -83,8 +89,7 @@
                     </a>
                 </div>
             </div>
-              
-        
+
             <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-flex-start"> 
                 <!-- About Me Section -->
                 <div class="col-lg-6 col-md-6" style="padding-right: 20px;">
@@ -97,29 +102,13 @@
                         Previously, I earned my Bachelor of Engineering in Computer Science from the International University – Vietnam National University HCMC. During my undergraduate studies, I also worked as an AI Engineer at VNG Corporation.
                         </p>
                     </div>
-                    <div class="text" style="font-size: 14px; line-height: 1.5;">
-                        <h2 style="font-size: 24px;">Research Interests</h2>
-                        <p style="color: #000; font-size: 18px;">
-                            My current research interests lie in generalizing and optimizing foundation multimodal models:
-                            <br>
-                            <br><span class="icon"><i class="fa fa-lightbulb"></i></span> <b>Understanding & Reasoning:</b> Multimodal Alignment, Representation Learning, Structured Representation, Compositional Reasoning, and Fine-grained Understanding.
-                            <br>
-                            <br><span class="icon"><i class="fa fa-bolt"></i></span> <b>Resource-efficient Models:</b> Token Merging/Pruning (Efficient Input), PEFT (Efficient Training) and Distilled/Small models (Efficient Inference).
-                        </p>
-                    </div>
                 </div>
 
-            <!-- <div class="justify-content-center align-items-center">  -->
-                    <!-- Update News Section -->
+                <!-- Recent News Section -->
                 <div class="col-lg-6 col-md-6" style="padding-left: 10px;">
                     <h2 style="font-size: 24px; margin-bottom: 20px;">Recent News</h2>
-                    <div class="update-news-box" style="color: #000; background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 8px; padding: 20px; font-size: 14px; line-height: 1.5; text-align: left; max-height: 400px; overflow-y: scroll;">
+                    <div class="update-news-box" style="color: #000; background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 8px; padding: 20px; font-size: 14px; line-height: 1.5; text-align: left; max-height: 280px; overflow-y: scroll;">
                         <ul style="list-style-type: none; padding: 0;">
-                            <!-- <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>September 2025:</strong> I will serve as a Reviewer for <b>ICCV 2025</b>.
-                                </span>
-                            </li> -->
                             <li style="margin-bottom: 15px; display: flex; align-items: center;">
                                 <span>
                                     <strong>March 2025:</strong> I will serve as a Reviewer for <b>ICCV 2025</b>.
@@ -130,41 +119,23 @@
                                     <strong>November 2024:</strong> I was awarded a Student Registration Scholarship to attend <b>ACCV 2024</b>, hosted in my hometown, Hanoi! 🇻🇳 ⛩️.
                                 </span>
                             </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>October 2024:</strong> I graduated and received Bachelor's Degree from <b>International University - Vietnam National University</b>.🎉🎉
-                                </span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>August 2024:</strong> I will serve as a Reviewer for <b>ICASSP 2025</b>.
-                                </span>
-                            </li>                            
-                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>April 2024:</strong> Our paper, titled <b>WAVER: Writing-Style Agnostic Text-Video Retrieval via Distilling Vision-Language Models Through Open-Vocabulary Knowledge</b> has been selected for an <span style="color: red;"><b>Oral Presentation</b></span> at <b>ICASSP 2024</b>.🎉🎉
-                                </span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>March 2024:</strong> I will serve as a <span style="color: rgb(8, 174, 52);"><a href="https://cmsworkshops.com/ICASSP2024/view_session.php?SessionID=1088" rel="permalink"><b>Session Chair</b></a></span> for <b>ICASSP 2024</b>.
-                                </span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>January 2024:</strong> One paper is accepted at <b>ICASSP 2024</b>.🎉🎉
-                                </span>
-                            </li>
+                            <!-- Additional news items go here -->
                         </ul>
-                        <!-- <p style="font-size: 12px; color: #555;">Stay tuned for more updates!</p> -->
                     </div>
-                <!-- Laos Tzu video -->
-                    <!-- <div class="text-center" style="margin-top: 20px;">
-                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/tLAZvESoVgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div> -->
-
                 </div>
 
+            </div>
+            
+            <!-- Research Interests Section (Centered, One Column) -->
+            <div class="research-interests">
+                <h2 style="font-size: 24px;">Research Interests</h2>
+                <p style="color: #000; font-size: 18px;">
+                    My current research interests lie in generalizing and optimizing foundation multimodal models:
+                    <br>
+                    <br><span class="icon"><i class="fa fa-lightbulb"></i></span> <b>Understanding & Reasoning:</b> Multimodal Alignment, Representation Learning, Structured Representation, Compositional Reasoning, and Fine-grained Understanding.
+                    <br>
+                    <br><span class="icon"><i class="fa fa-bolt"></i></span> <b>Resource-efficient Models:</b> Token Merging/Pruning (Efficient Input), PEFT (Efficient Training) and Distilled/Small models (Efficient Inference).
+                </p>
             </div>
         </div>
     </section>
