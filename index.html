@@ -28,227 +28,70 @@
     <link href="{{ '/css/academicons.min.css' | relative_url }}" rel="stylesheet">
 
     <style>
-        /* Centering the Research Interests section */
-        .research-interests {
-            text-align: left;
+        /* Footer with transparent background and slightly faded gray */
+        #footer {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.1); /* Slightly faded gray (0.1 for transparency) */
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            color: #000;
+            transition: background-color 0.3s ease; /* Smooth transition when showing the footer */
         }
+
+        /* Additional custom styles for other sections */
     </style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-    <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light site-navbar-target bg-white" id="ftco-navbar">
-        <div class="container">
-            <a id="navbar-brand" class="navbar-brand" href="#">
-                <span class="txt-rotate" data-period="2000" data-rotate='["Huy Le", "Le Huy"]'></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav nav ml-auto">
-                    <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-                    <li class="nav-item"><a href="publication.html" class="nav-link"><span>Publications</span></a></li>
-                    <li class="nav-item"><a href="gallery.html" class="nav-link"><span>Gallery</span></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Your existing content here... -->
 
-    <section class="ftco-section" id="about-section">
+    <footer id="footer">
         <div class="container">
-        
-            <!-- Contact Information Section -->
-            <div class="row justify-content-center mb-4">
+            <div class="row">
                 <div class="col-md-12 text-center">
-                    <a class="external-link button is-light" 
-                       href="https://scholar.google.com/citations?user=nsoYvw8AAAAJ&hl" 
-                       style="color: #000; margin-right: 15px; display: inline-block;">
-                        <span class="icon"><i class="ai ai-google-scholar"></i></span>
-                        <span>Scholar</span>
-                    </a>
-            
-                    <a class="external-link button is-light" 
-                       href="https://github.com/zef1611" 
-                       style="color: #000; margin-right: 15px; display: inline-block;">
-                        <span class="icon"><i class="fab fa-github"></i></span>
-                        <span>Github</span>
-                    </a>
-                    <a class="external-link button is-light" 
-                       href="https://www.linkedin.com/in/lehuy1611" 
-                       style="color: #000; margin-right: 15px; display: inline-block;">
-                        <span class="icon"><i class="fab fa-linkedin"></i></span>
-                        <span>Linkedin</span>
-                    </a>
-                    <a class="external-link button is-light" 
-                       href="mailto:lehuy2316@gmail.com" 
-                       style="color: #000; display: inline-block;">
-                        <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                        <span>Email</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-flex-start" style="max-height: 380px;"> 
-                <!-- About Me Section -->
-                <div class="col-lg-6 col-md-6" style="padding-right: 20px;">
-                    <div class="text" style="font-size: 14px; line-height: 1.5;">
-                        <h2 style="font-size: 24px;">About Me</h2>
-                        <p style="color: #000; font-size: 18px;">
-                            <b>Xin chào! I am Huy, an AI Resident at FPT Software AI Center, working closely with Prof. <a href="https://uark-aicv.github.io/team/ngan_le">Ngan Le</a> and Prof. <a href="https://tungk.github.io/">Tung Kieu</a>. I'm on my way to explore the world in every aspect through my viewpoint lens by becoming a researcher.</b>
-                        </p>
-                        <p style="color: #000; font-size: 18px;">
-                        Previously, I earned my Bachelor of Engineering in Computer Science from the International University – Vietnam National University HCMC, where I done my bachelor's thesis with Lecturer <a href="https://it.hcmiu.edu.vn/user/ltson/">Le Thanh Son</a> . During my undergraduate studies, I also worked as an AI Engineer at VNG Corporation.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Recent News Section -->
-                <div class="col-lg-6 col-md-6" style="padding-left: 10px;">
-                    <h2 style="font-size: 24px; margin-bottom: 20px;">Recent News</h2>
-                    <div class="update-news-box" style="color: #000; background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 8px; padding: 20px; font-size: 14px; line-height: 1.5; text-align: left; max-height: 290px; overflow-y: scroll;">
-                        <ul style="list-style-type: none; padding: 0;">
-                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>March 2025:</strong> I will serve as a Reviewer for <b>ICCV 2025</b>.
-                                </span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>November 2024:</strong> I was awarded a Student Registration Scholarship to attend <b>ACCV 2024</b>, hosted in my hometown, Hanoi! 🇻🇳 ⛩️.
-                                </span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>October 2024:</strong> I graduated and received Bachelor's Degree from <b>International University - Vietnam National University</b>.🎉🎉
-                                </span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>August 2024:</strong> I will serve as a Reviewer for <b>ICASSP 2025</b>.
-                                </span>
-                            </li>                            
-                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>April 2024:</strong> Our paper, titled <b>WAVER: Writing-Style Agnostic Text-Video Retrieval via Distilling Vision-Language Models Through Open-Vocabulary Knowledge</b> has been selected for an <span style="color: red;"><b>Oral Presentation</b></span> at <b>ICASSP 2024</b>.🎉🎉
-                                </span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>March 2024:</strong> I will serve as a <span style="color: rgb(8, 174, 52);"><a href="https://cmsworkshops.com/ICASSP2024/view_session.php?SessionID=1088" rel="permalink"><b>Session Chair</b></a></span> for <b>ICASSP 2024</b>.
-                                </span>
-                            </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: center;">
-                                <span>
-                                    <strong>January 2024:</strong> One paper is accepted at <b>ICASSP 2024</b>.🎉🎉
-                                </span>
-                            </li>
-                            <!-- Additional news items go here -->
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            
-            <!-- Research Interests Section (One Column) -->
-            <div class="row justify-content-left mb-4">
-                <h2 style="font-size: 24px;"><b>Research Interests</b></h2>
-                <p style="color: #000; font-size: 18px;">
-                    My current research interests lie in generalizing and optimizing foundation multimodal models:
-                    <br><span class="icon"><i class="fa fa-lightbulb"></i></span> <b>Understanding & Reasoning:</b> Multimodal Alignment, Representation Learning, Structured Representation, Compositional Reasoning, and Fine-grained Understanding.
-                    <br><span class="icon"><i class="fa fa-bolt"></i></span> <b>Resource-efficient Models:</b> Token Merging/Pruning (Efficient Input), PEFT (Efficient Training) and Distilled/Small models (Efficient Inference).
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="SITE_FOOTER" class="xU8fqS SITE_FOOTER wixui-footer" tabindex="-1">
-        <div class="_C0cVf">
-            <div class="_4XcTfy" data-testid="screenWidthContainerBg"></div>
-        </div>
-        <div class="U4Bvut">
-            <div class="G5K6X8">
-                <div class="gUbusX" data-testid="screenWidthContainerBgCenter"></div>
-            </div>
-            <div class="CJF7A2">
-                <div data-mesh-id="SITE_FOOTERinlineContent" data-testid="inline-content" class="">
-                    <div data-mesh-id="SITE_FOOTERinlineContent-gridContainer" data-testid="mesh-container-content">
-                        <!--$-->
-                        <div id="comp-lnawco0r" class="HcOXKn c9GqVL QxJLC3 lq2cno YQcXTT comp-lnawco0r wixui-rich-text" data-testid="richTextElement" ariaattributes="[object Object]">
-                            <p class="font_7 wixui-rich-text__text" style="font-size:11px;">
-                                <span class="color_40 wixui-rich-text__text">
-                                    <span style="font-size:11px;" class="wixui-rich-text__text">
-                                        <span style="letter-spacing:0.05em;" class="wixui-rich-text__text">
-                                            <span style="font-family:wfont_a71992_742595b112bf4ba6835bf037f2cf3599,wf_742595b112bf4ba6835bf037f,orig_montserrat_regular;" class="wixui-rich-text__text">
-                                                © 2023 Huy Le
-                                            </span>
-                                        </span>
-                                    </span>
-                                </span>
-                            </p>
-                        </div>
-                        <!--/$-->
-                        <!--$-->
-                        <div id="comp-ln94v0yb" class="comp-ln94v0yb SPY_vo">
-                            <div data-mesh-id="comp-ln94v0ybinlineContent" data-testid="inline-content" class="">
-                                <div data-mesh-id="comp-ln94v0ybinlineContent-gridContainer" data-testid="mesh-container-content">
-                                    <!--$-->
-                                    <div id="comp-ln83md3h" class="comp-ln83md3h" data-semantic-classname="button">
-                                        <a data-testid="linkElement" href="mailto:lehuy2316@gmail.com" target="_self" class="StylableButton2545352419__root style-lnaymgq3__root wixui-button StylableButton2545352419__link" aria-label="">
-                                            <span class="StylableButton2545352419__container">
-                                                <span class="StylableButton2545352419__icon wixui-button__icon" aria-hidden="true" data-testid="stylablebutton-icon">
-                                                    <span><!-- Email icon SVG --></span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <!--/$-->
-                                    <!--$-->
-                                    <div id="comp-ln83nh50" class="comp-ln83nh50" data-semantic-classname="button">
-                                        <a data-testid="linkElement" href="https://github.com/zef1611" target="_blank" rel="noreferrer noopener" class="StylableButton2545352419__root style-lnaymsvt__root wixui-button StylableButton2545352419__link" aria-label="">
-                                            <span class="StylableButton2545352419__container">
-                                                <span class="StylableButton2545352419__icon wixui-button__icon" aria-hidden="true" data-testid="stylablebutton-icon">
-                                                    <span><!-- GitHub icon SVG --></span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <!--/$-->
-                                    <!--$-->
-                                    <div id="comp-ln83vlit" class="comp-ln83vlit" data-semantic-classname="button">
-                                        <a data-testid="linkElement" href="https://www.linkedin.com/in/lehuy1611" target="_blank" rel="noreferrer noopener" class="StylableButton2545352419__root style-lnayn03q__root wixui-button StylableButton2545352419__link" aria-label="">
-                                            <span class="StylableButton2545352419__container">
-                                                <span class="StylableButton2545352419__icon wixui-button__icon" aria-hidden="true" data-testid="stylablebutton-icon">
-                                                    <span><!-- LinkedIn icon SVG --></span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <!--/$-->
-                                </div>
-                            </div>
-                        </div>
-                        <!--/$-->
-                    </div>
+                    <p>
+                        Copyright &copy; 
+                        <script>document.write(new Date().getFullYear());</script> Huy Le. All Rights Reserved.
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery-migrate-3.0.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/aos.js"></script>
-<script src="js/jquery.animateNumber.min.js"></script>
-<script src="js/scrollax.min.js"></script>
-<script src="js/main.js"></script>
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
+        </svg></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Function to check if the user has scrolled to the bottom
+        window.onscroll = function() {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                document.getElementById("footer").style.display = "block";  // Show footer when at the bottom
+            }
+        };
+    </script>
+
 </body>
 
 </html>
