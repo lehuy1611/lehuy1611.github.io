@@ -44,7 +44,7 @@ layout: null
             color: #000;
             bottom: 0;
             font-size: 14px;
-            /* border-top: 2px solid #ddd; Adds a thin gray line at the top of the footer */
+            border-top: 2px solid #ddd; /* Adds a thin gray line at the top of the footer */
         }
 
         /* Ensuring footer is at the bottom of the page */
@@ -132,7 +132,7 @@ layout: null
                         <h3>2022</h3>
                         {% for post in site.publications reversed %}
                         {% if post.year == '2022' %}
-                        <div class="resume-wrap d-flex ftco-animate">
+                        <div class="resume-wrap d-flex ftco-animate" style="border-top: 0px">
                             <div class="text pl-3">
                                 {% include archive-single.html %}
                             </div>
