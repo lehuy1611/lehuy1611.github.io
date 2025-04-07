@@ -4,7 +4,11 @@ image: "/images/publications/waver_2024.jpg"
 link: https://ieeexplore.ieee.org/document/10446193
 arxiv: 2312.09507
 github: https://github.com/Fsoft-AIC/WAVER
-authors: "<b>Huy Le</b>, Tung Kieu, Anh Nguyen, Ngan Le"
+authors:
+    - huyle
+    - tungkieu
+    - anhnguyen
+    - nganle
 collection: publications
 permalink: /publication/waver
 type: "conference paper"

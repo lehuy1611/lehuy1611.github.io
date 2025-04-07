@@ -2,7 +2,14 @@
 title: "Multi-Camera Multi-Vehicle Tracking with Domain Generalization and Contextual Constraints"
 image: "/images/publications/aictrack1_2022.png"
 link: https://openaccess.thecvf.com/content/CVPR2022W/AICity/html/Chung_Multi-Camera_Multi-Vehicle_Tracking_With_Domain_Generalization_and_Contextual_Constraints_CVPRW_2022_paper.html
-authors: "Nhat Chung, <b>Huy Le</b>, Vuong Nguyen, Quang Nguyen, Thong Nguyen, Tin Thai, Synh Ha"
+authors: 
+    - nhatchung
+    - huyle
+    - vuongnguyen
+    - quangnguyen
+    - thongnguyen
+    - tinthai
+    - synhha
 collection: publications
 permalink: /publication/aictrack1_2022
 type: "workshop paper"

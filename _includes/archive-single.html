@@ -64,19 +64,40 @@
                 {% if post.authors %}
                   <div class="authors-info" style="color: black;">
                     {% assign authors_list = "" %}
+                    {% assign total_authors = post.authors | size %}
+                    {% assign cofirst_count = post.cofirst | default: 0 %}
+                    {% assign cofirst_authors = post.authors | slice: 0, cofirst_count %}
+                    
                     {% for author_id in post.authors %}
                       {% assign author = site.data.authors[author_id] %}
+                      {% assign current_index = forloop.index %}  <!-- Get current index in the loop -->
+                
                       {% if author_id == "huyle" %}
-                        <!-- Make the author with id "huyle" bold -->
-                        {% assign authors_list = authors_list | append: "<strong><a href='" | append: author.url | append: "' target='_blank' style='font-weight: bold;'>" | append: author.name | append: "</a></strong>, " %}
+                        <!-- Make the author with id "huyle" bold and a link if a URL exists -->
+                        {% if author.url %}
+                          {% assign authors_list = authors_list | append: "<strong><a href='" | append: author.url | append: "' target='_blank' style='font-weight: bold;'>" | append: author.name | append: "</a></strong>" %}
+                        {% else %}
+                          {% assign authors_list = authors_list | append: "<strong>" | append: author.name | append: "</strong>" %}
+                        {% endif %}
                       {% else %}
-                        <!-- Other authors with normal text weight -->
-                        {% assign authors_list = authors_list | append: "<a href='" | append: author.url | append: "' target='_blank'>" | append: author.name | append: "</a>, " %}
+                        <!-- Other authors with normal text weight and link if a URL exists -->
+                        {% if author.url %}
+                          {% assign authors_list = authors_list | append: "<a href='" | append: author.url | append: "' target='_blank'>" | append: author.name | append: "</a>" %}
+                        {% else %}
+                          {% assign authors_list = authors_list | append: author.name %}
+                        {% endif %}
+                      {% endif %}
+                
+                      <!-- Check if this author is a co-first author and add an asterisk -->
+                      {% if cofirst_authors contains author_id %}
+                        {% assign authors_list = authors_list | append: "*" %}
+                      {% endif %}
+                
+                      <!-- Add a comma if it's not the last author -->
+                      {% if current_index < total_authors %}
+                        {% assign authors_list = authors_list | append: ", " %}
                       {% endif %}
                     {% endfor %}
-                    
-                    <!-- Remove the last comma and space -->
-                    {% assign authors_list = authors_list | slice: 0, authors_list.size - 2 %}
                     
                     <!-- Output the final list of authors -->
                     <p>{{ authors_list }}</p>

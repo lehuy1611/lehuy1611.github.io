@@ -3,7 +3,13 @@ title: "Multi-camera People Tracking With Mixture of Realistic and Synthetic Kno
 image: "/images/publications/aictrack1_2023.png"
 link: https://openaccess.thecvf.com/content/CVPR2023W/AICity/html/Nguyen_Multi-Camera_People_Tracking_With_Mixture_of_Realistic_and_Synthetic_Knowledge_CVPRW_2023_paper.html
 github: https://github.com/nguyenquivinhquang/Multi-camera-People-Tracking-With-Mixture-of-Realistic-and-Synthetic-Knowledge
-authors: "Quang Nguyen, <b>Huy Le</b>, Truc Chau, Duc Luu, Nhat Chung, Synh Ha"
+authors:     
+    - quangnguyen
+    - huyle
+    - trucchau
+    - ducluu
+    - nhatchung
+    - synhha
 collection: publications
 permalink: /publication/aictrack1_2023
 type: "workshop paper"

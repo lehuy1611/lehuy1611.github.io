@@ -2,7 +2,14 @@
 title: "Tracked-vehicle Retrieval by Natural Language Descriptions with Domain Adaptive Knowledge"
 image: "/images/publications/aictrack2_2022.png"
 link: https://openaccess.thecvf.com/content/CVPR2022W/AICity/html/Le_Tracked-Vehicle_Retrieval_by_Natural_Language_Descriptions_With_Domain_Adaptive_Knowledge_CVPRW_2022_paper.html
-authors: "<b>Huy Le</b>*, Quang Nguyen*, Vuong Nguyen, Thong Nguyen, Nhat Chung, Tin Thai, Synh Ha"
+authors: 
+    - huyle
+    - quangnguyen
+    - vuongnguyen
+    - thongnguyen
+    - nhatchung
+    - tinthai
+    - synhha
 collection: publications
 permalink: /publication/aictrack2_2022
 type: "workshop paper"
