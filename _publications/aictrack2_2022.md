@@ -4,9 +4,9 @@ image: "/images/publications/aictrack2_2022.png"
 link: https://openaccess.thecvf.com/content/CVPR2022W/AICity/html/Le_Tracked-Vehicle_Retrieval_by_Natural_Language_Descriptions_With_Domain_Adaptive_Knowledge_CVPRW_2022_paper.html
 authors: 
     - huyle
-    - quangnguyen
-    - vuongnguyen
-    - thongnguyen
+    - quangcvip
+    - vuongcvip
+    - thongcvip
     - nhatchung
     - tinthai
     - synhha

@@ -5,9 +5,9 @@ link: https://openaccess.thecvf.com/content/CVPR2022W/AICity/html/Chung_Multi-Ca
 authors: 
     - nhatchung
     - huyle
-    - vuongnguyen
-    - quangnguyen
-    - thongnguyen
+    - vuongcvip
+    - quangcvip
+    - thongcvip
     - tinthai
     - synhha
 collection: publications
