@@ -41,26 +41,21 @@
         /* @media (max-width: 991.98px) {
             #ftco-navbar,
             .navbar-collapse.show {
-                background-color: #ffffff !important;
-            }
-
-            /* Force text links inside the mobile navbar to stay black/gray */
-            .navbar-nav .nav-link {
-                color: #212529 !important; /* Bootstrap's default dark */
-            }
-
-            /* Optional: ensure hamburger icon is dark too */
-            .navbar-toggler {
-                color: #212529 !important;
-                border-color: #212529 !important;
-            }
-                    /* Optional: ensure hamburger icon is dark too */
-            .navbar-toggler-icon {
-                color: #212529 !important;
-                border-color: #212529 !important;
+                background-color: #fff !important;
             }
         } */
-
+        /* Footer with gray background */
+        footer.ftco-footer {
+            background-color: #ffffff; /* Gray background */
+            position: relative; /* Ensures it is positioned relative to the page */
+            width: 100%;
+            padding: 0px 0; /* Add padding to give some space around content */
+            text-align: center;
+            color: #000;
+            bottom: 0;
+            font-size: 14px;
+            border-top: 2px solid #ddd; /* Adds a thin gray line at the top of the footer */
+        }
 
         /* Ensuring footer is at the bottom of the page */
         body, html {
