@@ -1,5 +1,28 @@
 {% include base_path %}
+<style>
+  @media (max-width: 767px) {
+    .publication-table tr {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
+    .publication-table td {
+      width: 100% !important;
+      text-align: center !important;
+      padding: 10px !important;
+    }
+
+    .publication-table img {
+      max-width: 80%;
+      height: auto;
+    }
+
+    .publication-table .pub1 {
+      font-size: 18px;
+    }
+  }
+</style>
 {% if post.header.teaser %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% else %}
@@ -11,6 +34,7 @@
 {% else %}
   {% assign title = post.title %}
 {% endif %}
+
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
@@ -28,7 +52,7 @@
     {% endif %}
 
     {% if post.collection == 'publications' %}
-      <table style="width:100%; border:5px; border-spacing:0px; border-collapse:collapse; margin-right:auto; color: black;">
+      <table class="publication-table" style="width:100%; border:5px; border-spacing:0px; border-collapse:collapse; margin-right:auto; color: black;">
         <tbody>
           <tr>
             <td style="padding:15px; width:30%; text-align:center;">
