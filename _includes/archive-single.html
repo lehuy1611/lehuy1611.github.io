@@ -22,6 +22,18 @@
       font-size: 18px;
     }
   }
+  .authors-info .pub-author {
+    margin-bottom: 10px;
+  }
+  .authors-info a {
+    text-decoration: none; /* Remove underline from the links */
+    color: black; /* Default color for the links */
+  }
+
+  .authors-info a:hover {
+    color: rgb(42, 152, 249); /* Hover color for links */
+  }
+
 </style>
 {% if post.header.teaser %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
