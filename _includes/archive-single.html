@@ -59,7 +59,30 @@
                 <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; height:auto; display: block; margin: auto;" />
             </td>
             <td style="padding:5px; width:70%; color: black;">
-              <p><a class="pub1" href="{{ post.link }}" style="color: rgb(2, 108, 201);"><b>{{ post.title }}</b></a><br>{{ post.authors }}<br><i>{{ post.publication }}</i>, {{ post.year }}<br>
+              <p><a class="pub1" href="{{ post.link }}" style="color: rgb(2, 108, 201);"><b>{{ post.title }}</b></a>
+                <br>
+                {% if post.authors %}
+                  <div class="authors-info">
+                    {% for author_id in post.authors %}
+                      {% assign author = site.data.authors[author_id] %}
+                      <div class="pub-author" style="margin-bottom: 15px;">
+                        {% if author_id == "huyle" %}
+                          <!-- Make the author with id "huyle" bold -->
+                          <a href="{{ author.url }}" target="_blank" style="font-weight: bold;">
+                            <strong>{{ author.name }}</strong>
+                          </a>
+                        {% else %}
+                          <!-- Other authors with normal text weight -->
+                          <a href="{{ author.url }}" target="_blank">
+                            <strong>{{ author.name }}</strong>
+                          </a>
+                        {% endif %}
+                      </div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+                <br>
+                <i>{{ post.publication }}</i>, {{ post.year }}<br>
                 {% if post.additional %}
                 <span style="color: red;"><b>{{ post.additional }}</b>
                   {% if post.workshop %}
