@@ -5,7 +5,7 @@ link: https://openaccess.thecvf.com/content/CVPR2023W/AICity/html/Le_Tracked-Veh
 github: https://github.com/zef1611/AIC23_NLRetrieval_HCMIU_CVIP
 authors: 
     - huyle
-    - quangnguyen
+    - quangcvip
     - ducluu
     - trucchau
     - nhatchung

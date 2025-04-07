@@ -4,7 +4,7 @@ image: "/images/publications/aictrack1_2023.png"
 link: https://openaccess.thecvf.com/content/CVPR2023W/AICity/html/Nguyen_Multi-Camera_People_Tracking_With_Mixture_of_Realistic_and_Synthetic_Knowledge_CVPRW_2023_paper.html
 github: https://github.com/nguyenquivinhquang/Multi-camera-People-Tracking-With-Mixture-of-Realistic-and-Synthetic-Knowledge
 authors:     
-    - quangnguyen
+    - quangcvip
     - huyle
     - trucchau
     - ducluu

@@ -26,7 +26,7 @@ trucchau:
   name: Truc Chau
   url: https://scholar.google.com/citations?user=SI29sjwAAAAJ
 
-quangnguyen:
+quangcvip:
   name: Quang Nguyen
   url: https://scholar.google.com/citations?user=x0dxK5YAAAAJ
 
@@ -49,3 +49,6 @@ thongcvip:
 
 vuongcvip:
   name: Vuong Nguyen
+
+ducvip:
+  name: Duc Luu
