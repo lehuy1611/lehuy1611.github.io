@@ -6,7 +6,7 @@ github: https://github.com/zef1611/AIC23_NLRetrieval_HCMIU_CVIP
 authors: 
     - huyle
     - quangcvip
-    - ducluu
+    - duccvip
     - trucchau
     - nhatchung
     - synhha

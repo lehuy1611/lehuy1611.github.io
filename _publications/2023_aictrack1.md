@@ -7,7 +7,7 @@ authors:
     - quangcvip
     - huyle
     - trucchau
-    - ducluu
+    - duccvip
     - nhatchung
     - synhha
 collection: publications
