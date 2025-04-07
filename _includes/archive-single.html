@@ -21,7 +21,6 @@
     .publication-table .pub1 {
       font-size: 18px;
     }
-
   }
 </style>
 {% if post.header.teaser %}
@@ -60,7 +59,7 @@
                 <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; height:auto; display: block; margin: auto;" />
             </td>
             <td style="padding:5px; width:70%; color: black;">
-              <p><a class="pub1" href="{{ post.link }}" style="color: rgb(2, 108, 201);"><b>{{ post.title }}</b></a><br>
+              <p><a class="pub1" href="{{ post.link }}" style="color: rgb(2, 108, 201);"><b>{{ post.title }}</b></a><br>{{ post.authors }}<br><i>{{ post.publication }}</i>, {{ post.year }}<br>
                 {% if post.additional %}
                 <span style="color: red;"><b>{{ post.additional }}</b>
                   {% if post.workshop %}
