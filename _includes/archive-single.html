@@ -62,23 +62,24 @@
               <p><a class="pub1" href="{{ post.link }}" style="color: rgb(2, 108, 201);"><b>{{ post.title }}</b></a>
                 <br>
                 {% if post.authors %}
-                  <div class="authors-info">
+                  <div class="authors-info" style="color: black;">
+                    {% assign authors_list = "" %}
                     {% for author_id in post.authors %}
                       {% assign author = site.data.authors[author_id] %}
-                      <div class="pub-author" style="margin-bottom: 15px;">
-                        {% if author_id == "huyle" %}
-                          <!-- Make the author with id "huyle" bold -->
-                          <a href="{{ author.url }}" target="_blank" style="font-weight: bold;">
-                            <strong>{{ author.name }}</strong>
-                          </a>
-                        {% else %}
-                          <!-- Other authors with normal text weight -->
-                          <a href="{{ author.url }}" target="_blank">
-                            <strong>{{ author.name }}</strong>
-                          </a>
-                        {% endif %}
-                      </div>
+                      {% if author_id == "huyle" %}
+                        <!-- Make the author with id "huyle" bold -->
+                        {% assign authors_list = authors_list | append: "<strong><a href='" | append: author.url | append: "' target='_blank' style='font-weight: bold;'>" | append: author.name | append: "</a></strong>, " %}
+                      {% else %}
+                        <!-- Other authors with normal text weight -->
+                        {% assign authors_list = authors_list | append: "<a href='" | append: author.url | append: "' target='_blank'>" | append: author.name | append: "</a>, " %}
+                      {% endif %}
                     {% endfor %}
+                    
+                    <!-- Remove the last comma and space -->
+                    {% assign authors_list = authors_list | slice: 0, authors_list.size - 2 %}
+                    
+                    <!-- Output the final list of authors -->
+                    <p>{{ authors_list }}</p>
                   </div>
                 {% endif %}
                 <br>
