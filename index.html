@@ -39,21 +39,25 @@
 
     <style>
         @media (max-width: 991.98px) {
-        #ftco-navbar,
-        .navbar-collapse.show {
-            background-color: #ffffff !important;
-        }
+            #ftco-navbar,
+            .navbar-collapse.show,
+            .navbar-collapse {
+                background-color: #ffffff !important;
+            }
 
-        /* Force text links inside the mobile navbar to stay black/gray */
-        .navbar-nav .nav-link {
-            color: #212529 !important; /* Bootstrap's default dark */
-        }
+            .navbar-nav .nav-link {
+                color: #212529 !important; /* Bootstrap default dark gray */
+            }
 
-        /* Optional: ensure hamburger icon is dark too */
-        .navbar-toggler {
-            color: #000 !important;
-            border-color: #000 !important;
-        }
+            .navbar-toggler {
+                color: #000 !important;
+                border-color: #000 !important;
+            }
+
+            /* Optional: Add padding or spacing between dropdown items */
+            .navbar-nav .nav-item {
+                padding: 8px 16px;
+            }
         }
 
 
