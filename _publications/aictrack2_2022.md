@@ -10,6 +10,7 @@ authors:
     - nhatchung
     - tinthai
     - synhha
+cofirst: 2
 collection: publications
 permalink: /publication/aictrack2_2022
 type: "workshop paper"
