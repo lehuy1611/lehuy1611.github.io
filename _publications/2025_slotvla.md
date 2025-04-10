@@ -16,7 +16,7 @@ permalink: /publication/uno
 type: "under review"
 publication: "Under Review"
 year: "2025"
-date: 2025-01-05
+date: 2025-03-05
 ---
 <!-- <button class="btn btn-round btn-sm btn-ghost-blue" onclick="location.href='https://arxiv.org/abs/2312.09507'">arXiv</button> -->
 
