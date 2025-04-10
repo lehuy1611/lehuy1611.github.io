@@ -6,7 +6,7 @@ github:
 authors: 
     - nhatchung
     - huyle
-    - taisei
+    - taiseih
     - khoavo
     - tungkieu
     - anhnguyen
