@@ -109,6 +109,16 @@ layout: null
                     <h5 class="heading"><b>* indicates equal contribution</b></h5>
                     <!-- Filtered Sections -->
                     <div id="all">
+                        <h3>2025</h3>
+                        {% for post in site.publications reversed %}
+                        {% if post.year == '2025' %}
+                        <div class="resume-wrap d-flex ftco-animate">
+                            <div class="text pl-3">
+                                {% include archive-single.html %}
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
                         <h3>2024</h3>
                         {% for post in site.publications reversed %}
                         {% if post.year == '2024' %}
