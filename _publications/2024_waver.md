@@ -1,6 +1,6 @@
 ---
 title: "WAVER: Writing-style Agnostic Text-Video Retrieval via Distilling Vision-Language Models through Open-Vocabulary Knowledge"
-image: "/images/publications/waver_2024.jpg"
+image: "/images/publications/waver_2024.png"
 link: https://ieeexplore.ieee.org/document/10446193
 arxiv: 2312.09507
 github: https://github.com/Fsoft-AIC/WAVER
