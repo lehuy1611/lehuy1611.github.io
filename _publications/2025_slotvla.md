@@ -1,6 +1,6 @@
 ---
 title: "SlotVLA: Towards Relation-Centric Robotic Manipulation"
-image: "/images/publications/slotvla_2025.jpg"
+image: "/images/publications/slotvla_2025.png"
 arxiv: 
 github: 
 authors: 
