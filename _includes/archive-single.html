@@ -73,7 +73,7 @@
             <td style="padding:5px; width:70%; color: black;">
               <p><a class="pub1" href="{{ post.link }}" style="color: rgb(2, 108, 201);"><b>{{ post.title }}</b></a>
                 {% if post.authors %}
-                  <div class="authors-info" style="color: black;">
+                  <div class="authors-info" style="color: black; margin-top: 0px;">
                     {% assign authors_list = "" %}
                     {% assign total_authors = post.authors | size %}
                     {% assign cofirst_count = post.cofirst | default: 0 %}
