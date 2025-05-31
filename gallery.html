@@ -73,6 +73,30 @@
             border-radius: 0px;
         }
     </style>
+
+
+    <style>
+        /* 1) If ClustrMaps injects an <iframe> with id="clustrmaps", hide it: */
+        #clustrmaps {
+            display: none !important;
+        }
+
+        /* 2) In case they wrap it in a div or use a class, hide any common container:
+            (inspect the generated HTML in your browser to confirm the exact selector) */
+        .CM_widget,            /* hypothetical class name */
+        .clustrmaps-container, /* hypothetical wrapper */
+        iframe[src*="clustrmaps.com"] /* any iframe pointing to clustrmaps.com */ {
+            display: none !important;
+        }
+
+        /* 3) If there’s an <img> or <a> link back to ClustrMaps, hide those too: */
+        img[src*="clustrmaps.com"],
+        a[href*="clustrmaps.com"] {
+            display: none !important;
+        }
+    </style>
+
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -240,6 +264,12 @@
                 stroke="#F96D00" />
         </svg></div>
 
+    <script 
+        type="text/javascript" 
+        id="clustrmaps" 
+        src="//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=n&d=qA8TMRvi__8MrDOt6HeObIuOv_RmPNbz452h_CbC2Xw&co=ffffff&cmo=ff5353&cmn=3bc157&ct=808080">
+    </script>
+    
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
