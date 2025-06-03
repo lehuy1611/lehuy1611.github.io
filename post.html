@@ -29,6 +29,38 @@
 
 
     <style>
+        /* Footer with gray background */
+        footer.ftco-footer {
+            background-color: #ffffff; /* Gray background */
+            position: relative; /* Ensures it is positioned relative to the page */
+            width: 100%;
+            padding: 0px 0; /* Add padding to give some space around content */
+            text-align: center;
+            color: #000;
+            bottom: 0;
+            font-size: 14px;
+            border-top: 2px solid #ddd; /* Adds a thin gray line at the top of the footer */
+        }
+
+        /* Ensuring footer is at the bottom of the page */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ftco-footer {
+            margin-top: auto; /* This pushes the footer to the bottom of the page */
+        }
+
+        #ftco-loader {
+            display: none; /* Hide loader after page load */
+        }
+        
+    </style>
+
+    <style>
         /* 1) If ClustrMaps injects an <iframe> with id="clustrmaps", hide it: */
         #clustrmaps {
             display: none !important;
