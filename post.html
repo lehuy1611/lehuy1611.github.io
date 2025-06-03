@@ -27,53 +27,6 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/academicons.min.css">
 
-    <style>
-        /* Footer with gray background */
-        footer.ftco-footer {
-            background-color: #ffffff; /* Gray background */
-            position: relative; /* Ensures it is positioned relative to the page */
-            width: 100%;
-            padding: 0px 0; /* Add padding to give some space around content */
-            text-align: center;
-            color: #000;
-            bottom: 0;
-            font-size: 14px;
-            border-top: 2px solid #ddd; /* Adds a thin gray line at the top of the footer */
-        }
-
-        /* Ensuring footer is at the bottom of the page */
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .ftco-footer {
-            margin-top: auto; /* This pushes the footer to the bottom of the page */
-        }
-
-        #ftco-loader {
-            display: none; /* Hide loader after page load */
-        }
-                /* Gallery Image Styling */
-        .project.img {
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 100%;
-            padding-bottom: 100%; /* Maintains aspect ratio */
-        }
-
-        /* Responsive gallery images to fit within col-md-4 */
-        .col-md-4 .project.img {
-            height: 150px; /* Adjust height to fit the grid */
-            background-size: cover;
-            background-position: center center;
-            border-radius: 0px;
-        }
-    </style>
-
 
     <style>
         /* 1) If ClustrMaps injects an <iframe> with id="clustrmaps", hide it: */
@@ -111,26 +64,24 @@
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav nav ml-auto">
-                    <li class="nav-item"><a href="index.html" class="nav-link"><span>About</span></a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link"><span>Home</span></a></li>
                     <li class="nav-item"><a href="publication.html" class="nav-link"><span>Publications</span></a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link"><span>Blogs</span></a></li>
                     <li class="nav-item"><a href="gallery.html" class="nav-link"><span>Gallery</span></a></li>
-                    <li class="nav-item"><a href="#misc-section" class="nav-link"><span>Misc</span></a></li>
+                    <li class="nav-item"><a href="#post-section" class="nav-link"><span>Posts</span></a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="ftco-section ftco-no-pb goto-here" id="gallery-section">
+    <section class="ftco-section ftco-no-pb goto-here" id="post-section">
         <div class="container-fluid px-md-0">
             <div class="row no-gutters justify-content-center pb-5">
                 <div class="col-md-12 heading-section text-center ftco-animate">
-                    <h2 id="misc-section" class="mb-4">Misc</h2>
+                    <h2 id="post-section" class="mb-4">Posts</h2>
+                    <p><h4>In Progess....</h4></p>
                 </div>
             </div>
-        </div>
-    </section>
-
+          
     <footer class="ftco-footer ftco-section" style="color: #ffffff; position: relative;">
         <div class="container position-relative">
           <div class="row">
@@ -145,6 +96,10 @@
             <!-- Right-aligned Icons (overlay for md and up) -->
             <div class="footer-icons d-none d-md-block" 
                  style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+              <a href="mailto:lehuy2316@gmail.com" 
+                 style="color: #000; margin: 0 8px; font-size: 22px;">
+                <i class="fa fa-envelope"></i>
+              </a>
               <a href="https://scholar.google.com/citations?user=nsoYvw8AAAAJ&hl" 
                  style="color: #000; margin: 0 8px; font-size: 22px;">
                 <i class="ai ai-google-scholar"></i>
@@ -157,14 +112,18 @@
                  style="color: #000; margin: 0 8px; font-size: 22px;">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="mailto:lehuy2316@gmail.com" 
+              <a href="https://x.com/huile1611" 
                  style="color: #000; margin: 0 8px; font-size: 22px;">
-                <i class="fa fa-envelope"></i>
+                <i class="fa-brands fa-x-twitter"></i>
               </a>
             </div>
       
             <!-- Stacked icons for mobile -->
             <div class="col-12 text-center d-block d-md-none mt-2">
+              <a href="mailto:lehuy2316@gmail.com" 
+                 style="color: #000; margin: 0 8px; font-size: 22px;">
+                <i class="fa fa-envelope"></i>
+              </a>
               <a href="https://scholar.google.com/citations?user=nsoYvw8AAAAJ&hl" 
                  style="color: #000; margin: 0 8px; font-size: 22px;">
                 <i class="ai ai-google-scholar"></i>
@@ -177,16 +136,15 @@
                  style="color: #000; margin: 0 8px; font-size: 22px;">
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="mailto:lehuy2316@gmail.com" 
+              <a href="https://x.com/huile1611" 
                  style="color: #000; margin: 0 8px; font-size: 22px;">
-                <i class="fa fa-envelope"></i>
+                <i class="fa-brands fa-x-twitter"></i>
               </a>
             </div>
           </div>
         </div>
     </footer>
-      
-
+       
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
             <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
