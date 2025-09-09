@@ -34,7 +34,6 @@ toannguyen:
   name: Toan Nguyen
   url: https://scholar.google.com/citations?user=PhqGEY8AAAAJ
 
-
 taiseih:
   name: Taisei Hanyu
   url: https://scholar.google.com/citations?user=mJuHh7UAAAAJ
@@ -42,6 +41,21 @@ taiseih:
 khoavo:
   name: Khoa Vo
   url: https://scholar.google.com/citations?user=Iyvx8vcAAAAJ
+
+kashuy:
+  name: Kashu Yamazaki
+  url: https://scholar.google.com/citations?user=TF2LRvMAAAAJ
+
+frederickb:
+  name: Frederick Bumgarner
+
+chaser:
+  name: Chase Rainwater
+  url: https://scholar.google.com/citations?user=jGiFLP8AAAAJ
+
+duymhn:
+  name: Duy Minh Ho Nguyen
+  url: https://scholar.google.com/citations?user=_NIyeykAAAAJ
 
 tinthai:
   name: Tin Thai
