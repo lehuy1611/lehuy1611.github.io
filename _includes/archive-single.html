@@ -114,7 +114,15 @@
                     <p style="color: black; margin-top: 0px; margin: 0px 0;">{{ authors_list }}</p>
                   </div>
                 {% endif %}
-                <i>{{ post.publication }}</i>, {{ post.year }}<br>
+                <i>{{ post.publication }}</i>, {{ post.year }}
+                {% if post.type or post.type2 %}
+                  <span style="color: #2a98f9; font-weight: bold;">
+                    {% if post.type %}{{ post.type }}{% endif %}
+                    {% if post.type and post.type2 %} / {% endif %}
+                    {% if post.type2 %}{{ post.type2 }}{% endif %}
+                  </span>
+                {% endif %}
+                <br>
                 {% if post.additional %}
                 <span style="color: red;"><b>{{ post.additional }}</b>
                   {% if post.workshop %}
