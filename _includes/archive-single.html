@@ -114,15 +114,7 @@
                     <p style="color: black; margin-top: 0px; margin: 0px 0;">{{ authors_list }}</p>
                   </div>
                 {% endif %}
-                <i>{{ post.publication }}</i>, {{ post.year }}
-                {% if post.type or post.type2 %}
-                  <span style="color: #2a98f9; font-weight: bold;">
-                    {% if post.type %}{{ post.type }}{% endif %}
-                    {% if post.type and post.type2 %} / {% endif %}
-                    {% if post.type2 %}{{ post.type2 }}{% endif %}
-                  </span>
-                {% endif %}
-                <br>
+                <i>{{ post.publication }}</i>, {{ post.year }}<br>
                 {% if post.additional %}
                 <span style="color: red;"><b>{{ post.additional }}</b>
                   {% if post.workshop %}
@@ -234,3 +226,25 @@
     {% endif %}
   </article>
 </div>
+
+{% assign all_types = "" %}
+{% for post in site.publications %}
+  {% if post.type %}
+    {% unless all_types contains post.type %}
+      {% assign all_types = all_types | append: post.type | append: "," %}
+    {% endunless %}
+  {% endif %}
+  {% if post.type2 %}
+    {% unless all_types contains post.type2 %}
+      {% assign all_types = all_types | append: post.type2 | append: "," %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+{% assign type_list = all_types | split: "," | uniq | sort %}
+
+{% assign selected_type = "preprint" %} {# Example #}
+{% for post in site.publications %}
+  {% if post.type == selected_type or post.type2 == selected_type %}
+    <!-- Show this post -->
+  {% endif %}
+{% endfor %}
