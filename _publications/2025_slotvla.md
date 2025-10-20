@@ -1,16 +1,17 @@
 ---
-title: "SlotVLA: Towards Relation-Centric Robotic Manipulation"
+title: "SlotVLA: Towards Modeling of Object–Relation Representations in Robotic Manipulation"
 image: "/images/publications/slotvla_2025.png"
 arxiv:
 github:
 authors:
+  - taiseih
   - nhatchung
   - huyle
-  - taiseih
   - khoavo
   - tungkieu
   - anhnguyen
   - nganle
+cofirst: 2
 collection: publications
 permalink: /publication/uno
 type: "under review"
