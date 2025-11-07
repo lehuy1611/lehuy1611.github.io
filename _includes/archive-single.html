@@ -114,7 +114,11 @@
                     <p style="color: black; margin-top: 0px; margin: 0px 0;">{{ authors_list }}</p>
                   </div>
                 {% endif %}
+                {% if post.type == 'conference paper' %}
                 <i><b>{{ post.publication }}</b></i>, {{ post.year }}<br>
+                {% else %}
+                <i>{{ post.publication }}</i>, {{ post.year }}<br>
+                {% endif %}
                 {% if post.additional %}
                 <span style="color: red;"><b>{{ post.additional }}</b>
                   {% if post.workshop %}
