@@ -16,6 +16,7 @@ type2: "preprint"
 publication: "ICASSP"
 additional: "Oral Presentation"
 year: "2024"
+ac_year: "2024"
 date: 2024-12-04
 ---
 

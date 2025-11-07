@@ -18,6 +18,7 @@ publication: "CVPR Workshop"
 workshop: "The 6th AI City Challenge Workshop"
 workshop_link: https://www.aicitychallenge.org/2022-ai-city-challenge/
 year: "2022"
+ac_year: "2022"
 date: 2022-12-04
 ---
 
