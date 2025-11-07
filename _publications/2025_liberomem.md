@@ -20,7 +20,8 @@ collection: publications
 permalink: /publication/liberomem
 type: "conference paper"
 publication: "AAAI"
-year: "2025"
+year: "2026"
+ac_year: "2025"
 date: 2025-11-05
 ---
 
