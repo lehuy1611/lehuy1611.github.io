@@ -114,7 +114,7 @@
                     <p style="color: black; margin-top: 0px; margin: 0px 0;">{{ authors_list }}</p>
                   </div>
                 {% endif %}
-                <i>{{ post.publication }}</i>, {{ post.year }}<br>
+                <i><b>{{ post.publication }}</b></i>, {{ post.year }}<br>
                 {% if post.additional %}
                 <span style="color: red;"><b>{{ post.additional }}</b>
                   {% if post.workshop %}
@@ -210,7 +210,7 @@
                 <b><a class="pub1" href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: black;">{{ title }}</a></b>
               {% endif %}
               <br>
-              <p><a class="pub2" style="color: black;"><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</a></p>
+              <p><a class="pub2" style="color: black;"><i><b>{{ post.venue }}</b></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</a></p>
             </td>
           </tr>
         </tbody>
