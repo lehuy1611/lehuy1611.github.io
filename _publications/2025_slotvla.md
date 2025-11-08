@@ -7,8 +7,14 @@ authors:
   - taiseih
   - nhatchung
   - huyle
+  - toannguyen
+  - yukiikebe
+  - anthonyg
+  - duymhn
   - khoavo
   - tungkieu
+  - kashuy
+  - chaser
   - anhnguyen
   - nganle
 cofirst: 2
@@ -24,3 +30,4 @@ date: 2025-03-05
 <!-- <button class="btn btn-round btn-sm btn-ghost-blue" onclick="location.href='https://arxiv.org/abs/2312.09507'">arXiv</button> -->
 
 ## Abstract
+
