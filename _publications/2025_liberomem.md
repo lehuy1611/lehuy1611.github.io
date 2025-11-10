@@ -16,6 +16,7 @@ authors:
   - tungkieu
   - anhnguyen
   - nganle
+cofirst: 2
 collection: publications
 permalink: /publication/liberomem
 type: "conference paper"
