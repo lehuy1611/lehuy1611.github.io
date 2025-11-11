@@ -2,6 +2,7 @@
 title: "Rethinking Progression of Memory State in Robotic Manipulation: An Object-Centric Perspective"
 image: "/images/publications/liberomem_2025.png"
 arxiv:
+page: https://libero-mem.github.io/
 github:
 authors:
   - nhatchung
