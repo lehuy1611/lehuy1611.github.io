@@ -21,6 +21,7 @@ cofirst: 2
 collection: publications
 permalink: /publication/liberomem
 type: "conference paper"
+type2: "preprint"
 publication: "AAAI"
 year: "2026"
 ac_year: "2025"

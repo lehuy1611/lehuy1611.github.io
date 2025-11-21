@@ -210,7 +210,7 @@ layout: null
 
                     <div id="preprint" style="display: none;">
                         {% for post in site.publications reversed %}
-                        {% if post.type == 'preprint' %}
+                        {% if post.type == 'preprint' or post.type2 == 'preprint' %}
                         <div class="resume-wrap d-flex ftco-animate">
                             <div class="text pl-3">
                                 {% include archive-single.html %}

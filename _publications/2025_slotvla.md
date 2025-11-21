@@ -21,6 +21,7 @@ cofirst: 2
 collection: publications
 permalink: /publication/slotvla
 type: "under review"
+type2: "preprint"
 publication: "Under Review"
 year: "2025"
 ac_year: "2025"
