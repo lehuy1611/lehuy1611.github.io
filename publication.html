@@ -198,7 +198,7 @@ layout: null
 
                     <div id="workshop paper" style="display: none;">
                         {% for post in site.publications reversed %}
-                        {% if post.type == 'workshop paper' %}
+                        {% if post.type == 'workshop paper' or post.type2 == 'workshop paper' %}
                         <div class="resume-wrap d-flex ftco-animate">
                             <div class="text pl-3">
                                 {% include archive-single.html %}
