@@ -22,8 +22,8 @@ collection: publications
 permalink: /publication/slotvla
 type: "conference paper"
 type2: "preprint"
-publication: "ICRA 2026"
-year: "2025"
+publication: "ICRA"
+year: "2026"
 ac_year: "2026"
 date: 2026-05-05
 ---

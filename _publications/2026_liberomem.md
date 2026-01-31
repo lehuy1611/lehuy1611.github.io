@@ -23,7 +23,7 @@ permalink: /publication/liberomem
 type: "conference paper"
 type2: "preprint"
 publication: "AAAI"
-year: "2025"
+year: "2026"
 ac_year: "2026"
 date: 2026-01-05
 ---
