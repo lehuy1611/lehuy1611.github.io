@@ -16,20 +16,9 @@
     scrollProperty: 'scroll'
   });
 
-
-	var fullHeight = function() {
-
-		$('.js-fullheight').css('height', $(window).height());
-		$(window).resize(function(){
-			$('.js-fullheight').css('height', $(window).height());
-		});
-
-	};
-	fullHeight();
-
 	// loader
 	var loader = function() {
-		setTimeout(function() { 
+		setTimeout(function() {
 			if($('#ftco-loader').length > 0) {
 				$('#ftco-loader').removeClass('show');
 			}
@@ -40,31 +29,7 @@
 	// Scrollax
    $.Scrollax();
 
-
-
-   // Burger Menu
-	var burgerMenu = function() {
-
-		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
-
-			event.preventDefault();
-
-			if ( $('#ftco-nav').is(':visible') ) {
-				$(this).removeClass('active');
-			} else {
-				$(this).addClass('active');	
-			}
-
-			
-			
-		});
-
-	};
-	burgerMenu();
-
-
 	var onePageClick = function() {
-
 
 		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
 	    event.preventDefault();
@@ -74,64 +39,12 @@
 	    $('html, body').animate({
 	        scrollTop: $($.attr(this, 'href')).offset().top - 70
 	    }, 500, function() {
-	    	// window.location.hash = href;
 	    });
 		});
 
 	};
 
 	onePageClick();
-	
-
-	var carousel = function() {
-		$('.home-slider').owlCarousel({
-	    loop:true,
-	    autoplay: true,
-	    margin:0,
-	    animateOut: 'fadeOut',
-	    animateIn: 'fadeIn',
-	    nav:false,
-	    autoplayHoverPause: false,
-	    items: 1,
-	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
-	    responsive:{
-	      0:{
-	        items:1
-	      },
-	      600:{
-	        items:1
-	      },
-	      1000:{
-	        items:1
-	      }
-	    }
-		});
-	};
-	carousel();
-
-	$('nav .dropdown').hover(function(){
-		var $this = $(this);
-		// 	 timer;
-		// clearTimeout(timer);
-		$this.addClass('show');
-		$this.find('> a').attr('aria-expanded', true);
-		// $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
-		$this.find('.dropdown-menu').addClass('show');
-	}, function(){
-		var $this = $(this);
-			// timer;
-		// timer = setTimeout(function(){
-			$this.removeClass('show');
-			$this.find('> a').attr('aria-expanded', false);
-			// $this.find('.dropdown-menu').removeClass('animated-fast fadeInUp show');
-			$this.find('.dropdown-menu').removeClass('show');
-		// }, 100);
-	});
-
-
-	$('#dropdown04').on('show.bs.dropdown', function () {
-	  console.log('show');
-	});
 
 	// scroll
 	var scrollWindow = function() {
@@ -143,19 +56,19 @@
 
 			if (st > 150) {
 				if ( !navbar.hasClass('scrolled') ) {
-					navbar.addClass('scrolled');	
+					navbar.addClass('scrolled');
 				}
-			} 
+			}
 			if (st < 150) {
 				if ( navbar.hasClass('scrolled') ) {
 					navbar.removeClass('scrolled sleep');
 				}
-			} 
+			}
 			if ( st > 350 ) {
 				if ( !navbar.hasClass('awake') ) {
-					navbar.addClass('awake');	
+					navbar.addClass('awake');
 				}
-				
+
 				if(sd.length > 0) {
 					sd.addClass('sleep');
 				}
@@ -173,41 +86,12 @@
 	};
 	scrollWindow();
 
-	
-
-	var counter = function() {
-		
-		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-
-				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-				$('.number').each(function(){
-					var $this = $(this),
-						num = $this.data('number');
-						console.log(num);
-					$this.animateNumber(
-					  {
-					    number: num,
-					    numberStep: comma_separator_number_step
-					  }, 7000
-					);
-				});
-				
-			}
-
-		} , { offset: '95%' } );
-
-	}
-	counter();
-
-
 	var contentWayPoint = function() {
 		var i = 0;
 		$('.ftco-animate').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-				
+
 				i++;
 
 				$(this.element).addClass('item-animate');
@@ -229,9 +113,9 @@
 							el.removeClass('item-animate');
 						},  k * 50, 'easeInOutExpo' );
 					});
-					
+
 				}, 100);
-				
+
 			}
 
 		} , { offset: '95%' } );
@@ -244,18 +128,18 @@
     closeOnContentClick: true,
     closeBtnInside: false,
     fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    mainClass: 'mfp-no-margins mfp-with-zoom',
      gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      preload: [0,1]
     },
     image: {
       verticalFit: true
     },
     zoom: {
       enabled: true,
-      duration: 300 // don't foget to change the duration also in CSS
+      duration: 300
     }
   });
 
@@ -268,25 +152,6 @@
 
     fixedContentPos: false
   });
-
-
-  var goHere = function() {
-
-		$('.mouse-icon').on('click', function(event){
-			
-			event.preventDefault();
-
-			$('html,body').animate({
-				scrollTop: $('.goto-here').offset().top
-			}, 500, 'easeInOutExpo');
-			
-			return false;
-		});
-	};
-	goHere();
-
-	// $("#myScrollspy").scrollspy({ offset: -75 });
-
 
 
 var TxtRotate = function(el, toRotate, period) {
@@ -330,7 +195,7 @@ TxtRotate.prototype.tick = function() {
   }, delta);
 };
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
   var elements = document.getElementsByClassName('txt-rotate');
   for (var i=0; i<elements.length; i++) {
     var toRotate = elements[i].getAttribute('data-rotate');
@@ -344,54 +209,33 @@ window.onload = function() {
   css.type = "text/css";
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
-};
+});
 
 
 })(jQuery);
 
 
-
-
-
-
-
-// this makes the height of each page equal to the height of the window
-// $('.page').css('height', $( window ).height());
-
 // scrollspy section
 (function($){
-  //variable that will hold the href attr of the links in the menu
   var sections = [];
-  //variable that stores the id of the section
   var id = false;
-  //variable for the selection of the anchors in the navbar
   var $navbara = $('#navi a');
-  
+
   $navbara.click(function(e){
-    //prevent the page from refreshing
     e.preventDefault();
-    //set the top offset animation and speed
     $('html, body').animate({
       scrollTop: $($(this).attr('href')).offset().top - 180
 },500);
     hash($(this).attr('href'));
   });
-  
-  
-  
-  //select all the anchors in the navbar one after another
+
   $navbara.each(function(){
-   // and adds them in the sections variable
     sections.push($($(this).attr('href')));
-    
   })
   $(window).scroll(function(e){
-    // scrollTop retains the value of the scroll top with the reference at the middle of the page
     var scrollTop = $(this).scrollTop() + ($(window).height()/2);
-    //cycle through the values in sections array
     for (var i in sections) {
       var section = sections[i];
-      //if scrollTop variable is bigger than the top offset of a section in the sections array then 
       if (scrollTop > section.offset().top){
         var scrolled_id = section.attr('id');
       }
@@ -399,7 +243,7 @@ window.onload = function() {
     if (scrolled_id !== id) {
       id = scrolled_id;
       $($navbara).removeClass('current');
-      $('#navi a[href="#' + id + '"]').addClass('current'); 
+      $('#navi a[href="#' + id + '"]').addClass('current');
     }
   })
 })(jQuery);
@@ -411,32 +255,3 @@ hash = function(h){
     location.hash = h;
   }
 }
-
-
-$(function() {
-
-  $(".progress").each(function() {
-
-    var value = $(this).attr('data-value');
-    var left = $(this).find('.progress-left .progress-bar');
-    var right = $(this).find('.progress-right .progress-bar');
-
-    if (value > 0) {
-      if (value <= 50) {
-        right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
-      } else {
-        right.css('transform', 'rotate(180deg)')
-        left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
-      }
-    }
-
-  })
-
-  function percentageToDegrees(percentage) {
-
-    return percentage / 100 * 360
-
-  }
-
-});
-

@@ -19,20 +19,15 @@ layout: null
     <link rel="shortcut icon" href="images/icons/cloudy.ico">
     <link rel="apple-touch-icon" href="images/icons/cloudy.ico">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
     <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/academicons.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <style>
         /* Footer with gray background */
@@ -316,12 +311,6 @@ layout: null
                 stroke="#F96D00" />
         </svg></div>
 
-    <!-- <script 
-        type="text/javascript" 
-        id="clustrmaps" 
-        src="//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=n&d=qA8TMRvi__8MrDOt6HeObIuOv_RmPNbz452h_CbC2Xw&co=ffffff&cmo=ff5353&cmn=3bc157&ct=808080">
-    </script> -->
-
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -329,10 +318,8 @@ layout: null
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
     <script src="js/main.js"></script>
 
@@ -346,7 +333,7 @@ layout: null
             document.getElementById("preprint").style.display = "none";
             document.getElementById("under review").style.display = "none";
         }
-        window.onload = init;
+        document.addEventListener("DOMContentLoaded", init);
 
         function select_func() {
             const sections = {
@@ -362,58 +349,6 @@ layout: null
                 document.getElementById(value).style.display = key === selected ? "block" : "none";
             }
         }
-    </script>
-    <!-- Txt-Rotate Script -->
-    <script>
-        class TxtRotate {
-            constructor(el, toRotate, period) {
-                this.toRotate = toRotate;
-                this.el = el;
-                this.loopNum = 0;
-                this.period = parseInt(period, 10) || 2000;
-                this.txt = '';
-                this.isDeleting = false;
-                this.tick();
-            }
-
-            tick() {
-                let i = this.loopNum % this.toRotate.length;
-                let fullTxt = this.toRotate[i];
-
-                this.txt = this.isDeleting 
-                    ? fullTxt.substring(0, this.txt.length - 1) 
-                    : fullTxt.substring(0, this.txt.length + 1);
-
-                this.el.innerHTML = `<span class="wrap">${this.txt}</span>`;
-
-                let that = this;
-                let delta = 300 - Math.random() * 100;
-
-                if (this.isDeleting) delta /= 2;
-
-                if (!this.isDeleting && this.txt === fullTxt) {
-                    delta = this.period;
-                    this.isDeleting = true;
-                } else if (this.isDeleting && this.txt === '') {
-                    this.isDeleting = false;
-                    this.loopNum++;
-                    delta = 500;
-                }
-
-                setTimeout(() => that.tick(), delta);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            let elements = document.getElementsByClassName('txt-rotate');
-            for (let i = 0; i < elements.length; i++) {
-                let toRotate = elements[i].getAttribute('data-rotate');
-                let period = elements[i].getAttribute('data-period');
-                if (toRotate) {
-                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
-                }
-            }
-        });
     </script>
 
 </body>
