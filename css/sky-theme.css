@@ -89,26 +89,32 @@ body,
     100% { background-position: 220% center; }
 }
 
-/* Replace the template's themed circle behind the brand with a sky sparkle
-   that gently twinkles (scale + opacity pulse). */
+/* Replace the template's themed circle behind the brand with a soft sky
+   halo — a radial sky-tinted gradient that fades to transparent so the
+   rotating text reads cleanly on top without any shape conflicts. */
 .navbar-brand:after,
 #navbar-brand:after {
-    background: url('../images/icons/sparkle.svg') center center / contain no-repeat !important;
-    width: 80px !important;
-    height: 52px !important;
-    left: -22px !important;
-    border-radius: 0 !important;
-    animation: sky-twinkle 3.2s ease-in-out infinite;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(186, 230, 253, 0.85) 0%,   /* sky-200 */
+        rgba(125, 211, 252, 0.45) 45%,  /* sky-300 */
+        rgba(56, 189, 248, 0) 75%       /* sky-400, fully transparent */
+    ) !important;
+    width: 160px !important;
+    height: 64px !important;
+    left: -28px !important;
+    border-radius: 50% !important;
+    animation: sky-breathe 4.5s ease-in-out infinite;
 }
 
-@keyframes sky-twinkle {
+@keyframes sky-breathe {
     0%, 100% {
         transform: translateY(-50%) scale(1);
         opacity: 1;
     }
     50% {
-        transform: translateY(-50%) scale(1.08);
-        opacity: 0.78;
+        transform: translateY(-50%) scale(1.06);
+        opacity: 0.82;
     }
 }
 
@@ -137,14 +143,14 @@ body,
 .ftco-section li a,
 .ftco-section span a {
     font-weight: 700;
-    color: #0EA5E9; /* sky-500 */
+    color: #0369A1; /* sky-700: main tone */
     text-decoration: none;
     transition: color 0.15s ease-in-out;
 }
 .ftco-section p a:hover,
 .ftco-section li a:hover,
 .ftco-section span a:hover {
-    color: #38BDF8; /* sky-400 */
+    color: #0EA5E9; /* sky-500: lighter pop on hover */
     text-decoration: underline;
 }
 
@@ -167,7 +173,7 @@ body,
     transition: color 0.15s ease-in-out;
 }
 .external-link.button.is-light:hover {
-    color: #0EA5E9 !important;
+    color: #0369A1 !important;
 }
 
 /* --------- Footer -------------------------------------------------------- */
