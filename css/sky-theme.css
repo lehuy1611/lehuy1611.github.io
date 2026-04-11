@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Sky-aesthetic theme — shared across every page of the portfolio.
+   Inspired by Saining Xie's academic minimalism, retuned with sky-blue as
+   the dominant accent tone. Link, heading, nav-brand, and card colors all
+   come from the Tailwind sky palette (500–700) on a slate-700 body text.
+
+   Palette reference:
+     sky-50   #F0F9FF   (card backgrounds)
+     sky-100  #E0F2FE
+     sky-200  #BAE6FD   (card borders)
+     sky-300  #7DD3FC
+     sky-400  #38BDF8   (link hover)
+     sky-500  #0EA5E9   (main link color)
+     sky-600  #0284C7
+     sky-700  #0369A1   (headings, nav brand)
+     sky-800  #075985
+     sky-900  #0C4A6E
+     slate-700 #334155  (body text)
+   ========================================================================== */
+
+/* --------- Typography ---------------------------------------------------- */
+
+body,
+.ftco-section,
+.ftco-section p,
+.ftco-section li,
+.ftco-section span:not(.icon):not(.oi) {
+    font-family: "Lato", "Poppins", Verdana, Helvetica, sans-serif !important;
+    color: #334155;
+}
+
+.ftco-section p,
+.ftco-section li span:not(.icon):not(.oi) {
+    color: #334155 !important;
+}
+
+/* --------- Headings ------------------------------------------------------ */
+
+.ftco-section h1,
+.ftco-section h2,
+.ftco-section h3,
+.ftco-section h4,
+.ftco-section h5 {
+    font-family: "Lato", "Poppins", sans-serif !important;
+    font-weight: 700;
+    color: #0369A1; /* sky-700 */
+    letter-spacing: -0.01em;
+}
+
+/* --------- Navbar brand -------------------------------------------------- */
+
+#navbar-brand,
+.navbar-brand {
+    font-family: "Lato", sans-serif !important;
+    font-weight: 900;
+    color: #0369A1 !important;
+    letter-spacing: -0.01em;
+}
+
+/* Rotating name ("Huy Le" / "Le Huy"):
+   Lato 900 with a sky gradient text fill — artistic, painterly feel.
+   Falls back to solid sky-700 in browsers without background-clip:text. */
+.navbar-brand .txt-rotate,
+#navbar-brand .txt-rotate {
+    font-family: "Lato", sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+    color: #0369A1; /* fallback */
+    background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 50%, #0369A1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Replace the template's themed circle behind the brand with a sky sparkle. */
+.navbar-brand:after,
+#navbar-brand:after {
+    background: url('../images/icons/sparkle.svg') center center / contain no-repeat !important;
+    width: 80px !important;
+    height: 52px !important;
+    left: -22px !important;
+    border-radius: 0 !important;
+}
+
+/* Keep nav links readable & on-theme */
+.ftco_navbar .nav-link {
+    font-family: "Lato", "Poppins", sans-serif !important;
+}
+.ftco_navbar .nav-link:hover,
+.ftco_navbar .nav-item.active > .nav-link {
+    color: #0369A1 !important;
+}
+
+/* --------- In-content links ---------------------------------------------- */
+
+.ftco-section p a,
+.ftco-section li a,
+.ftco-section span a {
+    font-weight: 700;
+    color: #0EA5E9; /* sky-500 */
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+}
+.ftco-section p a:hover,
+.ftco-section li a:hover,
+.ftco-section span a:hover {
+    color: #38BDF8; /* sky-400 */
+    text-decoration: underline;
+}
+
+/* --------- Sky-tinted cards (Recent News, any similar container) -------- */
+
+.update-news-box,
+.sky-card {
+    background-color: #F0F9FF !important; /* sky-50 */
+    border: 1px solid #BAE6FD !important;  /* sky-200 */
+    color: #334155 !important;
+}
+.update-news-box strong,
+.sky-card strong {
+    color: #0369A1;
+}
+
+/* --------- External contact buttons (Email / Scholar / GitHub / …) ------ */
+
+.external-link.button.is-light {
+    transition: color 0.15s ease-in-out;
+}
+.external-link.button.is-light:hover {
+    color: #0EA5E9 !important;
+}
+
+/* --------- Footer -------------------------------------------------------- */
+
+footer.ftco-footer p,
+footer.ftco-footer span {
+    color: #334155 !important;
+}
