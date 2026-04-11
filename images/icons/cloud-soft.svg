@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 64" fill="none">
+  <!-- Minimal cloud: single flat sky-100 fill, low opacity, no halo,
+       no gradient — sits as a whisper of sky behind the text so it
+       blends with the white page instead of drawing attention. -->
+  <path d="M 20 50
+           C 4 50 0 34 16 26
+           C 14 12 36 4 50 18
+           C 58 2 92 2 100 22
+           C 110 8 142 10 150 30
+           C 168 28 174 48 158 52
+           L 20 52
+           C 12 52 10 50 20 50 Z"
+        fill="#E0F2FE"
+        opacity="0.55"/>
+</svg>
