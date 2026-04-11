@@ -1,33 +1,6 @@
- AOS.init({
- 	duration: 800,
- 	easing: 'slide'
- });
-
 (function($) {
 
 	"use strict";
-
-	$(window).stellar({
-    responsive: true,
-    parallaxBackgrounds: true,
-    parallaxElements: true,
-    horizontalScrolling: false,
-    hideDistantElements: false,
-    scrollProperty: 'scroll'
-  });
-
-	// loader
-	var loader = function() {
-		setTimeout(function() {
-			if($('#ftco-loader').length > 0) {
-				$('#ftco-loader').removeClass('show');
-			}
-		}, 1);
-	};
-	loader();
-
-	// Scrollax
-   $.Scrollax();
 
 	var onePageClick = function() {
 
@@ -85,73 +58,6 @@
 		});
 	};
 	scrollWindow();
-
-	var contentWayPoint = function() {
-		var i = 0;
-		$('.ftco-animate').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-
-				i++;
-
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
-
-					$('body .ftco-animate.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							var effect = el.data('animate-effect');
-							if ( effect === 'fadeIn') {
-								el.addClass('fadeIn ftco-animated');
-							} else if ( effect === 'fadeInLeft') {
-								el.addClass('fadeInLeft ftco-animated');
-							} else if ( effect === 'fadeInRight') {
-								el.addClass('fadeInRight ftco-animated');
-							} else {
-								el.addClass('fadeInUp ftco-animated');
-							}
-							el.removeClass('item-animate');
-						},  k * 50, 'easeInOutExpo' );
-					});
-
-				}, 100);
-
-			}
-
-		} , { offset: '95%' } );
-	};
-	contentWayPoint();
-
-	// magnific popup
-	$('.image-popup').magnificPopup({
-    type: 'image',
-    closeOnContentClick: true,
-    closeBtnInside: false,
-    fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom',
-     gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1]
-    },
-    image: {
-      verticalFit: true
-    },
-    zoom: {
-      enabled: true,
-      duration: 300
-    }
-  });
-
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-
-    fixedContentPos: false
-  });
 
 
 var TxtRotate = function(el, toRotate, period) {
@@ -213,45 +119,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 })(jQuery);
-
-
-// scrollspy section
-(function($){
-  var sections = [];
-  var id = false;
-  var $navbara = $('#navi a');
-
-  $navbara.click(function(e){
-    e.preventDefault();
-    $('html, body').animate({
-      scrollTop: $($(this).attr('href')).offset().top - 180
-},500);
-    hash($(this).attr('href'));
-  });
-
-  $navbara.each(function(){
-    sections.push($($(this).attr('href')));
-  })
-  $(window).scroll(function(e){
-    var scrollTop = $(this).scrollTop() + ($(window).height()/2);
-    for (var i in sections) {
-      var section = sections[i];
-      if (scrollTop > section.offset().top){
-        var scrolled_id = section.attr('id');
-      }
-    }
-    if (scrolled_id !== id) {
-      id = scrolled_id;
-      $($navbara).removeClass('current');
-      $('#navi a[href="#' + id + '"]').addClass('current');
-    }
-  })
-})(jQuery);
-
-hash = function(h){
-  if (history.pushState){
-    history.pushState(null, null, h);
-  }else{
-    location.hash = h;
-  }
-}
