@@ -59,28 +59,43 @@ body,
 }
 
 /* Rotating name ("Huy Le" / "Le Huy"):
-   Flat sky-700 — matches the heading and nav-brand color for full theme
-   consistency. No gradient, no shimmer; just a confident sky-blue name. */
+   Dark sky-900 text so the name reads as the clear foreground element —
+   strong contrast on both the white navbar background AND on top of the
+   sky-400 circle that sits behind it. Higher z-index pushes the text
+   above the circle so the circle remains a backdrop accent.
+
+   IMPORTANT: main.js wraps the actual text in <span class="wrap"> on every
+   tick, and css/style.css has `.navbar-brand span { color: #000; }` which
+   targets that inner span directly (specificity 11). We therefore MUST set
+   the color on `.wrap` itself, not just on `.txt-rotate` — otherwise
+   inheritance loses to the template's direct-span rule and the text
+   renders black. */
 .navbar-brand .txt-rotate,
-#navbar-brand .txt-rotate {
+#navbar-brand .txt-rotate,
+.navbar-brand .txt-rotate .wrap,
+#navbar-brand .txt-rotate .wrap,
+.navbar-brand .txt-rotate > .wrap,
+#navbar-brand .txt-rotate > .wrap {
     font-family: "Lato", sans-serif !important;
     font-weight: 900 !important;
     font-size: 1.5rem;
     letter-spacing: -0.01em;
-    color: #0369A1 !important; /* sky-700 — same as headings & nav brand hover */
+    color: #0C4A6E !important; /* sky-900 — dark, pops on white + on the circle */
+    position: relative;
+    z-index: 2; /* lift above the ::after circle for clear foreground */
 }
 
-/* Revert to the original template's circle layout behind the brand
-   (40x40 circle, left:-12px), but retinted to match the sky theme.
-   Uses sky-300 for a clear, cheerful sky-blue that's visible without
-   overpowering the rotating gradient text on top. */
+/* Original template's circle layout behind the brand (40x40, left:-12px)
+   retinted as a darker sky-400 accent. Explicit z-index keeps the circle
+   firmly in the background (behind text which sits at z-index:2). */
 .navbar-brand:after,
 #navbar-brand:after {
-    background: #7DD3FC !important; /* sky-300 */
+    background: #38BDF8 !important; /* sky-400 — darker, more visible backdrop */
     width: 40px !important;
     height: 40px !important;
     left: -12px !important;
     border-radius: 50% !important;
+    z-index: 0 !important; /* explicitly behind the rotating text */
     animation: sky-breathe 4.5s ease-in-out infinite;
 }
 
@@ -329,12 +344,14 @@ body,
     color: #0369A1 !important; /* sky-700 hover — label + icon deepen together */
 }
 
-/* --------- Sky-tinted cards (Recent News, any similar container) -------- */
+/* --------- Recent News / sky cards --------
+   Very light near-white background so the card blends with the page —
+   almost transparent. Soft neutral-gray border for a subtle edge. */
 
 .update-news-box,
 .sky-card {
-    background-color: #F0F9FF !important; /* sky-50 */
-    border: 1px solid #BAE6FD !important;  /* sky-200 */
+    background-color: #F8FAFC !important; /* slate-50 — barely-there gray */
+    border: 1px solid #E2E8F0 !important;  /* slate-200 — soft edge */
     color: #334155 !important;
 }
 .update-news-box strong,
