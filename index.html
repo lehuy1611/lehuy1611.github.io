@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/academicons.min.css">
+    <link rel="stylesheet" href="css/sky-theme.css">
 
     <style>
         /* Footer with gray background */
@@ -58,40 +59,7 @@
             display: none; /* Hide loader after page load */
         }
 
-        /* ---------- Sky-aesthetic theme (Saining Xie inspired) ---------- */
-
-        /* Typography: Lato as primary, soft muted sky-slate body color */
-        body,
-        .ftco-section,
-        #about-section,
-        #about-section p,
-        #about-section li,
-        #about-section span {
-            font-family: "Lato", "Poppins", Verdana, Helvetica, sans-serif !important;
-            color: #334155;
-        }
-        #about-section p,
-        #about-section li span {
-            color: #334155 !important;
-        }
-
-        /* Headings: confident but airy — weight 700 with sky accent */
-        #about-section h2 {
-            font-family: "Lato", "Poppins", sans-serif !important;
-            font-weight: 700;
-            color: #0C4A6E; /* deep sky for headings */
-            letter-spacing: -0.01em;
-        }
-
-        /* Navbar name pop */
-        #navbar-brand {
-            font-family: "Lato", sans-serif !important;
-            font-weight: 900;
-            color: #0C4A6E !important;
-            letter-spacing: -0.01em;
-        }
-
-        /* Custom split: give About Me a bit more room than Recent News on md+ */
+        /* Page-specific layout: About Me (55%) / Recent News (45%) split on md+ */
         @media (min-width: 768px) {
             .about-col {
                 flex: 0 0 55%;
@@ -101,38 +69,6 @@
                 flex: 0 0 45%;
                 max-width: 45%;
             }
-        }
-
-        /* Links — sky as the main tone, bold, underline on hover */
-        #about-section p a,
-        #about-section li a {
-            font-weight: 700;
-            color: #0369A1; /* sky-700: main tone */
-            text-decoration: none;
-            transition: color 0.15s ease-in-out;
-        }
-        #about-section p a:hover,
-        #about-section li a:hover {
-            color: #0EA5E9; /* lighter sky pop on hover */
-            text-decoration: underline;
-        }
-
-        /* Recent News box — sky-tinted instead of gray */
-        .update-news-box {
-            background-color: #F0F9FF !important; /* sky-50 */
-            border: 1px solid #BAE6FD !important; /* sky-200 */
-            color: #334155 !important;
-        }
-        .update-news-box strong {
-            color: #0C4A6E;
-        }
-
-        /* Contact buttons — sky-tinted subtle hover */
-        .external-link.button.is-light {
-            transition: color 0.15s ease-in-out;
-        }
-        .external-link.button.is-light:hover {
-            color: #0369A1 !important;
         }
     </style>
 
