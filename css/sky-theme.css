@@ -186,13 +186,15 @@ body,
 }
 
 /* --- Author list ---
-   Linked and non-linked authors must look identical: same color, same
-   weight, same size. Only the hover state differs (linked authors deepen
-   to sky-700 + underline; plain text has no hover effect). */
+   All authors use the SAME sky-700 color — linked, unlinked, Huy, others,
+   all indistinguishable by color. The only differentiation is font weight:
+   Huy renders at 800 (extra bold) to mark "this is me"; every other author
+   renders at 500 (medium). Hover still deepens the color on linked names
+   for an interaction cue. */
 .publication-table .authors-info,
 .publication-table .authors-info p.authors-line,
 .publication-table .authors-info p.authors-line * {
-    color: #64748B !important; /* slate-500 */
+    color: #0369A1 !important; /* sky-700 — same as venue, links, theme accent */
     font-weight: 500 !important;
     font-size: 0.98em;
     line-height: 1.45;
@@ -202,36 +204,43 @@ body,
     transition: color 0.15s ease-in-out;
 }
 .publication-table .authors-info a:hover {
-    color: #0369A1 !important; /* sky-700 hover */
+    color: #0C4A6E !important; /* sky-900 on hover — slightly deeper */
     text-decoration: underline;
 }
-/* Your own name — bonded to title color so the eye links you to the title.
-   Rule specificity (3 classes + 1 element) beats the broad author rule. */
+/* Your own name — SAME color as every other author, distinguished only
+   by a heavier bold weight so the eye still picks you out in the list. */
 .publication-table .authors-info a.pub-me,
 .publication-table .authors-info .pub-me,
 .publication-table .authors-info p.authors-line a.pub-me,
 .publication-table .authors-info p.authors-line .pub-me {
-    color: #0C4A6E !important; /* sky-900 */
-    font-weight: 700 !important;
+    color: #0369A1 !important; /* sky-700 — identical to other authors */
+    font-weight: 800 !important; /* heavier than others (500) — weight distinguishes, color does not */
 }
 .publication-table .authors-info a.pub-me:hover {
-    color: #0EA5E9 !important;
+    color: #0C4A6E !important;
 }
 
-/* --- Venue + year --- */
+/* --- Venue + year ---
+   One color for this level, distinct from authors (sky-700) and title
+   (sky-900). Uses sky-800 — sits between the two, giving the venue a
+   "sub-heading" feel while keeping the sky-family progression:
+       Title (sky-900) > Venue (sky-800) > Authors (sky-700)
+*/
+.publication-table .pub-venue,
+.publication-table .pub-venue *,
+.publication-table .pub-year {
+    color: #075985 !important; /* sky-800 */
+}
 .publication-table .pub-venue {
-    color: #0369A1 !important; /* sky-700 */
     font-weight: 500;
     font-size: 0.98em;
 }
 .publication-table .pub-venue i,
 .publication-table .pub-venue i b,
 .publication-table .pub-venue > b {
-    color: #0369A1 !important;
     font-weight: 700;
 }
 .publication-table .pub-year {
-    color: #64748B !important; /* slate-500 — recede */
     font-weight: 400;
 }
 

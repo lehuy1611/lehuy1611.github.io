@@ -25,7 +25,7 @@ type2: "preprint"
 publication: "ICRA"
 year: "2026"
 ac_year: "2026"
-date: 2026-05-05
+date: 2026-01-05
 ---
 
 <!-- <button class="btn btn-round btn-sm btn-ghost-blue" onclick="location.href='https://arxiv.org/abs/2312.09507'">arXiv</button> -->
