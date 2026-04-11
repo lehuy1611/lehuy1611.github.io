@@ -59,35 +59,15 @@ body,
 }
 
 /* Rotating name ("Huy Le" / "Le Huy"):
-   Lato 900 with an animated sky gradient text fill — shimmer like sunlight
-   drifting across clouds — plus a soft sky halo via drop-shadow.
-   Falls back to solid sky-900 in browsers without background-clip:text. */
+   Flat sky-700 — matches the heading and nav-brand color for full theme
+   consistency. No gradient, no shimmer; just a confident sky-blue name. */
 .navbar-brand .txt-rotate,
 #navbar-brand .txt-rotate {
     font-family: "Lato", sans-serif !important;
     font-weight: 900 !important;
     font-size: 1.5rem;
     letter-spacing: -0.01em;
-    color: #0C4A6E; /* fallback */
-    background: linear-gradient(
-        120deg,
-        #38BDF8 0%,
-        #0EA5E9 25%,
-        #0369A1 50%,
-        #0EA5E9 75%,
-        #38BDF8 100%
-    );
-    background-size: 220% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 10px rgba(14, 165, 233, 0.28));
-    animation: sky-shimmer 6s linear infinite;
-}
-
-@keyframes sky-shimmer {
-    0%   { background-position: 0% center; }
-    100% { background-position: 220% center; }
+    color: #0369A1 !important; /* sky-700 — same as headings & nav brand hover */
 }
 
 /* Revert to the original template's circle layout behind the brand
@@ -194,7 +174,7 @@ body,
 .publication-table span.pub1 b {
     color: #0C4A6E !important; /* sky-900 */
     font-weight: 800 !important;
-    font-size: 1em;
+    font-size: 0.95em;
     letter-spacing: -0.005em;
     text-decoration: none;
     transition: color 0.15s ease-in-out;
@@ -289,7 +269,41 @@ body,
    Colors match the index-page top contact buttons for consistency:
    slate-700 default, sky-700 hover. Label + icon share the same color
    so the whole button deepens as one unit. Layout is left untouched —
-   the template's native Bulma .button.is-small.is-ghost handles it. */
+   the template's native Bulma .button.is-small.is-ghost handles it.
+
+   CRITICAL RESET: publication entries are wrapped in <div class="resume-wrap">
+   which triggers .resume-wrap .icon in style.css — that rule turns any
+   .icon span into a 50x50 themecolor circle with white text (intended for
+   CV timeline entries). We must flatten that shape back to inline so our
+   publication buttons render correctly. */
+.resume-wrap .publication-table .icon,
+.publication-table .icon,
+.publication-table .pub-btn .icon {
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    border-radius: 0 !important;
+    display: inline !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    vertical-align: baseline !important;
+}
+.resume-wrap .publication-table .icon span,
+.publication-table .icon span,
+.publication-table .pub-btn .icon span {
+    color: inherit !important;
+    font-size: inherit !important;
+}
+
 .publication-table a.pub-btn {
     color: #334155 !important; /* slate-700 — matches index contact buttons */
     font-weight: 600 !important;
