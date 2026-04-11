@@ -90,17 +90,17 @@ body,
     100% { background-position: 220% center; }
 }
 
-/* Replace the template's themed circle behind the brand with a soft,
-   painterly sky cloud (see images/icons/cloud-soft.svg). The SVG has its
-   own gradient fill + outer halo baked in, so the rotating text sits on
-   top of a dreamy sky-cloud without any shape conflicts. */
+/* Revert to the original template's circle layout behind the brand
+   (40x40 circle, left:-12px), but retinted to match the sky theme.
+   Uses sky-300 for a clear, cheerful sky-blue that's visible without
+   overpowering the rotating gradient text on top. */
 .navbar-brand:after,
 #navbar-brand:after {
-    background: url('../images/icons/cloud-soft.svg') center center / contain no-repeat !important;
-    width: 200px !important;
-    height: 72px !important;
-    left: -38px !important;
-    border-radius: 0 !important;
+    background: #7DD3FC !important; /* sky-300 */
+    width: 40px !important;
+    height: 40px !important;
+    left: -12px !important;
+    border-radius: 50% !important;
     animation: sky-breathe 4.5s ease-in-out infinite;
 }
 
@@ -158,60 +158,149 @@ body,
     text-decoration: underline;
 }
 
-/* Publication table: body text color on cells, rows, and author blocks */
+/* ==================================================================
+   Publication entries — visual hierarchy
+   ------------------------------------------------------------------
+   Within each row we build a clear reading order through color, weight,
+   and size, all within one coherent sky+slate palette:
+
+       Title   (sky-900, 800wt, 1.1em)      ← dominant, first read
+       You     (sky-900, 700wt)             ← ties you to the title
+       Others  (slate-500, 500wt)           ← recessive supporting cast
+       Venue   (sky-700, 700wt italic)     ← secondary prominence
+       Year    (slate-500, 400wt)          ← metadata
+       Award   (amber-600, 700wt)           ← warm accent, pops
+       Workshop(sky-600, 600wt, underline) ← sub-link, lower rank
+       Buttons (slate-600 label + sky-500 icon, sky-700 hover)
+   ================================================================== */
+
+/* Base table text */
 .publication-table,
 .publication-table td,
-.publication-table p,
-.publication-table .authors-info,
-.publication-table .authors-info p {
+.publication-table p {
     color: #334155 !important;
     font-family: "Lato", "Poppins", sans-serif !important;
 }
 
-/* -------- Publication visual hierarchy --------
-   Title ≫ Authors. Title is the boldest, darkest, and largest element in
-   each entry, so the eye lands on it first. Authors recede to a soft slate
-   so they don't compete — except the user's own name, which is kept bold
-   via an inline style in archive-single.html so the hierarchy reads:
-       Title  (sky-900, 800wt, 1.1em)
-       Me     (slate-500, bold inline)
-       Others (slate-500, medium)
-*/
-
-/* Publication title link — most prominent */
+/* --- Title (most prominent) --- */
 .publication-table a.pub1 {
-    color: #0C4A6E !important; /* sky-900: deep, commanding */
+    color: #0C4A6E !important; /* sky-900 */
     font-weight: 800 !important;
     font-size: 1.1em;
     letter-spacing: -0.005em;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
 }
 .publication-table a.pub1:hover {
-    color: #0EA5E9 !important; /* sky-500 pop on hover */
+    color: #0EA5E9 !important; /* sky-500 pop */
     text-decoration: underline;
 }
 
-/* Author links — subdued secondary.
-   No !important on font-weight so the Jekyll-injected inline bold on the
-   user's own name still wins and highlights them in the list. */
+/* --- Author list ---
+   Linked and non-linked authors must look identical: same color, same
+   weight, same size. Only the hover state differs (linked authors deepen
+   to sky-700 + underline; plain text has no hover effect). */
+.publication-table .authors-info,
+.publication-table .authors-info p.authors-line,
+.publication-table .authors-info p.authors-line * {
+    color: #64748B !important; /* slate-500 */
+    font-weight: 500 !important;
+    font-size: 0.98em;
+    line-height: 1.45;
+}
 .publication-table .authors-info a {
-    color: #64748B !important; /* slate-500: clearly softer than body text */
-    font-weight: 500;
     text-decoration: none;
     transition: color 0.15s ease-in-out;
 }
 .publication-table .authors-info a:hover {
-    color: #0369A1 !important; /* sky-700: becomes blue on hover for contrast */
+    color: #0369A1 !important; /* sky-700 hover */
     text-decoration: underline;
 }
-
-/* External-link buttons inside publication entries (arXiv/Code/Project Page) */
-.publication-table .external-link.button {
-    color: #334155 !important;
+/* Your own name — bonded to title color so the eye links you to the title.
+   Rule specificity (3 classes + 1 element) beats the broad author rule. */
+.publication-table .authors-info a.pub-me,
+.publication-table .authors-info .pub-me,
+.publication-table .authors-info p.authors-line a.pub-me,
+.publication-table .authors-info p.authors-line .pub-me {
+    color: #0C4A6E !important; /* sky-900 */
+    font-weight: 700 !important;
 }
-.publication-table .external-link.button span {
+.publication-table .authors-info a.pub-me:hover {
     color: #0EA5E9 !important;
 }
-.publication-table .external-link.button:hover {
+
+/* --- Venue + year --- */
+.publication-table .pub-venue {
+    color: #0369A1 !important; /* sky-700 */
+    font-weight: 500;
+    font-size: 0.98em;
+}
+.publication-table .pub-venue i,
+.publication-table .pub-venue i b,
+.publication-table .pub-venue > b {
+    color: #0369A1 !important;
+    font-weight: 700;
+}
+.publication-table .pub-year {
+    color: #64748B !important; /* slate-500 — recede */
+    font-weight: 400;
+}
+
+/* --- Award / "Additional" highlight (Oral, Best Paper, Runner-up, …) --- */
+.publication-table .pub-additional {
+    color: #D97706 !important; /* amber-600 — warm sunset accent */
+    font-weight: 700;
+    font-size: 0.98em;
+}
+.publication-table .pub-additional b {
+    color: #D97706 !important;
+    font-weight: 800;
+}
+.publication-table .pub-additional-sep {
+    color: #64748B !important;
+    font-weight: 400;
+}
+
+/* --- Workshop sub-link (lower than title) --- */
+.publication-table a.pub-workshop {
+    color: #0284C7 !important; /* sky-600 */
+    font-weight: 600 !important;
+    font-size: 0.95em;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+}
+.publication-table a.pub-workshop u {
+    text-decoration: underline;
+}
+.publication-table a.pub-workshop:hover {
+    color: #0EA5E9 !important; /* sky-500 */
+}
+
+/* --- Action buttons (arXiv / Code / Project Page) --- */
+.publication-table a.pub-btn {
+    color: #475569 !important; /* slate-600 label */
+    font-weight: 600 !important;
+    font-size: 0.95em;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.publication-table a.pub-btn .icon,
+.publication-table a.pub-btn .icon i {
+    color: #0EA5E9 !important; /* sky-500 icon */
+    font-size: 1.05em;
+}
+.publication-table a.pub-btn .pub-btn-label {
+    color: #475569 !important;
+}
+.publication-table a.pub-btn:hover,
+.publication-table a.pub-btn:hover .pub-btn-label {
+    color: #0369A1 !important; /* sky-700 hover — everything in the button deepens together */
+}
+.publication-table a.pub-btn:hover .icon,
+.publication-table a.pub-btn:hover .icon i {
     color: #0369A1 !important;
 }
 

@@ -25,15 +25,8 @@
   .authors-info .pub-author {
     margin-bottom: 10px;
   }
-  .authors-info a {
-    /* text-decoration: none; Remove underline from the links */
-    color: #0369A1; /* sky-700 — themed link color */
-  }
-
-  .authors-info a:hover {
-    color: #0EA5E9; /* sky-500 — themed hover */
-  }
-
+  /* All author styling is handled in css/sky-theme.css (.publication-table
+     .authors-info and friends) for single source of truth. */
 </style>
 {% if post.header.teaser %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
@@ -64,16 +57,16 @@
     {% endif %}
 
     {% if post.collection == 'publications' %}
-      <table class="publication-table" style="width:100%; border:5px; border-spacing:0px; border-collapse:collapse; margin-right:auto; color: #334155;">
+      <table class="publication-table" style="width:100%; border:5px; border-spacing:0px; border-collapse:collapse; margin-right:auto;">
         <tbody>
           <tr>
             <td style="padding:15px; width:30%; text-align:center;">
                 <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; height:auto; display: block; margin: auto;" />
             </td>
-            <td style="padding:5px; width:70%; color: #334155;">
-              <p style="margin: 0px 0;"><a class="pub1" href="{{ post.link }}" style="color: #0369A1;"><b>{{ post.title }}</b></a>
+            <td style="padding:5px; width:70%;">
+              <p style="margin: 0px 0;"><a class="pub1" href="{{ post.link }}"><b>{{ post.title }}</b></a>
                 {% if post.authors %}
-                  <div class="authors-info" style="color: #334155; margin: 0px 0;">
+                  <div class="authors-info" style="margin: 0px 0;">
                     {% assign authors_list = "" %}
                     {% assign total_authors = post.authors | size %}
                     {% assign cofirst_count = post.cofirst | default: 0 %}
@@ -84,11 +77,11 @@
                       {% assign current_index = forloop.index %}  <!-- Get current index in the loop -->
                 
                       {% if author_id == "huyle" %}
-                        <!-- Make the author with id "huyle" bold and a link if a URL exists -->
+                        <!-- Make the author with id "huyle" bold, themed, and a link if a URL exists -->
                         {% if author.url %}
-                          {% assign authors_list = authors_list | append: "<a href='" | append: author.url | append: "' target='_blank' style='font-weight: bold;'>" | append: author.name | append: "</a>" %}
+                          {% assign authors_list = authors_list | append: "<a href='" | append: author.url | append: "' target='_blank' class='pub-me' style='font-weight: bold;'>" | append: author.name | append: "</a>" %}
                         {% else %}
-                          {% assign authors_list = authors_list | append: author.name | append: "</strong>" %}
+                          {% assign authors_list = authors_list | append: "<span class='pub-me'>" | append: author.name | append: "</span>" %}
                         {% endif %}
                       {% else %}
                         <!-- Other authors with normal text weight and link if a URL exists -->
@@ -111,38 +104,34 @@
                     {% endfor %}
                     
                     <!-- Output the final list of authors -->
-                    <p style="color: #334155; margin-top: 0px; margin: 0px 0;">{{ authors_list }}</p>
+                    <p class="authors-line" style="margin-top: 0px; margin: 0px 0;">{{ authors_list }}</p>
                   </div>
                 {% endif %}
                 {% if post.type == 'conference paper' %}
-                <i><b>{{ post.publication }}</b></i>, {{ post.year }}<br>
+                <span class="pub-venue"><i><b>{{ post.publication }}</b></i>, <span class="pub-year">{{ post.year }}</span></span><br>
                 {% else %}
-                {{ post.publication }} {{ post.year }}<br>
+                <span class="pub-venue"><b>{{ post.publication }}</b> <span class="pub-year">{{ post.year }}</span></span><br>
                 {% endif %}
                 {% if post.additional %}
-                <span style="color: #B91C1C;"><b>{{ post.additional }}</b>
-                  {% if post.workshop %}
-                  <span style="color: #334155;">, </span>
-                  {% endif %}
-                </span>
+                <span class="pub-additional"><b>{{ post.additional }}</b>{% if post.workshop %}<span class="pub-additional-sep">, </span>{% endif %}</span>
                 {% endif %}
                 {% if post.workshop %}
-              <a class="pub1" href="{{ post.workshop_link }}" style="color: #0369A1;"><u>{{ post.workshop }}</u></a>
+              <a class="pub-workshop" href="{{ post.workshop_link }}"><u>{{ post.workshop }}</u></a>
               {% endif %}
             </p>
               {% if post.arxiv %}
-                <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ post.arxiv }}" style="color: #334155; padding-right: 20px;">
-                <span style="color: #0EA5E9; class="icon"><i class="ai ai-arxiv"></i> arXiv</span>
+                <a class="external-link button is-small is-ghost pub-btn" href="https://arxiv.org/abs/{{ post.arxiv }}" style="padding-right: 20px;">
+                <span class="icon"><i class="ai ai-arxiv"></i></span> <span class="pub-btn-label">arXiv</span>
               </a>
               {% endif %}
               {% if post.github %}
-                <a class="external-link button is-small is-ghost" href="{{ post.github }}" style="color: #334155; padding-right: 20px;">
-                  <span style="color: #0EA5E9; class="icon"><i class="fab fa-github"></i> Code</span>
+                <a class="external-link button is-small is-ghost pub-btn" href="{{ post.github }}" style="padding-right: 20px;">
+                  <span class="icon"><i class="fab fa-github"></i></span> <span class="pub-btn-label">Code</span>
                 </a>
               {% endif %}
               {% if post.page %}
-                <a class="external-link button is-small is-ghost" href="{{ post.page }}" style="color: #334155; padding-right: 20px;">
-                  <span style="color: #0EA5E9; class="icon"><i class="fa fa-globe"></i> Project Page</span>
+                <a class="external-link button is-small is-ghost pub-btn" href="{{ post.page }}" style="padding-right: 20px;">
+                  <span class="icon"><i class="fa fa-globe"></i></span> <span class="pub-btn-label">Project Page</span>
                 </a>
               {% endif %}
             </p>
