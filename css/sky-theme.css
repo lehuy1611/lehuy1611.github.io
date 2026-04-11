@@ -167,19 +167,43 @@ body,
     color: #334155 !important;
     font-family: "Lato", "Poppins", sans-serif !important;
 }
-.publication-table .authors-info a {
-    color: #0369A1 !important;
-}
-.publication-table .authors-info a:hover {
-    color: #0EA5E9 !important;
-}
-/* Publication title link inside tables */
+
+/* -------- Publication visual hierarchy --------
+   Title ≫ Authors. Title is the boldest, darkest, and largest element in
+   each entry, so the eye lands on it first. Authors recede to a soft slate
+   so they don't compete — except the user's own name, which is kept bold
+   via an inline style in archive-single.html so the hierarchy reads:
+       Title  (sky-900, 800wt, 1.1em)
+       Me     (slate-500, bold inline)
+       Others (slate-500, medium)
+*/
+
+/* Publication title link — most prominent */
 .publication-table a.pub1 {
-    color: #0369A1 !important;
+    color: #0C4A6E !important; /* sky-900: deep, commanding */
+    font-weight: 800 !important;
+    font-size: 1.1em;
+    letter-spacing: -0.005em;
 }
 .publication-table a.pub1:hover {
-    color: #0EA5E9 !important;
+    color: #0EA5E9 !important; /* sky-500 pop on hover */
+    text-decoration: underline;
 }
+
+/* Author links — subdued secondary.
+   No !important on font-weight so the Jekyll-injected inline bold on the
+   user's own name still wins and highlights them in the list. */
+.publication-table .authors-info a {
+    color: #64748B !important; /* slate-500: clearly softer than body text */
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+}
+.publication-table .authors-info a:hover {
+    color: #0369A1 !important; /* sky-700: becomes blue on hover for contrast */
+    text-decoration: underline;
+}
+
 /* External-link buttons inside publication entries (arXiv/Code/Project Page) */
 .publication-table .external-link.button {
     color: #334155 !important;
