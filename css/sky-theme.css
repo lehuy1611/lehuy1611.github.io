@@ -182,8 +182,16 @@ body,
     font-family: "Lato", "Poppins", sans-serif !important;
 }
 
-/* --- Title (most prominent) --- */
-.publication-table a.pub1 {
+/* --- Title (most prominent) ---
+   Covers both <a class="pub1"> (linked paper) and <span class="pub1">
+   (unlinked paper) so the title looks visually identical whether or
+   not it has a clickable URL. Only the anchor variant hovers. */
+.publication-table .pub1,
+.publication-table a.pub1,
+.publication-table span.pub1,
+.publication-table .pub1 b,
+.publication-table a.pub1 b,
+.publication-table span.pub1 b {
     color: #0C4A6E !important; /* sky-900 */
     font-weight: 800 !important;
     font-size: 1.1em;
@@ -191,8 +199,9 @@ body,
     text-decoration: none;
     transition: color 0.15s ease-in-out;
 }
-.publication-table a.pub1:hover {
-    color: #0EA5E9 !important; /* sky-500 pop */
+.publication-table a.pub1:hover,
+.publication-table a.pub1:hover b {
+    color: #0EA5E9 !important; /* sky-500 pop (hover only on anchor) */
     text-decoration: underline;
 }
 
