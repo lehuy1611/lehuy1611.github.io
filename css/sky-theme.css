@@ -90,21 +90,17 @@ body,
     100% { background-position: 220% center; }
 }
 
-/* Replace the template's themed circle behind the brand with a soft sky
-   halo — a radial sky-tinted gradient that fades to transparent so the
-   rotating text reads cleanly on top without any shape conflicts. */
+/* Replace the template's themed circle behind the brand with a soft,
+   painterly sky cloud (see images/icons/cloud-soft.svg). The SVG has its
+   own gradient fill + outer halo baked in, so the rotating text sits on
+   top of a dreamy sky-cloud without any shape conflicts. */
 .navbar-brand:after,
 #navbar-brand:after {
-    background: radial-gradient(
-        ellipse at center,
-        rgba(186, 230, 253, 0.85) 0%,   /* sky-200 */
-        rgba(125, 211, 252, 0.45) 45%,  /* sky-300 */
-        rgba(56, 189, 248, 0) 75%       /* sky-400, fully transparent */
-    ) !important;
-    width: 160px !important;
-    height: 64px !important;
-    left: -28px !important;
-    border-radius: 50% !important;
+    background: url('../images/icons/cloud-soft.svg') center center / contain no-repeat !important;
+    width: 200px !important;
+    height: 72px !important;
+    left: -38px !important;
+    border-radius: 0 !important;
     animation: sky-breathe 4.5s ease-in-out infinite;
 }
 
