@@ -194,7 +194,7 @@ body,
 .publication-table span.pub1 b {
     color: #0C4A6E !important; /* sky-900 */
     font-weight: 800 !important;
-    font-size: 1.1em;
+    font-size: 1em;
     letter-spacing: -0.005em;
     text-decoration: none;
     transition: color 0.15s ease-in-out;
@@ -285,32 +285,25 @@ body,
     color: #0EA5E9 !important; /* sky-500 */
 }
 
-/* --- Action buttons (arXiv / Code / Project Page) --- */
+/* --- Action buttons (arXiv / Code / Project Page) ---
+   Colors match the index-page top contact buttons for consistency:
+   slate-700 default, sky-700 hover. Label + icon share the same color
+   so the whole button deepens as one unit. Layout is left untouched —
+   the template's native Bulma .button.is-small.is-ghost handles it. */
 .publication-table a.pub-btn {
-    color: #475569 !important; /* slate-600 label */
+    color: #334155 !important; /* slate-700 — matches index contact buttons */
     font-weight: 600 !important;
-    font-size: 0.95em;
     text-decoration: none;
     transition: color 0.15s ease-in-out;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
 }
 .publication-table a.pub-btn .icon,
 .publication-table a.pub-btn .icon i {
-    color: #0EA5E9 !important; /* sky-500 icon */
-    font-size: 1.05em;
-}
-.publication-table a.pub-btn .pub-btn-label {
-    color: #475569 !important;
+    color: #334155 !important; /* slate-700 — icon inherits from button */
 }
 .publication-table a.pub-btn:hover,
-.publication-table a.pub-btn:hover .pub-btn-label {
-    color: #0369A1 !important; /* sky-700 hover — everything in the button deepens together */
-}
 .publication-table a.pub-btn:hover .icon,
 .publication-table a.pub-btn:hover .icon i {
-    color: #0369A1 !important;
+    color: #0369A1 !important; /* sky-700 hover — label + icon deepen together */
 }
 
 /* --------- Sky-tinted cards (Recent News, any similar container) -------- */
@@ -343,11 +336,23 @@ footer.ftco-footer span {
     color: #334155 !important;
 }
 
-/* Footer social icons — override inline color:#000 on bare <a> tags */
-footer.ftco-footer a {
-    color: #334155 !important;
+/* Footer social icons — force slate-700 (matching the index-page top
+   contact buttons) so the footer icons look the same across every page.
+   The selector below matches the broad link rule's specificity (4 :not
+   classes) but comes later in source order, so it wins the cascade. */
+footer.ftco-footer a,
+footer.ftco-footer div a,
+footer.ftco-footer div a:not(.nav-link):not(.navbar-brand):not(.button):not(.external-link),
+footer.ftco-footer .footer-icons a,
+footer.ftco-footer .col-12 a {
+    color: #334155 !important; /* slate-700 — same as index top buttons */
+    font-weight: 400 !important;
     transition: color 0.15s ease-in-out;
 }
-footer.ftco-footer a:hover {
-    color: #0369A1 !important;
+footer.ftco-footer a:hover,
+footer.ftco-footer div a:hover,
+footer.ftco-footer div a:not(.nav-link):not(.navbar-brand):not(.button):not(.external-link):hover,
+footer.ftco-footer .footer-icons a:hover,
+footer.ftco-footer .col-12 a:hover {
+    color: #0369A1 !important; /* sky-700 hover accent, subtle */
 }

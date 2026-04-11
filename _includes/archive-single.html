@@ -121,20 +121,19 @@
             </p>
               {% if post.arxiv %}
                 <a class="external-link button is-small is-ghost pub-btn" href="https://arxiv.org/abs/{{ post.arxiv }}" style="padding-right: 20px;">
-                <span class="icon"><i class="ai ai-arxiv"></i></span> <span class="pub-btn-label">arXiv</span>
-              </a>
+                  <span class="icon"><i class="ai ai-arxiv"></i></span> arXiv
+                </a>
               {% endif %}
               {% if post.github %}
                 <a class="external-link button is-small is-ghost pub-btn" href="{{ post.github }}" style="padding-right: 20px;">
-                  <span class="icon"><i class="fab fa-github"></i></span> <span class="pub-btn-label">Code</span>
+                  <span class="icon"><i class="fab fa-github"></i></span> Code
                 </a>
               {% endif %}
               {% if post.page %}
                 <a class="external-link button is-small is-ghost pub-btn" href="{{ post.page }}" style="padding-right: 20px;">
-                  <span class="icon"><i class="fa fa-globe"></i></span> <span class="pub-btn-label">Project Page</span>
+                  <span class="icon"><i class="fa fa-globe"></i></span> Project Page
                 </a>
               {% endif %}
-            </p>
             </td>
           </tr>
         </tbody>
