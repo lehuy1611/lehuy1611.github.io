@@ -354,14 +354,15 @@ body,
     color: #0369A1 !important; /* sky-700 hover — label + icon deepen together */
 }
 
-/* --------- Recent News / sky cards --------
-   Very light near-white background so the card blends with the page —
-   almost transparent. Soft neutral-gray border for a subtle edge. */
+/* --------- Recent News / cards --------
+   Neutral light gray (no blue tint) — matches Saining Xie's academic
+   minimalism where cards sit on soft warm-neutral backgrounds instead
+   of colored tints. */
 
 .update-news-box,
 .sky-card {
-    background-color: #F8FAFC !important; /* slate-50 — barely-there gray */
-    border: 1px solid #E2E8F0 !important;  /* slate-200 — soft edge */
+    background-color: #F5F5F5 !important; /* neutral-100 — pure light gray */
+    border: 1px solid #E5E5E5 !important;  /* neutral-200 — soft gray edge */
     color: #334155 !important;
 }
 .update-news-box strong,
