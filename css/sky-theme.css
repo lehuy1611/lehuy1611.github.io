@@ -18,6 +18,16 @@
      slate-700 #334155  (body text)
    ========================================================================== */
 
+/* Override the template's `--themecolor` CSS variable (originally #2a98f9
+   in css/style.css:8) with sky-900. Everything the template uses the
+   variable for — active nav-link color, hover-underline background,
+   services/contact icon tints — automatically picks up the new value.
+   Specific rules I've already overridden (like .navbar-brand:after) still
+   win because they set the property directly, not via var(). */
+:root {
+    --themecolor: #0C4A6E;
+}
+
 /* --------- Typography ---------------------------------------------------- */
 
 body,
