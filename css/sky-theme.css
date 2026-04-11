@@ -40,10 +40,11 @@ body,
 .ftco-section h2,
 .ftco-section h3,
 .ftco-section h4,
-.ftco-section h5 {
+.ftco-section h5,
+.ftco-section h6 {
     font-family: "Lato", "Poppins", sans-serif !important;
     font-weight: 700;
-    color: #0C4A6E; /* sky-900: deeper default accent */
+    color: #0C4A6E !important; /* sky-900: deeper default accent */
     letter-spacing: -0.01em;
 }
 
@@ -138,20 +139,60 @@ body,
 }
 
 /* --------- In-content links ---------------------------------------------- */
+/* Covers <p>, <li>, <span>, <div>, and <td> wrapped links across pages so the
+   Jekyll publication include (archive-single.html) and other table/div links
+   are themed consistently. Buttons and nav links are excluded explicitly. */
 
 .ftco-section p a,
 .ftco-section li a,
-.ftco-section span a {
+.ftco-section span a,
+.ftco-section td a,
+.ftco-section div a:not(.nav-link):not(.navbar-brand):not(.button):not(.external-link) {
     font-weight: 700;
-    color: #0369A1; /* sky-700: main tone */
+    color: #0369A1 !important; /* sky-700: main tone, overrides inline color */
     text-decoration: none;
     transition: color 0.15s ease-in-out;
 }
 .ftco-section p a:hover,
 .ftco-section li a:hover,
-.ftco-section span a:hover {
-    color: #0EA5E9; /* sky-500: lighter pop on hover */
+.ftco-section span a:hover,
+.ftco-section td a:hover,
+.ftco-section div a:not(.nav-link):not(.navbar-brand):not(.button):not(.external-link):hover {
+    color: #0EA5E9 !important; /* sky-500: lighter pop on hover */
     text-decoration: underline;
+}
+
+/* Publication table: body text color on cells, rows, and author blocks */
+.publication-table,
+.publication-table td,
+.publication-table p,
+.publication-table .authors-info,
+.publication-table .authors-info p {
+    color: #334155 !important;
+    font-family: "Lato", "Poppins", sans-serif !important;
+}
+.publication-table .authors-info a {
+    color: #0369A1 !important;
+}
+.publication-table .authors-info a:hover {
+    color: #0EA5E9 !important;
+}
+/* Publication title link inside tables */
+.publication-table a.pub1 {
+    color: #0369A1 !important;
+}
+.publication-table a.pub1:hover {
+    color: #0EA5E9 !important;
+}
+/* External-link buttons inside publication entries (arXiv/Code/Project Page) */
+.publication-table .external-link.button {
+    color: #334155 !important;
+}
+.publication-table .external-link.button span {
+    color: #0EA5E9 !important;
+}
+.publication-table .external-link.button:hover {
+    color: #0369A1 !important;
 }
 
 /* --------- Sky-tinted cards (Recent News, any similar container) -------- */
@@ -170,10 +211,11 @@ body,
 /* --------- External contact buttons (Email / Scholar / GitHub / …) ------ */
 
 .external-link.button.is-light {
+    color: #334155 !important; /* slate-700 default, matches body text */
     transition: color 0.15s ease-in-out;
 }
 .external-link.button.is-light:hover {
-    color: #0369A1 !important;
+    color: #0369A1 !important; /* sky-700 on hover */
 }
 
 /* --------- Footer -------------------------------------------------------- */
@@ -181,4 +223,13 @@ body,
 footer.ftco-footer p,
 footer.ftco-footer span {
     color: #334155 !important;
+}
+
+/* Footer social icons — override inline color:#000 on bare <a> tags */
+footer.ftco-footer a {
+    color: #334155 !important;
+    transition: color 0.15s ease-in-out;
+}
+footer.ftco-footer a:hover {
+    color: #0369A1 !important;
 }

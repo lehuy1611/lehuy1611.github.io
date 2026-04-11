@@ -27,11 +27,11 @@
   }
   .authors-info a {
     /* text-decoration: none; Remove underline from the links */
-    color: black; /* Default color for the links */
+    color: #0369A1; /* sky-700 — themed link color */
   }
 
   .authors-info a:hover {
-    color: rgb(42, 152, 249); /* Hover color for links */
+    color: #0EA5E9; /* sky-500 — themed hover */
   }
 
 </style>
@@ -64,16 +64,16 @@
     {% endif %}
 
     {% if post.collection == 'publications' %}
-      <table class="publication-table" style="width:100%; border:5px; border-spacing:0px; border-collapse:collapse; margin-right:auto; color: black;">
+      <table class="publication-table" style="width:100%; border:5px; border-spacing:0px; border-collapse:collapse; margin-right:auto; color: #334155;">
         <tbody>
           <tr>
             <td style="padding:15px; width:30%; text-align:center;">
                 <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; height:auto; display: block; margin: auto;" />
             </td>
-            <td style="padding:5px; width:70%; color: black;">
-              <p style="margin: 0px 0;"><a class="pub1" href="{{ post.link }}" style="color: rgb(2, 108, 201);"><b>{{ post.title }}</b></a>
+            <td style="padding:5px; width:70%; color: #334155;">
+              <p style="margin: 0px 0;"><a class="pub1" href="{{ post.link }}" style="color: #0369A1;"><b>{{ post.title }}</b></a>
                 {% if post.authors %}
-                  <div class="authors-info" style="color: black; margin: 0px 0;">
+                  <div class="authors-info" style="color: #334155; margin: 0px 0;">
                     {% assign authors_list = "" %}
                     {% assign total_authors = post.authors | size %}
                     {% assign cofirst_count = post.cofirst | default: 0 %}
@@ -111,7 +111,7 @@
                     {% endfor %}
                     
                     <!-- Output the final list of authors -->
-                    <p style="color: black; margin-top: 0px; margin: 0px 0;">{{ authors_list }}</p>
+                    <p style="color: #334155; margin-top: 0px; margin: 0px 0;">{{ authors_list }}</p>
                   </div>
                 {% endif %}
                 {% if post.type == 'conference paper' %}
@@ -120,42 +120,42 @@
                 {{ post.publication }} {{ post.year }}<br>
                 {% endif %}
                 {% if post.additional %}
-                <span style="color: red;"><b>{{ post.additional }}</b>
+                <span style="color: #B91C1C;"><b>{{ post.additional }}</b>
                   {% if post.workshop %}
-                  <span style="color: black;">, </span>
+                  <span style="color: #334155;">, </span>
                   {% endif %}
                 </span>
                 {% endif %}
                 {% if post.workshop %}
-              <a class="pub1" href="{{ post.workshop_link }}" style="color: black;"><u>{{ post.workshop }}</u></a>
-              {% endif %}              
+              <a class="pub1" href="{{ post.workshop_link }}" style="color: #0369A1;"><u>{{ post.workshop }}</u></a>
+              {% endif %}
             </p>
               {% if post.arxiv %}
-                <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ post.arxiv }}" style="color: black; padding-right: 20px;">
-                <span style="color: rgb(42, 152, 249); class="icon"><i class="ai ai-arxiv"></i> arXiv</span>
+                <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ post.arxiv }}" style="color: #334155; padding-right: 20px;">
+                <span style="color: #0EA5E9; class="icon"><i class="ai ai-arxiv"></i> arXiv</span>
               </a>
               {% endif %}
               {% if post.github %}
-                <a class="external-link button is-small is-ghost" href="{{ post.github }}" style="color: black; padding-right: 20px;">
-                  <span style="color: rgb(42, 152, 249); class="icon"><i class="fab fa-github"></i> Code</span>
+                <a class="external-link button is-small is-ghost" href="{{ post.github }}" style="color: #334155; padding-right: 20px;">
+                  <span style="color: #0EA5E9; class="icon"><i class="fab fa-github"></i> Code</span>
                 </a>
               {% endif %}
               {% if post.page %}
-                <a class="external-link button is-small is-ghost" href="{{ post.page }}" style="color: black; padding-right: 20px;">
-                  <span style="color: rgb(42, 152, 249); class="icon"><i class="fa fa-globe"></i> Project Page</span>
+                <a class="external-link button is-small is-ghost" href="{{ post.page }}" style="color: #334155; padding-right: 20px;">
+                  <span style="color: #0EA5E9; class="icon"><i class="fa fa-globe"></i> Project Page</span>
                 </a>
-              {% endif %}  
+              {% endif %}
             </p>
             </td>
           </tr>
         </tbody>
       </table>
     {% else %}
-      <h2 class="archive__item-title" itemprop="headline" style="color: black;">
+      <h2 class="archive__item-title" itemprop="headline" style="color: #0C4A6E;">
         {% if post.link %}
-          <a href="{{ post.link }}" style="color: black;">{{ title }}</a>
+          <a href="{{ post.link }}" style="color: #0C4A6E;">{{ title }}</a>
         {% else %}
-          <a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: black;">{{ title }}</a>
+          <a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: #0C4A6E;">{{ title }}</a>
         {% endif %}
       </h2>
     {% endif %}
