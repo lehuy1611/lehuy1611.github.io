@@ -9,8 +9,8 @@ Usage:
 from PIL import Image
 import os
 
-CANVAS_W, CANVAS_H = 800, 450
-PADDING = 20
+CANVAS_W, CANVAS_H = 640, 320
+PADDING = 0
 
 IMG_DIR = os.path.join(os.path.dirname(__file__), '..', 'images', 'publications')
 IMG_DIR = os.path.abspath(IMG_DIR)

@@ -4,9 +4,9 @@
 
 All publication images are standardized to:
 
-- **Size:** 800 x 450 px (16:9)
+- **Size:** 640 x 320 px (2:1)
 - **Format:** PNG with transparent background (RGBA)
-- **Layout:** Original image scaled to fit with 20px padding, centered on the canvas
+- **Layout:** Original image scaled to fit edge-to-edge, centered on the canvas
 
 ## Adding a New Image
 
