@@ -275,15 +275,17 @@ body,
     text-decoration: underline;
 }
 /* Your own name — SAME color as every other author, distinguished only
-   by a heavier bold weight so the eye still picks you out in the list. */
-.publication-table .authors-info a.pub-me,
-.publication-table .authors-info .pub-me,
-.publication-table .authors-info p.authors-line a.pub-me,
-.publication-table .authors-info p.authors-line .pub-me {
+   by a heavier bold weight so the eye still picks you out in the list.
+   Selectors include .ftco-section to beat the broad link rule's specificity
+   (.ftco-section div a:not(...) = 0-5-2). */
+.ftco-section .publication-table .authors-info a.pub-me,
+.ftco-section .publication-table .authors-info .pub-me,
+.ftco-section .publication-table .authors-info p.authors-line a.pub-me,
+.ftco-section .publication-table .authors-info p.authors-line .pub-me {
     color: #0369A1 !important; /* sky-700 — identical to other authors */
     font-weight: 700 !important; /* heavier than others (500) — weight distinguishes, color does not */
 }
-.publication-table .authors-info a.pub-me:hover {
+.ftco-section .publication-table .authors-info a.pub-me:hover {
     color: #0C4A6E !important;
 }
 
@@ -734,14 +736,14 @@ html[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-toggler {
 [data-theme="dark"] .publication-table .authors-info a:hover {
     color: #7DD3FC !important;
 }
-[data-theme="dark"] .publication-table .authors-info a.pub-me,
-[data-theme="dark"] .publication-table .authors-info .pub-me,
-[data-theme="dark"] .publication-table .authors-info p.authors-line a.pub-me,
-[data-theme="dark"] .publication-table .authors-info p.authors-line .pub-me {
+[data-theme="dark"] .ftco-section .publication-table .authors-info a.pub-me,
+[data-theme="dark"] .ftco-section .publication-table .authors-info .pub-me,
+[data-theme="dark"] .ftco-section .publication-table .authors-info p.authors-line a.pub-me,
+[data-theme="dark"] .ftco-section .publication-table .authors-info p.authors-line .pub-me {
     color: #F0F9FF !important; /* sky-50 — stands out from other authors' sky-400 */
     font-weight: 700 !important; /* heavier than others (500) — matches light mode distinction */
 }
-[data-theme="dark"] .publication-table .authors-info a.pub-me:hover {
+[data-theme="dark"] .ftco-section .publication-table .authors-info a.pub-me:hover {
     color: #BAE6FD !important; /* sky-200 — hover deepens from sky-50, mirrors light mode pattern */
     text-decoration: underline;
 }
