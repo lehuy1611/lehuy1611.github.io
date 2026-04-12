@@ -447,7 +447,6 @@ footer.ftco-footer .col-12 a:hover {
     align-items: center;
     justify-content: center;
     line-height: 1;
-    order: 1; /* push after navbar-collapse on desktop */
 }
 /* On desktop, add left spacing so it doesn't crowd the last nav link */
 @media (min-width: 992px) {
@@ -517,18 +516,29 @@ footer.ftco-footer .col-12 a:hover {
     background-color: #0F172A !important;
     background: #0F172A !important;
 }
-/* style.css forces color:#000000 !important on scrolled nav-links —
-   override with the same specificity + later source order. */
-[data-theme="dark"] .ftco-navbar-light.scrolled .nav-link,
-[data-theme="dark"] .ftco-navbar-light.scrolled .nav-item > .nav-link {
+/* style.css forces color:#000000 !important on scrolled nav-links.
+   Use high-specificity selectors to guarantee override. */
+html[data-theme="dark"] .ftco-navbar-light.scrolled .nav-link,
+html[data-theme="dark"] .ftco-navbar-light.scrolled .nav-item > .nav-link,
+html[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link {
     color: #94A3B8 !important; /* slate-400 */
 }
-[data-theme="dark"] .ftco-navbar-light.scrolled .nav-link:hover,
-[data-theme="dark"] .ftco-navbar-light.scrolled .nav-item.active > a,
-[data-theme="dark"] .ftco-navbar-light.scrolled .nav-link.active {
+html[data-theme="dark"] .ftco-navbar-light.scrolled .nav-link span,
+html[data-theme="dark"] .ftco-navbar-light.scrolled .nav-item > .nav-link span {
+    color: #94A3B8 !important;
+}
+html[data-theme="dark"] .ftco-navbar-light.scrolled .nav-link:hover,
+html[data-theme="dark"] .ftco-navbar-light.scrolled .nav-link:hover span,
+html[data-theme="dark"] .ftco-navbar-light.scrolled .nav-item.active > a,
+html[data-theme="dark"] .ftco-navbar-light.scrolled .nav-item.active > a span,
+html[data-theme="dark"] .ftco-navbar-light.scrolled .nav-link.active {
     color: #7DD3FC !important; /* sky-300 */
 }
-[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-toggler {
+html[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-brand,
+html[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-brand span {
+    color: #7DD3FC !important;
+}
+html[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-toggler {
     color: #CBD5E1 !important;
     border-color: #334155 !important;
 }
