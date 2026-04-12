@@ -11,10 +11,7 @@
     function getPreferred() {
         var saved = localStorage.getItem(STORAGE_KEY);
         if (saved === 'dark' || saved === 'light') return saved;
-        // Fall back to OS preference
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            return 'dark';
-        }
+        // Default to light mode
         return 'light';
     }
 
