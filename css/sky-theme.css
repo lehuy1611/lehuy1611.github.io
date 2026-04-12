@@ -39,9 +39,14 @@ body,
     color: #334155;
 }
 
-.ftco-section p,
-.ftco-section li span:not(.icon):not(.oi) {
+/* !important on <p> so it overrides inline color:#000 on paragraphs.
+   NO !important on <li> spans so inline brand colors (e.g., Google
+   colored letters) can still win over this rule. */
+.ftco-section p {
     color: #334155 !important;
+}
+.ftco-section li span:not(.icon):not(.oi) {
+    color: #334155;
 }
 
 /* --------- Headings ------------------------------------------------------ */
