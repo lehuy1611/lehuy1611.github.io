@@ -427,17 +427,19 @@ footer.ftco-footer .col-12 a:hover {
 
 /* --------- Theme toggle button ------------------------------------------- */
 
-/* Match .ftco-navbar-light .navbar-nav > .nav-item > .nav-link sizing
-   (font-size 23px, padding .7rem 20px) so the icon sits on the same
-   baseline and the navbar height stays consistent. */
+/* The toggle button lives OUTSIDE the collapsible #ftco-nav so it's
+   always visible on mobile next to the hamburger.  On desktop (lg+)
+   it sits at the far right after the nav links via order + ml-auto.
+   Sizing mirrors .ftco-navbar-light .navbar-nav > .nav-item > .nav-link
+   (font-size 23px, padding .7rem top/bottom) so baselines match. */
 .theme-toggle {
     background: none;
     border: none;
     cursor: pointer;
     padding-top: .7rem;
     padding-bottom: .7rem;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 20px;
     color: #334155;
     transition: color 0.2s ease, transform 0.3s ease;
@@ -445,6 +447,14 @@ footer.ftco-footer .col-12 a:hover {
     align-items: center;
     justify-content: center;
     line-height: 1;
+    order: 1; /* push after navbar-collapse on desktop */
+}
+/* On desktop, add left spacing so it doesn't crowd the last nav link */
+@media (min-width: 992px) {
+    .theme-toggle {
+        padding-left: 20px;
+        padding-right: 0;
+    }
 }
 .theme-toggle:hover {
     color: #0369A1;
@@ -502,9 +512,25 @@ footer.ftco-footer .col-12 a:hover {
     background: #0F172A !important;
     border-bottom: 1px solid #1E293B;
 }
-[data-theme="dark"] .ftco_navbar.scrolled {
+[data-theme="dark"] .ftco_navbar.scrolled,
+[data-theme="dark"] .ftco-navbar-light.scrolled {
     background-color: #0F172A !important;
     background: #0F172A !important;
+}
+/* style.css forces color:#000000 !important on scrolled nav-links —
+   override with the same specificity + later source order. */
+[data-theme="dark"] .ftco-navbar-light.scrolled .nav-link,
+[data-theme="dark"] .ftco-navbar-light.scrolled .nav-item > .nav-link {
+    color: #94A3B8 !important; /* slate-400 */
+}
+[data-theme="dark"] .ftco-navbar-light.scrolled .nav-link:hover,
+[data-theme="dark"] .ftco-navbar-light.scrolled .nav-item.active > a,
+[data-theme="dark"] .ftco-navbar-light.scrolled .nav-link.active {
+    color: #7DD3FC !important; /* sky-300 */
+}
+[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-toggler {
+    color: #CBD5E1 !important;
+    border-color: #334155 !important;
 }
 
 [data-theme="dark"] #navbar-brand,
@@ -582,6 +608,14 @@ footer.ftco-footer .col-12 a:hover {
 [data-theme="dark"] [style*="color: #0C4A6E"],
 [data-theme="dark"] [style*="color:#0C4A6E"] {
     color: #7DD3FC !important;
+}
+[data-theme="dark"] [style*="color: #D97706"],
+[data-theme="dark"] [style*="color:#D97706"] {
+    color: #FBBF24 !important; /* amber-400 — brighter on dark bg */
+}
+[data-theme="dark"] [style*="color: #0EA5E9"],
+[data-theme="dark"] [style*="color:#0EA5E9"] {
+    color: #38BDF8 !important; /* sky-400 — slightly brighter on dark bg */
 }
 
 /* Inline background overrides — elements with hardcoded light backgrounds */
