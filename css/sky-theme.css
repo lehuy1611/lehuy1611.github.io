@@ -125,6 +125,16 @@ body,
     }
 }
 
+/* Mobile: fix navbar-brand width so the toggler button doesn't shift
+   as the rotating text types/deletes characters.
+   Only applies at <=991.98px where the toggler is visible. */
+@media (max-width: 991.98px) {
+    .navbar-brand,
+    #navbar-brand {
+        min-width: 110px; /* wide enough for "Huy Le" / "Le Huy" at 1.5rem bold */
+    }
+}
+
 /* Respect users who prefer no motion */
 @media (prefers-reduced-motion: reduce) {
     .navbar-brand .txt-rotate,
