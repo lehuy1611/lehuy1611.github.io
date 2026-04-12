@@ -221,13 +221,18 @@ body,
     padding-bottom: 0 !important;
 }
 
-/* Publication flexbox layout */
+/* Publication flexbox layout (matches shushengyang.com) */
 .publication-table {
     display: flex;
     gap: 1.5rem;
     padding: 1rem 0;
-    align-items: center;
-    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.publication-table:hover {
+    background-color: transparent;
 }
 
 .pub-image {
@@ -242,13 +247,15 @@ body,
     height: auto;
     max-width: 100%;
     object-fit: contain;
-    display: block;
     border-radius: 0;
 }
 
 .pub-text {
     flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Base text */
