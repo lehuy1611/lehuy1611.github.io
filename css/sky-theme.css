@@ -90,7 +90,7 @@ body,
     font-weight: 700 !important;
     font-size: 1.5rem;
     letter-spacing: -0.01em;
-    color: #0C4A6E !important; /* sky-900 — dark, pops on white + on the circle */
+    color: #0EA5E9 !important; /* sky-500 — bright airy sky */
     position: relative;
     z-index: 2; /* lift above the ::after circle for clear foreground */
 }
