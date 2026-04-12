@@ -1,19 +1,27 @@
 """
-Standardize publication images to a uniform 800x450 transparent canvas.
+Standardize publication images to a uniform 640x320 transparent canvas
+with 16px rounded corners baked in.
 
 Usage:
     source Code/env/mila/bin/activate
     python3 scripts/standardize_pub_images.py
 """
 
-from PIL import Image
+from PIL import Image, ImageDraw
 import os
 
 CANVAS_W, CANVAS_H = 640, 320
-PADDING = 0
+RADIUS = 16
 
 IMG_DIR = os.path.join(os.path.dirname(__file__), '..', 'images', 'publications')
 IMG_DIR = os.path.abspath(IMG_DIR)
+
+
+def make_rounded_mask(w, h, radius):
+    mask = Image.new('L', (w, h), 0)
+    draw = ImageDraw.Draw(mask)
+    draw.rounded_rectangle([0, 0, w, h], radius=radius, fill=255)
+    return mask
 
 
 def standardize(path):
@@ -25,18 +33,21 @@ def standardize(path):
 
     original_size = img.size
 
-    avail_w = CANVAS_W - 2 * PADDING
-    avail_h = CANVAS_H - 2 * PADDING
-
-    scale = min(avail_w / img.width, avail_h / img.height)
+    scale = min(CANVAS_W / img.width, CANVAS_H / img.height)
     new_w = int(img.width * scale)
     new_h = int(img.height * scale)
     img_resized = img.resize((new_w, new_h), Image.LANCZOS)
 
+    # Apply rounded corners
+    mask = make_rounded_mask(new_w, new_h, RADIUS)
+    r, g, b, a = img_resized.split()
+    a = Image.composite(a, Image.new('L', (new_w, new_h), 0), mask)
+    img_rounded = Image.merge('RGBA', (r, g, b, a))
+
     canvas = Image.new('RGBA', (CANVAS_W, CANVAS_H), (0, 0, 0, 0))
     x = (CANVAS_W - new_w) // 2
     y = (CANVAS_H - new_h) // 2
-    canvas.paste(img_resized, (x, y), img_resized)
+    canvas.paste(img_rounded, (x, y), img_rounded)
     canvas.save(path)
 
     return original_size

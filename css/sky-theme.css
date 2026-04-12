@@ -221,18 +221,39 @@ body,
     padding-bottom: 0 !important;
 }
 
-/* Uniform publication thumbnail */
-.publication-table .pub-thumbnail {
+/* Publication flexbox layout */
+.publication-table {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    align-items: center;
     width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-    border-radius: 8px;
 }
 
-/* Base table text */
+.pub-image {
+    flex-shrink: 0;
+    width: 30%;
+    max-width: 30%;
+    overflow: hidden;
+}
+
+.pub-image .pub-thumbnail {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 0;
+}
+
+.pub-text {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Base text */
 .publication-table,
-.publication-table td,
+.publication-table .pub-text,
 .publication-table p {
     color: #334155 !important;
     font-family: "Lato", "Poppins", sans-serif !important;
@@ -719,7 +740,7 @@ html[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-toggler {
 
 /* Publication table */
 [data-theme="dark"] .publication-table,
-[data-theme="dark"] .publication-table td,
+[data-theme="dark"] .publication-table .pub-text,
 [data-theme="dark"] .publication-table p {
     color: #CBD5E1 !important;
 }

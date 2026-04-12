@@ -1,21 +1,24 @@
 {% include base_path %}
 <style>
   @media (max-width: 767px) {
-    .publication-table tr {
-      display: flex;
+    .publication-table {
       flex-direction: column;
-      align-items: center;
+      gap: 0.5rem;
     }
 
-    .publication-table td {
+    .pub-image {
       width: 100% !important;
-      text-align: center !important;
-      padding: 10px !important;
+      max-width: 100% !important;
+      text-align: center;
     }
 
-    .publication-table .pub-thumbnail {
+    .pub-image .pub-thumbnail {
       max-width: 80%;
-      height: auto;
+    }
+
+    .pub-text {
+      width: 100% !important;
+      text-align: center;
     }
 
     .publication-table .pub1 {
@@ -57,13 +60,11 @@
     {% endif %}
 
     {% if post.collection == 'publications' %}
-      <table class="publication-table" style="width:100%; border:5px; border-spacing:0px; border-collapse:collapse; margin-right:auto;">
-        <tbody>
-          <tr>
-            <td style="padding:15px; width:30%; text-align:center; vertical-align:middle;">
-                <img src="{{ post.image }}" alt="{{ post.title }}" class="pub-thumbnail" />
-            </td>
-            <td style="padding:5px; width:70%;">
+      <div class="publication-table">
+        <div class="pub-image">
+          <img src="{{ post.image }}" alt="{{ post.title }}" class="pub-thumbnail" />
+        </div>
+        <div class="pub-text">
               <p style="margin: 0px 0;">{% if post.link %}<a class="pub1" href="{{ post.link }}"><b>{{ post.title }}</b></a>{% else %}<span class="pub1"><b>{{ post.title }}</b></span>{% endif %}
                 {% if post.authors %}
                   <div class="authors-info" style="margin: 0px 0;">
@@ -134,10 +135,8 @@
                   <span class="icon"><i class="fa fa-globe"></i></span> Project Page
                 </a>
               {% endif %}
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        </div>
+      </div>
     {% else %}
       <h2 class="archive__item-title" itemprop="headline" style="color: #0C4A6E;">
         {% if post.link %}
