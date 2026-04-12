@@ -751,6 +751,13 @@ html[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-toggler {
     color: #38BDF8 !important;
 }
 
+/* Publication images: add white background + rounded corners in dark mode */
+[data-theme="dark"] .publication-table td img {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 4px;
+}
+
 /* Publication filter dropdown */
 [data-theme="dark"] .pubtype-select {
     background-color: #1E293B;
