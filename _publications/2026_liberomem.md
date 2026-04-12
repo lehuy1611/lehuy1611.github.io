@@ -4,7 +4,7 @@ image: "/images/publications/liberomem_2025.png"
 link: https://ojs.aaai.org/index.php/AAAI/article/view/37337
 arxiv: 2511.11478
 page: https://libero-mem.github.io/
-github:
+github: https://github.com/libero-mem/libero-mem
 authors:
   - nhatchung
   - taiseih
