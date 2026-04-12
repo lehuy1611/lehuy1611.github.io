@@ -184,6 +184,14 @@ body,
        Buttons (slate-600 label + sky-500 icon, sky-700 hover)
    ================================================================== */
 
+/* Remove border from the last publication entry so it doesn't create
+   a double-line with the footer's border-top */
+.resume-wrap:last-child {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
 /* Base table text */
 .publication-table,
 .publication-table td,
