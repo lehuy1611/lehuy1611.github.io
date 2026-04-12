@@ -427,12 +427,18 @@ footer.ftco-footer .col-12 a:hover {
 
 /* --------- Theme toggle button ------------------------------------------- */
 
+/* Match .ftco-navbar-light .navbar-nav > .nav-item > .nav-link sizing
+   (font-size 23px, padding .7rem 20px) so the icon sits on the same
+   baseline and the navbar height stays consistent. */
 .theme-toggle {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 6px 10px;
-    font-size: 18px;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
     color: #334155;
     transition: color 0.2s ease, transform 0.3s ease;
     display: flex;
@@ -490,12 +496,15 @@ footer.ftco-footer .col-12 a:hover {
 [data-theme="dark"] .ftco_navbar,
 [data-theme="dark"] #ftco-navbar,
 [data-theme="dark"] .ftco_navbar.bg-white,
-[data-theme="dark"] nav.bg-white {
+[data-theme="dark"] nav.bg-white,
+[data-theme="dark"] .ftco-navbar-light {
     background-color: #0F172A !important;
+    background: #0F172A !important;
     border-bottom: 1px solid #1E293B;
 }
 [data-theme="dark"] .ftco_navbar.scrolled {
     background-color: #0F172A !important;
+    background: #0F172A !important;
 }
 
 [data-theme="dark"] #navbar-brand,
@@ -573,6 +582,21 @@ footer.ftco-footer .col-12 a:hover {
 [data-theme="dark"] [style*="color: #0C4A6E"],
 [data-theme="dark"] [style*="color:#0C4A6E"] {
     color: #7DD3FC !important;
+}
+
+/* Inline background overrides — elements with hardcoded light backgrounds */
+[data-theme="dark"] [style*="background-color: #f8f9fa"],
+[data-theme="dark"] [style*="background-color:#f8f9fa"] {
+    background-color: #1E293B !important;
+}
+[data-theme="dark"] [style*="background-color: #ffffff"],
+[data-theme="dark"] [style*="background-color:#ffffff"] {
+    background-color: #0F172A !important;
+}
+/* Inline border overrides */
+[data-theme="dark"] [style*="border: 1px solid #ddd"],
+[data-theme="dark"] [style*="border:1px solid #ddd"] {
+    border-color: #334155 !important;
 }
 
 /* Profile name heading */
@@ -685,8 +709,25 @@ footer.ftco-footer .col-12 a:hover {
     border-color: #334155 !important;
 }
 
-/* Experience page icons */
-[data-theme="dark"] .resume-wrap .icon {
+/* Experience page sidebar nav */
+[data-theme="dark"] #navi li a {
+    color: #94A3B8 !important; /* slate-400 */
+}
+[data-theme="dark"] #navi li a:hover,
+[data-theme="dark"] #navi li a.current {
+    color: #7DD3FC !important; /* sky-300 */
+}
+
+/* Experience page .text-primary (Skills label) */
+[data-theme="dark"] .text-primary {
+    color: #38BDF8 !important; /* sky-400 */
+}
+
+/* Experience page timeline icons — NOT publication button icons.
+   The direct-child combinator (>) ensures we only hit the 50x50 circle
+   icons that are immediate children of .resume-wrap, not the inline
+   .icon spans nested inside .publication-table buttons. */
+[data-theme="dark"] .resume-wrap > .icon {
     background: #075985 !important;
 }
 
@@ -712,6 +753,15 @@ footer.ftco-footer .col-12 a:hover {
 [data-theme="dark"] footer.ftco-footer .footer-icons a:hover,
 [data-theme="dark"] footer.ftco-footer .col-12 a:hover {
     color: #38BDF8 !important;
+}
+
+/* Inline SVG logos — dark fills vanish on dark backgrounds.
+   brightness(0) flattens to black, invert(1) flips to white. */
+[data-theme="dark"] img[src*="mila.svg"],
+[data-theme="dark"] img[src*="udem.svg"],
+[data-theme="dark"] img[src*="nvidia.svg"],
+[data-theme="dark"] img[src*="deepmind.svg"] {
+    filter: brightness(0) invert(1);
 }
 
 /* Profile photo shadow adjustment */
