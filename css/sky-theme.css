@@ -131,7 +131,26 @@ body,
 @media (max-width: 991.98px) {
     .navbar-brand,
     #navbar-brand {
-        min-width: 110px; /* wide enough for "Huy Le" / "Le Huy" at 1.5rem bold */
+        width: 110px;  /* fixed width — prevents flex reflow during text rotation */
+        min-width: 110px;
+        flex-shrink: 0;
+    }
+
+    /* Pin the toggler & theme-toggle so they never move regardless of brand content width */
+    .ftco_navbar .navbar-toggler,
+    .ftco_navbar .theme-toggle {
+        flex-shrink: 0;
+    }
+
+    .ftco_navbar .navbar-toggler {
+        margin-left: auto;
+    }
+
+    /* Ensure the nav container uses a stable flex layout */
+    #ftco-navbar .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
     }
 }
 
