@@ -227,6 +227,7 @@ body,
     height: auto;
     display: block;
     margin: auto;
+    border-radius: 8px;
 }
 
 /* Base table text */
