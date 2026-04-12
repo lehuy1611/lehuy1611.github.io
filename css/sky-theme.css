@@ -283,7 +283,7 @@ body,
 .ftco-section .publication-table .authors-info p.authors-line a.pub-me,
 .ftco-section .publication-table .authors-info p.authors-line .pub-me {
     color: #0369A1 !important; /* sky-700 — identical to other authors */
-    font-weight: 700 !important; /* heavier than others (500) — weight distinguishes, color does not */
+    font-weight: 800 !important; /* extra-bold — heavier than others (500) for clear distinction */
 }
 .ftco-section .publication-table .authors-info a.pub-me:hover {
     color: #0C4A6E !important;
@@ -740,11 +740,11 @@ html[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-toggler {
 [data-theme="dark"] .ftco-section .publication-table .authors-info .pub-me,
 [data-theme="dark"] .ftco-section .publication-table .authors-info p.authors-line a.pub-me,
 [data-theme="dark"] .ftco-section .publication-table .authors-info p.authors-line .pub-me {
-    color: #F0F9FF !important; /* sky-50 — stands out from other authors' sky-400 */
-    font-weight: 700 !important; /* heavier than others (500) — matches light mode distinction */
+    color: #38BDF8 !important; /* sky-400 — same blue as other authors */
+    font-weight: 800 !important; /* extra-bold — heavier than others (500) for clear distinction */
 }
 [data-theme="dark"] .ftco-section .publication-table .authors-info a.pub-me:hover {
-    color: #BAE6FD !important; /* sky-200 — hover deepens from sky-50, mirrors light mode pattern */
+    color: #7DD3FC !important; /* sky-300 — same hover as other authors */
     text-decoration: underline;
 }
 [data-theme="dark"] .publication-table .pub-venue,
