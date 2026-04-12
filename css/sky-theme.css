@@ -199,7 +199,7 @@ body,
 .publication-table span.pub1 b {
     color: #0C4A6E !important; /* sky-900 */
     font-weight: 800 !important;
-    font-size: 0.95em;
+    font-size: 1em;
     letter-spacing: -0.005em;
     text-decoration: none;
     transition: color 0.15s ease-in-out;
@@ -221,7 +221,7 @@ body,
 .publication-table .authors-info p.authors-line * {
     color: #0369A1 !important; /* sky-700 — same as venue, links, theme accent */
     font-weight: 500 !important;
-    font-size: 0.98em;
+    font-size: 1em;
     line-height: 1.45;
 }
 .publication-table .authors-info a {
@@ -258,7 +258,7 @@ body,
 }
 .publication-table .pub-venue {
     font-weight: 500;
-    font-size: 0.98em;
+    font-size: 1em;
 }
 .publication-table .pub-venue i,
 .publication-table .pub-venue i b,
@@ -273,7 +273,7 @@ body,
 .publication-table .pub-additional {
     color: #D97706 !important; /* amber-600 — warm sunset accent */
     font-weight: 700;
-    font-size: 0.98em;
+    font-size: 1em;
 }
 .publication-table .pub-additional b {
     color: #D97706 !important;
@@ -288,7 +288,7 @@ body,
 .publication-table a.pub-workshop {
     color: #0284C7 !important; /* sky-600 */
     font-weight: 700 !important;
-    font-size: 0.95em;
+    font-size: 1em;
     text-decoration: none;
     transition: color 0.15s ease-in-out;
 }
