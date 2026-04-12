@@ -1,19 +1,25 @@
 {% include base_path %}
 <style>
-  @media (max-width: 768px) {
-    .publication-table {
+  @media (max-width: 767px) {
+    .publication-table tr {
+      display: flex;
       flex-direction: column;
-      gap: 1rem;
+      align-items: center;
     }
 
-    .pub-image {
+    .publication-table td {
       width: 100% !important;
-      max-width: 100% !important;
+      text-align: center !important;
+      padding: 10px !important;
     }
 
-    .pub-image .pub-thumbnail {
-      max-width: 100%;
+    .publication-table img {
+      max-width: 80%;
       height: auto;
+    }
+
+    .publication-table .pub1 {
+      font-size: 18px;
     }
   }
   .authors-info .pub-author {
@@ -51,11 +57,13 @@
     {% endif %}
 
     {% if post.collection == 'publications' %}
-      <div class="publication-table">
-        <div class="pub-image">
-          <img src="{{ post.image }}" alt="{{ post.title }}" class="pub-thumbnail" />
-        </div>
-        <div class="pub-text">
+      <table class="publication-table" style="width:100%; border:5px; border-spacing:0px; border-collapse:collapse; margin-right:auto;">
+        <tbody>
+          <tr>
+            <td style="padding:15px; width:30%; text-align:center; vertical-align:middle;">
+                <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; height:auto; display: block; margin: 0 auto;" />
+            </td>
+            <td style="padding:5px; width:70%;">
               <p style="margin: 0px 0;">{% if post.link %}<a class="pub1" href="{{ post.link }}"><b>{{ post.title }}</b></a>{% else %}<span class="pub1"><b>{{ post.title }}</b></span>{% endif %}
                 {% if post.authors %}
                   <div class="authors-info" style="margin: 0px 0;">
@@ -63,11 +71,11 @@
                     {% assign total_authors = post.authors | size %}
                     {% assign cofirst_count = post.cofirst | default: 0 %}
                     {% assign cofirst_authors = post.authors | slice: 0, cofirst_count %}
-                    
+
                     {% for author_id in post.authors %}
                       {% assign author = site.data.authors[author_id] %}
                       {% assign current_index = forloop.index %}  <!-- Get current index in the loop -->
-                
+
                       {% if author_id == "huyle" %}
                         <!-- Make the author with id "huyle" bold, themed, and a link if a URL exists -->
                         {% if author.url %}
@@ -83,18 +91,18 @@
                           {% assign authors_list = authors_list | append: author.name %}
                         {% endif %}
                       {% endif %}
-                
+
                       <!-- Check if this author is a co-first author and add an asterisk -->
                       {% if cofirst_authors contains author_id %}
                         {% assign authors_list = authors_list | append: "*" %}
                       {% endif %}
-                
+
                       <!-- Add a comma if it's not the last author -->
                       {% if current_index < total_authors %}
                         {% assign authors_list = authors_list | append: ", " %}
                       {% endif %}
                     {% endfor %}
-                    
+
                     <!-- Output the final list of authors -->
                     <p class="authors-line" style="margin-top: 0px; margin: 0px 0;">{{ authors_list }}</p>
                   </div>
@@ -126,8 +134,10 @@
                   <span class="icon"><i class="fa fa-globe"></i></span> Project Page
                 </a>
               {% endif %}
-        </div>
-      </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     {% else %}
       <h2 class="archive__item-title" itemprop="headline" style="color: #0C4A6E;">
         {% if post.link %}
