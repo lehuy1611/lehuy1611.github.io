@@ -221,6 +221,22 @@ body,
     padding-bottom: 0 !important;
 }
 
+/* Uniform publication thumbnail size */
+.publication-table .pub-thumbnail {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 767px) {
+    .publication-table .pub-thumbnail {
+        height: 140px;
+        max-width: 80%;
+    }
+}
+
 /* Base table text */
 .publication-table,
 .publication-table td,
