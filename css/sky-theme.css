@@ -283,7 +283,7 @@ body,
 .ftco-section .publication-table .authors-info p.authors-line a.pub-me,
 .ftco-section .publication-table .authors-info p.authors-line .pub-me {
     color: #0369A1 !important; /* sky-700 — identical to other authors */
-    font-weight: 800 !important; /* extra-bold — heavier than others (500) for clear distinction */
+    font-weight: 900 !important; /* black weight — heavier than others (500) for clear distinction */
 }
 .ftco-section .publication-table .authors-info a.pub-me:hover {
     color: #0C4A6E !important;
@@ -741,7 +741,7 @@ html[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-toggler {
 [data-theme="dark"] .ftco-section .publication-table .authors-info p.authors-line a.pub-me,
 [data-theme="dark"] .ftco-section .publication-table .authors-info p.authors-line .pub-me {
     color: #38BDF8 !important; /* sky-400 — same blue as other authors */
-    font-weight: 800 !important; /* extra-bold — heavier than others (500) for clear distinction */
+    font-weight: 900 !important; /* black weight — heavier than others (500) for clear distinction */
 }
 [data-theme="dark"] .ftco-section .publication-table .authors-info a.pub-me:hover {
     color: #7DD3FC !important; /* sky-300 — same hover as other authors */
