@@ -79,7 +79,7 @@
                       {% if author_id == "huyle" %}
                         <!-- Make the author with id "huyle" bold, themed, and a link if a URL exists -->
                         {% if author.url %}
-                          {% assign authors_list = authors_list | append: "<a href='" | append: author.url | append: "' target='_blank' class='pub-me' style='font-weight: bold;'>" | append: author.name | append: "</a>" %}
+                          {% assign authors_list = authors_list | append: "<a href='" | append: author.url | append: "' target='_blank' class='pub-me'>" | append: author.name | append: "</a>" %}
                         {% else %}
                           {% assign authors_list = authors_list | append: "<span class='pub-me'>" | append: author.name | append: "</span>" %}
                         {% endif %}
