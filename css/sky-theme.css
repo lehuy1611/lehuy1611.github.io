@@ -221,13 +221,15 @@ body,
     padding-bottom: 0 !important;
 }
 
-/* Uniform publication thumbnail size */
+/* Uniform publication thumbnail size with faded edges */
 .publication-table .pub-thumbnail {
     width: 100%;
     height: 160px;
     object-fit: contain;
     display: block;
     margin: auto;
+    -webkit-mask-image: radial-gradient(ellipse 85% 80% at center, #000 50%, transparent 100%);
+    mask-image: radial-gradient(ellipse 85% 80% at center, #000 50%, transparent 100%);
 }
 
 @media (max-width: 767px) {
@@ -784,13 +786,6 @@ html[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-toggler {
 [data-theme="dark"] .publication-table a.pub-btn:hover .icon,
 [data-theme="dark"] .publication-table a.pub-btn:hover .icon i {
     color: #38BDF8 !important;
-}
-
-/* Publication images: add white background + rounded corners in dark mode */
-[data-theme="dark"] .publication-table td img {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 4px;
 }
 
 /* Publication filter dropdown */
