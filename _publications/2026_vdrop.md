@@ -1,7 +1,7 @@
 ---
 title: "How and What to Imagine? Visual Thinking in Unified Multimodal Models for Cross-View Spatial Reasoning"
 image: "/images/publications/vdrop_2026.png"
-arxiv: 2605.27310
+arxiv: "2605.27310"
 authors:
   - qianyang
   - ankurs
