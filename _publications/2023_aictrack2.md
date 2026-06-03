@@ -3,7 +3,7 @@ title: "Tracked-Vehicle Retrieval by Natural Language Descriptions With Multi-Co
 image: "/images/publications/aictrack2_2023.png"
 link: https://openaccess.thecvf.com/content/CVPR2023W/AICity/html/Le_Tracked-Vehicle_Retrieval_by_Natural_Language_Descriptions_With_Multi-Contextual_Adaptive_Knowledge_CVPRW_2023_paper.html
 github: https://github.com/zef1611/AIC23_NLRetrieval_HCMIU_CVIP
-arxiv: https://openaccess.thecvf.com/content/CVPR2023W/AICity/papers/Le_Tracked-Vehicle_Retrieval_by_Natural_Language_Descriptions_With_Multi-Contextual_Adaptive_Knowledge_CVPRW_2023_paper.pdf
+pdf: https://openaccess.thecvf.com/content/CVPR2023W/AICity/papers/Le_Tracked-Vehicle_Retrieval_by_Natural_Language_Descriptions_With_Multi-Contextual_Adaptive_Knowledge_CVPRW_2023_paper.pdf
 authors:
   - huyle
   - quangcvip

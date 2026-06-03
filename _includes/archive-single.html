@@ -128,6 +128,11 @@
                   <span class="icon"><i class="ai ai-arxiv"></i></span> arXiv
                 </a>
               {% endif %}
+              {% if post.pdf %}
+                <a class="pub-btn" href="{{ post.pdf }}">
+                  <span class="icon"><i class="fa fa-file-pdf"></i></span> PDF
+                </a>
+              {% endif %}
               {% if post.page %}
                 <a class="pub-btn" href="{{ post.page }}">
                   <span class="icon"><i class="fa fa-globe"></i></span> Project Page
