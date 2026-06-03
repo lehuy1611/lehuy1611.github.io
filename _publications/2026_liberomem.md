@@ -5,6 +5,7 @@ link: https://ojs.aaai.org/index.php/AAAI/article/view/37337
 arxiv: 2511.11478
 page: https://libero-mem.github.io/
 github: https://github.com/libero-mem/libero-mem
+hf: https://huggingface.co/libero-mem
 authors:
   - nhatchung
   - taiseih
@@ -18,7 +19,9 @@ authors:
   - tungkieu
   - anhnguyen
   - nganle
-cofirst: 2
+cofirst:
+  - nhatchung
+  - taiseih
 collection: publications
 permalink: /publication/liberomem
 type: "conference paper"

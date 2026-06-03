@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 88" fill="none">
+  <!-- Arms -->
+  <path d="M14.2 43.2c-4.1-4.2-10.9-4.2-15.1 0" stroke="#FF9D00" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M95 43.2c-4.1-4.2-10.9-4.2-15.1 0" stroke="#FF9D00" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Face circle -->
+  <circle cx="47.5" cy="47" r="38" fill="#FFD21E"/>
+  <!-- Left eye (closed happy squint) -->
+  <path d="M28 38 Q32 33 36 38" stroke="#111" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+  <!-- Right eye (closed happy squint) -->
+  <path d="M59 38 Q63 33 67 38" stroke="#111" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+  <!-- Smile -->
+  <path d="M31 56 Q47.5 72 64 56" stroke="#111" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Rosy cheeks -->
+  <circle cx="23" cy="57" r="7" fill="#FF9D9D" opacity="0.55"/>
+  <circle cx="72" cy="57" r="7" fill="#FF9D9D" opacity="0.55"/>
+  <!-- Tongue / teeth hint inside smile -->
+  <path d="M36 60 Q47.5 70 59 60" fill="#FF6B6B" opacity="0.4"/>
+</svg>

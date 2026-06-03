@@ -10,6 +10,9 @@ authors:
   - zhuanshi
   - perouz
   - aishwaryaa
+cofirst:
+  - ankurs
+  - huyle
 collection: publications
 permalink: /publication/vdrop
 type: "preprint"

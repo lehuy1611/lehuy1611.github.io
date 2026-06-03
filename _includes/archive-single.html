@@ -74,8 +74,7 @@
                   <div class="authors-info" style="margin: 0px 0;">
                     {% assign authors_list = "" %}
                     {% assign total_authors = post.authors | size %}
-                    {% assign cofirst_count = post.cofirst | default: 0 %}
-                    {% assign cofirst_authors = post.authors | slice: 0, cofirst_count %}
+                    {% assign cofirst_authors = post.cofirst %}
 
                     {% for author_id in post.authors %}
                       {% assign author = site.data.authors[author_id] %}
@@ -129,14 +128,19 @@
                   <span class="icon"><i class="ai ai-arxiv"></i></span> arXiv
                 </a>
               {% endif %}
+              {% if post.page %}
+                <a class="external-link button is-small is-ghost pub-btn" href="{{ post.page }}" style="padding-right: 20px;">
+                  <span class="icon"><i class="fa fa-globe"></i></span> Project Page
+                </a>
+              {% endif %}
               {% if post.github %}
                 <a class="external-link button is-small is-ghost pub-btn" href="{{ post.github }}" style="padding-right: 20px;">
                   <span class="icon"><i class="fab fa-github"></i></span> Code
                 </a>
               {% endif %}
-              {% if post.page %}
-                <a class="external-link button is-small is-ghost pub-btn" href="{{ post.page }}" style="padding-right: 20px;">
-                  <span class="icon"><i class="fa fa-globe"></i></span> Project Page
+              {% if post.hf %}
+                <a class="external-link button is-small is-ghost pub-btn" href="{{ post.hf }}" style="padding-right: 20px;">
+                  <span class="icon"><img src="/images/icons/huggingface.svg" alt="Hugging Face" style="height:1em; vertical-align:-0.15em;"></span> HuggingFace
                 </a>
               {% endif %}
             </td>
