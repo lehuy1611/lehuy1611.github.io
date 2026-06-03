@@ -851,8 +851,9 @@ html[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-toggler {
     -moz-box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Publication images — white-background PNGs need a soft container in dark mode */
-[data-theme="dark"] .publication-table td img {
+/* Publication images/videos — white-background PNGs need a soft container in dark mode */
+[data-theme="dark"] .publication-table td img,
+[data-theme="dark"] .publication-table td video {
     background: #ffffff;
     border-radius: 8px;
     padding: 6px;

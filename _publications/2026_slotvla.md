@@ -1,6 +1,7 @@
 ---
 title: "SlotVLA: Towards Modeling of Object–Relation Representations in Robotic Manipulation"
 image: "/images/publications/slotvla_2025.png"
+video: "/videos/slot_vla.mp4"
 arxiv: 2511.06754
 github:
 authors:
