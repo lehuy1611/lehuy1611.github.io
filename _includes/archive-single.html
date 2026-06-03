@@ -124,22 +124,22 @@
               {% endif %}
             </p>
               {% if post.arxiv %}
-                <a class="external-link button is-small is-ghost pub-btn" href="https://arxiv.org/abs/{{ post.arxiv }}" style="padding-right: 20px;">
+                <a class="pub-btn" href="https://arxiv.org/abs/{{ post.arxiv }}">
                   <span class="icon"><i class="ai ai-arxiv"></i></span> arXiv
                 </a>
               {% endif %}
               {% if post.page %}
-                <a class="external-link button is-small is-ghost pub-btn" href="{{ post.page }}" style="padding-right: 20px;">
+                <a class="pub-btn" href="{{ post.page }}">
                   <span class="icon"><i class="fa fa-globe"></i></span> Project Page
                 </a>
               {% endif %}
               {% if post.github %}
-                <a class="external-link button is-small is-ghost pub-btn" href="{{ post.github }}" style="padding-right: 20px;">
+                <a class="pub-btn" href="{{ post.github }}">
                   <span class="icon"><i class="fab fa-github"></i></span> Code
                 </a>
               {% endif %}
               {% if post.hf %}
-                <a class="external-link button is-small is-ghost pub-btn" href="{{ post.hf }}" style="padding-right: 20px;">
+                <a class="pub-btn" href="{{ post.hf }}">
                   <span class="icon"><img src="/images/icons/huggingface.svg" alt="Hugging Face" style="height:1em; vertical-align:-0.15em;"></span> HuggingFace
                 </a>
               {% endif %}

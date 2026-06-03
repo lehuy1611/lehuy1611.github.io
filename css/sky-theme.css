@@ -383,19 +383,34 @@ body,
 }
 
 .publication-table a.pub-btn {
-    color: #334155 !important; /* slate-700 — matches index contact buttons */
-    font-weight: 700 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    background: #E0F2FE;       /* sky-100 */
+    color: #0369A1 !important; /* sky-700 */
+    font-size: 0.82em;
+    font-weight: 600 !important;
     text-decoration: none;
-    transition: color 0.15s ease-in-out;
+    transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+    margin-right: 6px;
+    margin-top: 6px;
 }
 .publication-table a.pub-btn .icon,
 .publication-table a.pub-btn .icon i {
-    color: #334155 !important; /* slate-700 — icon inherits from button */
+    color: #0369A1 !important;
 }
-.publication-table a.pub-btn:hover,
+.publication-table a.pub-btn:hover {
+    background: #0369A1;       /* sky-700 filled */
+    color: #ffffff !important;
+}
 .publication-table a.pub-btn:hover .icon,
 .publication-table a.pub-btn:hover .icon i {
-    color: #0369A1 !important; /* sky-700 hover — label + icon deepen together */
+    color: #ffffff !important;
+}
+.publication-table a.pub-btn:hover .icon img {
+    filter: brightness(0) invert(1); /* invert SVG icons (HF logo) to white */
 }
 
 /* --------- Recent News / cards --------
@@ -765,16 +780,23 @@ html[data-theme="dark"] .ftco-navbar-light.scrolled .navbar-toggler {
     color: #7DD3FC !important;
 }
 [data-theme="dark"] .publication-table a.pub-btn {
-    color: #CBD5E1 !important;
+    background: #0C2A3E;       /* dark sky tint */
+    color: #7DD3FC !important; /* sky-300 */
 }
 [data-theme="dark"] .publication-table a.pub-btn .icon,
 [data-theme="dark"] .publication-table a.pub-btn .icon i {
-    color: #CBD5E1 !important;
+    color: #7DD3FC !important;
 }
-[data-theme="dark"] .publication-table a.pub-btn:hover,
+[data-theme="dark"] .publication-table a.pub-btn:hover {
+    background: #0369A1;
+    color: #ffffff !important;
+}
 [data-theme="dark"] .publication-table a.pub-btn:hover .icon,
 [data-theme="dark"] .publication-table a.pub-btn:hover .icon i {
-    color: #38BDF8 !important;
+    color: #ffffff !important;
+}
+[data-theme="dark"] .publication-table a.pub-btn:hover .icon img {
+    filter: brightness(0) invert(1);
 }
 
 /* Publication filter dropdown */
