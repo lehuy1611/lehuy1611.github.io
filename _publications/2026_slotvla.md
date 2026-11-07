@@ -3,6 +3,7 @@ title: "SlotVLA: Towards Modeling of Object–Relation Representations in Roboti
 image: "/images/publications/slotvla_2025.png"
 video: "/videos/slot_vla.mp4"
 arxiv: 2511.06754
+link: https://ieeexplore.ieee.org/document/11695805
 hf: https://huggingface.co/libero-plus
 authors:
   - taiseih
